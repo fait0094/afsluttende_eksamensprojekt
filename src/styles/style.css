@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ------------- GLOBAL ------------- */
+  /* Font scale heading */
+  --text-9: 3.052rem;
+  --text-8: 2.441rem;
+  --text-7: 1.953rem;
+  --text-6: 1.563rem;
+  --text-5: 1.25rem;
+
+  /* Font scale body text */
+  --text-4: 1rem;
+  --text-3: 0.8rem;
+  --text-2: 0.64rem;
+  --text-1: 0.512rem;
+
+  /* ------------- ALIAS ------------- */
+  /* Farver */
+  --primary_white: #faf6ef;
+  --secondary_beige: #ece6dc;
+  --light_brown: #513826;
+  --dark_brown: #462216;
+  --accent_green: #1e4b1e;
+
+  /* Font */
+  --heading-h1: var(--text-9);
+  --heading-h2: var(--text-8);
+  --heading-h3: var(--text-7);
+  --heading-h4: var(--text-6);
+  --heading-h5: var(--text-5);
+  --body-default: var(--text-4);
+
+  /* Ved ikke om vi skal køre spacingssss :) */
+
+  /* SPACING */
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 1rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 2rem;
+  --spacing-md2: 2.1rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 5rem;
+}

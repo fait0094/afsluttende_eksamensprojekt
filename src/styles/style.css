@@ -32,7 +32,8 @@
   --primary_white: #faf6ef;
   --secondary_beige: #ece6dc;
   --light_brown: #513826;
-  --dark_brown: #462216;
+  --medium_brown: #462216;
+  --dark_brown: #35261c;
   --accent_green: #1e4b1e;
 
   /* Font */
@@ -54,4 +55,59 @@
   --spacing-lg: 3rem;
   --spacing-xl: 4rem;
   --spacing-xxl: 5rem;
+}
+
+/* Fælles styling */
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: var(--body-default);
+  line-height: 1.5;
+  background-color: var(--primary_white);
+  color: var(--dark_brown);
+}
+
+h1,
+.heading-1 {
+  font-size: var(--heading-h1);
+  font-weight: 800;
+  text-transform: uppercase;
+
+  line-height: 1.1;
+  /* margin-top: 0; */
+  margin-bottom: var(--spacing-xxs);
+}
+
+h2,
+.heading-2 {
+  font-size: var(--heading-h2);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xxs);
+}
+
+h3,
+.heading-3 {
+  font-size: var(--heading-h3);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xxs);
+}
+
+h4,
+.heading-4 {
+  font-size: var(--heading-h4);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h5,
+.heading-5 {
+  font-size: var(--heading-h5);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--body-default);
+  max-width: 65ch;
 }

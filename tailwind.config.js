@@ -8,6 +8,7 @@ export default {
         secondary_beige: "#ece6dc",
         light_brown: "#513826",
         dark_brown: "#462216",
+        darkest_brown: "#35261C",
         accent_green: "#1e4b1e",
       },
     },

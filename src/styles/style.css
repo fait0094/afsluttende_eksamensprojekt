@@ -111,3 +111,10 @@ p {
   font-size: var(--body-default);
   max-width: 65ch;
 }
+
+/*-----------------STYLES-----------------*/
+
+header {
+  background-image: url("/billeder/img header.png");
+  background-size: cover;
+}

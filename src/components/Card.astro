@@ -1,7 +1,21 @@
 ---
 import "../styles/style.css";
+import Kategoricard from "./Kategoricard.astro";
+const {
+  kategori, title, pris, imgpath, produkt
+} = Astro.props;
+
+
 ---
 
 <section>
-  <div><img src="" alt=""></div>
+  <div><img src={produkt} alt=""></div>
+  <div><h5>{kategori}</h5>
+<h3>{title}</h3>
+<div>
+<h4>{pris}</h4>
+<img src={imgpath} alt="produkt_billeder">
+</div>
+</div>
+  
 </section>

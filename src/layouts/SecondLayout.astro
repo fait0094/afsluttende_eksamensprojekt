@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 
 const { title, metacontent } = Astro.props;
 ---
@@ -26,6 +27,7 @@ const { title, metacontent } = Astro.props;
       <slot />
     </main>
     <Header></Header>
+    <Card></Card>
     <Footer />
   </body>
 </html>

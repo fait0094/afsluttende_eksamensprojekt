@@ -23,13 +23,11 @@ const { title, metacontent } = Astro.props;
   </head>
   <body>
     <!-- Lav en seperat menu på forsiden?? Da den ikke er stylet på samme måde på andre sider -->
-    <!-- <Header /> -->
-    <main>
-      <slot />
-    </main>
     <Header />
-    <Card />
-    <Kategoricard />
+    <main>
+      <slot />   
+    </main>
+
     <Footer />
   </body>
 </html>

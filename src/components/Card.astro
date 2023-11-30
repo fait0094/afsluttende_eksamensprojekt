@@ -1,21 +1,22 @@
 ---
 import "../styles/style.css";
-import Kategoricard from "./Kategoricard.astro";
+import Button from "./Button.astro";
 const {
-  kategori, title, pris, imgpath, produkt
+  kategori, title, price, buttonarrow, img_product, link_side
 } = Astro.props;
 
 
 ---
 
-<section>
-  <div><img src={produkt} alt=""></div>
-  <div><h5>{kategori}</h5>
-<h3>{title}</h3>
-<div>
-<h4>{pris}</h4>
-<img src={imgpath} alt="produkt_billeder">
+<section class="bg-secondary_beige w-[21rem]"> 
+  <a href={link_side}>  <div><img src={img_product} alt="produkt_billeder"></div>
+  <div class="p-7"><h1>{kategori}</h1>
+<h2>{title}</h2>
+<div class="flex justify-between">
+<h3>{price}</h3>
+<Button></Button>
 </div>
 </div>
-  
+</a>
 </section>
+

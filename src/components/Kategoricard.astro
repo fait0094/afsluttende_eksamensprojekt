@@ -1,7 +1,23 @@
 ---
 import "../styles/style.css";
+import SecondaryButton from "./SecondaryButton.astro";
 
-const { title, description, imgPath, kategori, link_side, maleicon, femaleicon, ejer, btn } = Astro.props;
+const { title, description, imgPath, link_side } = Astro.props;
 ---
+    <div class="flex justify-center items-center h-screen card">
+        <div class=" bg-[url('/produktbilleder/kaffeprodukt_1.png')] bg-cover w-96 h-96 overflow-hidden shadow-lg hover:shadow-2xl duration-150">
+                    <a href={link_side}> 
 
+            <!-- Content inside the card goes here -->
+            <div class="p-6 text-white  pt-44">
+                <h2 class=" font-bold mb-2">{title}</h2>
+                           <div class="flex justify-between">
+                <p class="w-[15rem]" >{description}</p>
+                <SecondaryButton></SecondaryButton>
+                </div>
+            </div>
+          </a>
+        </div>
+       
+    </div>
 

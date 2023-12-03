@@ -1,5 +1,69 @@
 ---
-import Card from "../components/Card.astro";
+import Kategoricard from "../components/Kategoricard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import "..//styles/style.css";
 ---
+
+
+
+<MainLayout
+  title="Det Lille Kafferisteri"
+  metacontent="(Indsæt metabeskrivelse her)"
+>
+  
+<section class="grid grid-cols-3 justify-between gap-10">
+      <Kategoricard
+      backgroundImage="/kategoricards/kaffeprodukter.webp"
+    title="Kaffeprodukter"
+    description="Udforsk vores sortiment af bæredygtige kaffebønner fra vores lokale risteri..."
+    link_side="/"
+    
+    />
+      <Kategoricard
+   backgroundImage="/kategoricards/kaffekassen.webp"
+    title="Kaffekassen"
+    description="Bliv en del af kaffekassen og modtag hver måned en pakke med lækkerier..."
+    link_side="/"
+    
+    />
+
+      <Kategoricard
+   backgroundImage="/kategoricards/lidt_til_kaffen.webp"
+    title="Lidt Til Kaffen"
+    description="Opdag vores sortiment af delikate søde fristelser og nyd det sammen med kaffen..."
+    link_side="/"
+    
+    />
+
+      <Kategoricard
+   backgroundImage="/kategoricards/kaffetilbehor.webp"
+    title="Kaffetilbehør"
+    description="Se vores udvalg af kaffetilbehør, kaffefiltre, kaffebryggere mv..."
+    link_side="/"
+    
+    />
+
+      <Kategoricard
+   backgroundImage="/kategoricards/hudpleje.webp"
+    title="Hudpleje"
+    description="Forkæl din krop med luksuriøse hudplejeprodukter, der er fremstillet med kaffe..."
+    link_side="/"
+    
+    />
+
+      <Kategoricard
+   backgroundImage="/kategoricards/rengoring.webp"
+    title="Rengøring"
+    description="Rengøring af dit brygudstyr har en stor betydning for et godt resultat for din kaffe..."
+    link_side="/"
+    
+    />
+
+
+
+
+</section>
+
+</MainLayout>
+
+

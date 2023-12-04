@@ -9,6 +9,7 @@ import Timer from "../components/Timer.astro";
 import "../styles/style.css";
 import InfoSection from "../components/InfoSection.astro";
 import Heading from "../components/Heading.astro";
+import Forslag from "../components/Forslag.astro";
 
 ---
 
@@ -68,13 +69,61 @@ text="Læs mere om kaffekassen"
 
 <!-- mest populære kaffeprodukter -->
 <section>
-  <h3>Mest populære kaffeprodukter</h3>
-  
+    <Forslag
+    heading="Mest populære produkter"
+        link_side_1="/produktside"
+	    img_product_1="/billeder/forslag-1.jpg"
+        kategori_1="Espresso"
+	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
+	    price_1="FRA 79 DKK"
+
+        link_side_2="/produktside"
+	    img_product_2="/billeder/forslag-2.jpg"
+        kategori_2="Espresso"
+	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+	    price_2="FRA 79 DKK"
+
+        link_side_3="/produktside"
+	    img_product_3="/billeder/forslag-3.jpg"
+        kategori_3="Stempelkande"
+	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
+	    price_3="FRA 79 DKK"
+    />
 </section>
 
 <!-- når du handler hos os får du -->
+<Heading><h2>når du handler hos os får du</h2><Heading/>
+<InfoSection
+img1="/ikoner/kvalitet.svg"
+title1="Kvalitet"
+description1="Vi køber kvalitets kaffebønner og arbejder på at få det bedste frem i bønnerne."
+
+img2="/ikoner/baeredygtighed.svg"
+title2="Bæredygtighed"
+description2="Vi brygger kaffe med god samvittighed og går ind for bæredygtighed."
+
+img3="/ikoner/okologi.svg"
+title3="Økologi"
+description3="Det er vigtigt for os, at vores kaffe er certificeret økologisk."
+>
+</InfoSection>
+<PrimaryButton
+link_side="/kaffeprodukter"
+text="Gå til kaffeprodukter"
+></PrimaryButton>
 
 <!-- famlieejet virksomhed -->
+<section>
+  <div>
+  <h2>Familieejet virksomhed</h2>
+  <p>Velkommen til vores lille familieejede eventyr, der oprindeligt startede i hjemmets garage. Vi har vokset os fra vores beskedne begyndelse og udviklet konceptet med en charmerende butik på Hundested Havn. Vores passion ligger dybt for kaffen og lokalområdet, og vi leverer med stolthed kaffe til lokale restauranter, caféer og udvalgte butikker.</p>
+  <PrimaryButton
+  link_side="/om"
+  text="Læs mere"
+  ></PrimaryButton>
+  </div>
+  
+</section>
 
 <!-- følg på instagram -->
 

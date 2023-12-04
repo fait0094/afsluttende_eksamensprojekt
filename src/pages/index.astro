@@ -8,15 +8,76 @@ import ToggleDropdown from "../components/ToggleDropdown.astro";
 import Timer from "../components/Timer.astro";
 import "../styles/style.css";
 import InfoSection from "../components/InfoSection.astro";
+import Heading from "../components/Heading.astro";
 
 ---
 
 <SecondLayout
   title="Det Lille Kafferisteri"
   metacontent="(Indsæt metabeskrivelse her)"
-/>
- 
-<section class="h-scren bg-[url('/billeder/hero-billede.png')] bg-cover"></section>
+>
+
+<!-- herosection -->
+ <section
+    class="flex items-center justify-start h-screen bg-[url('/billeder/hero-billede.png')] bg-cover md:bg-center bg-custom_position -z-10"
+  >
+    <div class="text-left mx-8 text-primary_white lg:ml-36">
+      <h1>Velkommen til det lille kafferisteri</h1>
+      <p>
+ Dyk ned i kunsten af vores kafferisteri, hvor passion møder præcision. Fordyb dig i symfonien af aromaer og smag på udsøgte, friskristede kaffebønner. Hæv din kaffeoplevelse
+      </p>
+      <div class="mt-5">
+        <PrimaryButton link_side="/shop" text="Gå til shoppen">
+        </PrimaryButton>
+      </div>
+    </div>
+    </section>
+
+
+<!-- tilmeld dig kaffekassen -->
+
+<section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto md:grid md:grid-cols-2 bg-secondary_beige">
+  <img src="/produktbilleder/kaffekasse_stor.webp" alt="kaffekasse_billede">
+  <div class="cols-2 mb-6">
+    <h2>Tilmeld dig kaffekassen</h2>
+    <h3>Det er ligesom at få en gave hver måned</h3>
+    <p class="italic">“Jeg er almen kaffedrikker, men har aldrig været den største kaffeentusiast, men så gik det op for mig, hvor lækker god kaffe er, og hvor få ting du egentlig behøver for at lave god kaffe. Takket hver kaffekassen, har jeg fået ressourcerne til at producere den helt rigtige kaffe og få tips med på vejen med den guide, der medfølger hver måned.”</p>
+  
+    <div class="flex gap-5 my-6">
+      <img src="/billeder/testimonals_kristian.png" alt="">
+      <div>
+      <h4>Kristian, abonnement af Kaffekassen Deluxe</h4>
+      <img src="/ikoner/5-stjerner.svg" alt="anmeldelser_5_stjerner">
+      </div>
+    </div>
+      <PrimaryButton 
+text="Læs mere om kaffekassen"
+  >
+  </PrimaryButton>
+  </div>
+
+</section>
+
+<!-- altid friskristet kaffe -->
+<section>
+<Heading><h2>altid friskristet kaffe</h2><Heading/>
+<p>Tre gange om ugen forvandler vi bønner til den friskeste og mest lækre kaffe, for at sikre, at du altid får den bedste smagsoplevelse</p>
+<Timer></Timer>
+</section>
+
+
+<!-- mest populære kaffeprodukter -->
+<section>
+  <h3>Mest populære kaffeprodukter</h3>
+  
+</section>
+
+<!-- når du handler hos os får du -->
+
+<!-- famlieejet virksomhed -->
+
+<!-- følg på instagram -->
+
 
 </SecondLayout>
 

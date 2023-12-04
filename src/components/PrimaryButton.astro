@@ -1,13 +1,14 @@
 ---
 import "../styles/style.css";
 const {
-    text
+    text, link_side
 } = Astro.props;
 ---
 
 
-<div class="bg-secondary_beige hover:bg-accent_green inline-flex">
+<div class="bg-accent_green hover:bg-light_accent_green inline-flex">
+   <a href={link_side}>
     <h4 class="text-primary_white py-2 px-5">{text}</h4>
 </div>
-
+  </a> 
 

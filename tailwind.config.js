@@ -10,6 +10,7 @@ export default {
         dark_brown: "#462216",
         darkest_brown: "#35261C",
         accent_green: "#1e4b1e",
+        light_accent_green: "#426A46",
       },
       fontSize: {
         "heading-1": ["3.052rem"],

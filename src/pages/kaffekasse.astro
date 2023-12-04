@@ -1,14 +1,25 @@
 ---
 import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import InfoSection from "../components/InfoSection.astro";
 import "..//styles/style.css";
 ---
 
 
-<!-- ABONNOMENT SECTION HER -->
+
 
 <MainLayout>
-<section class="grid lg:grid-cols-3 md:grid-cols-2 justify-center">
+<!-- ABONNOMENT SECTION HER -->
+<section class="grid justify-center bg-secondary_beige">
+<Heading heading="Abonnement">
+</Heading>
+    <p class="text-center">Vælg en abonnementløsning hos Det lille kafferisteri. Vores abonnement, Kaffekassen, er nøglen til kaffeviden og bryggemetoder. Med abonnementet får du uundværlig læring, lækker kaffe og spændende gaver, der forbedrer din kaffeoplevelse. Bliv klogere og gladere med vores månedlige overraskelser og sjove kaffeoplevelser.</p>
+</section>
+
+<!-- KAFFEKASSE SECTION HER -->
+<Heading heading="vores udvalg af kaffekasser"></Heading>
+<section class="lg:flex lg:justify-evenly grid md:grid-cols-2">
     <Card 
     link_side="kaffekasseSingle"
     img_product="/produktbilleder/kaffekasse.png"
@@ -33,6 +44,25 @@ import "..//styles/style.css";
 
 </section>
 
-<!-- Sådan bestiller du kaffekassen infosection -->
+<!-- SÅDAN BESTILLER DU SECTION HER -->
+
+<section class="bg-secondary_beige">
+<Heading heading="sådan bestiller du kaffekassen">
+</Heading>
+
+<InfoSection img1="/ikoner/kvalitet.svg"
+title1="vælg din favorit kaffekasse... "
+description1="Der opfylder dine specifikke behov, hvad enten det er smag, pris eller andre præferencer."
+
+img2="/ikoner/baeredygtighed.svg"
+title2="tilmeld dig..."
+description2="den abonnementsordning der passer lige til dig og dit kaffebehov."
+
+img3="/ikoner/okologi.svg"
+title3="Modtag din kaffekasse..."
+description3="og oplev ren nydelse af den friskristede kaffe sammen med en lille sød overraskelse"
+>
+</InfoSection>
+</section>
 
 </MainLayout>

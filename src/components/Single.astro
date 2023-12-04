@@ -4,7 +4,7 @@ import KaffeGalleri from "./KaffeGalleri.astro";
 import PrimaryButton from "./PrimaryButton.astro";
 import Skala from "./Skala.astro";
 import ToggleDropdown from "./ToggleDropdown.astro";
-const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4 } = Astro.props;
+const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4 } = Astro.props;
 ---
 
 <section class="grid md:grid-cols-2 bg-secondary_beige py-16">
@@ -51,10 +51,14 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4 } = Astro.
          <img src="/ikoner/landekort.svg" alt="">
         </div>
 
+        <!-- Inputfelter -->
        <div class="grid grid-row md:grid-cols-2 gap-5">
-           <PrimaryButton text="Midlertidig Type"/>
-           <PrimaryButton text="Midlertidig Størrelse"/>
-           <PrimaryButton text="Midlertidig Antal"/>
+           <ToggleDropdown
+           type="Type" title="Hele bønner" option1="Kværnede bønner"/>
+           <ToggleDropdown
+           type="Størrelse" title="250 g" option1="1000 g"/>
+           <ToggleDropdown
+           type="Antal" title="1" option1="1" option2="2" option3="3"/>
            <PrimaryButton text="Tilføj til kurven"/>
            
        </div>

@@ -7,7 +7,7 @@ import ToggleDropdown from "./ToggleDropdown.astro";
 const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4 } = Astro.props;
 ---
 
-<section class="grid md:grid-cols-2">
+<section class="grid md:grid-cols-2 bg-secondary_beige py-16">
     <KaffeGalleri/>
    <div class="">
         <h5>Espresso</h5>
@@ -19,13 +19,13 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4 } = Astro.
            </div>
         </div>
         <h2>159 DKK</h2>
-        <div class="flex gap-4">
+        <div class="flex gap-4 mb-4">
             <img src="/ikoner/stjerner.svg" alt="">
             <p class="underline">Se anmeldelser</p>
         </div>
-        <p>Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
+        <p class="mb-4">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
         <div class="flex justify-between">
-         <div class="md:flex gap-10">
+         <div class="md:flex gap-8">
                 <Skala
                 skala="Syrlighed"
                 beanImgPath1="/ikoner/bean-full.png"

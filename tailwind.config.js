@@ -11,6 +11,13 @@ export default {
         darkest_brown: "#35261C",
         accent_green: "#1e4b1e",
       },
+      fontSize: {
+        "heading-1": ["3.052rem"],
+        "heading-2": ["2.441rem"],
+        "heading-3": ["1.953rem"],
+        "heading-4": ["1.563rem"],
+        "heading-5": ["1.25rem"],
+      },
     },
   },
   plugins: [],

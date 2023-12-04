@@ -1,5 +1,40 @@
 ---
 import Card from "../components/Card.astro";
+import Heading from "../components/Heading.astro";
+import "../styles/style.css";
+import Sti from "../components/Sti.astro";
+import Testimonial from "../components/Testimonial.astro";
+import Single from "../components/Single.astro";
+import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import "..//styles/style.css";
 ---
+
+<MainLayout>
+<section class="">
+    <Sti
+    sti1="Forside"
+    divider1="/"
+    sti2="Gavekort"
+    />
+    <Single/>
+      <Forslag
+        link_side_1="/produktside"
+	    img_product_1="/billeder/forslag-1.jpg"
+        kategori_1="Espresso"
+	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
+	    price_1="FRA 79 DKK"
+
+        link_side_2="/produktside"
+	    img_product_2="/billeder/forslag-2.jpg"
+        kategori_2="Espresso"
+	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+	    price_2="FRA 79 DKK"
+
+        link_side_3="/produktside"
+	    img_product_3="/billeder/forslag-3.jpg"
+        kategori_3="Stempelkande"
+	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
+	    price_3="FRA 79 DKK"
+    />
+</section>
+</MainLayout>

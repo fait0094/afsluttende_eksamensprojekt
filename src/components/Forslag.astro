@@ -1,31 +1,54 @@
 ---
 import "../styles/style.css";
 import Heading from "./Heading.astro";
-import Card from "./Card.astro";
-const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4 } = Astro.props;
+import SecondaryButton from "./SecondaryButton.astro";
+const { kategori_1, title_1, price_1, buttonarrow, img_product_1, link_side_1, kategori_2, title_2, price_2, img_product_2, link_side_2, kategori_3, title_3, price_3, img_product_3, link_side_3 } = Astro.props;
 ---
+<section class="py-16">
+	<Heading><h2>Du vil muligvis synes godt om</h2><Heading/>
+		 <div class="flex gap-10">
+		<div class="bg-secondary_beige w-[21rem] mt-10 mx-auto"> 
+  <a href={link_side_1}>  <div><img src={img_product_1} alt="produkt_billeder"></div>
+  <div class="p-7"><h3 class="text-heading-5">{kategori_1}</h3>
+<h2 class="uppercase">{title_1}</h2>
+<div class="flex justify-between">
+<h3 class="uppercase">{price_1}</h3>
+<SecondaryButton/>
+</div>
+</div>
+</a>
+</div>
+		<div class="bg-secondary_beige w-[21rem] mt-10 mx-auto"> 
+  <a href={link_side_2}>  <div><img src={img_product_2} alt="produkt_billeder"></div>
+  <div class="p-7"><h3 class="text-heading-5">{kategori_2}</h3>
+<h2 class="uppercase">{title_2}</h2>
+<div class="flex justify-between">
+<h3 class="uppercase">{price_2}</h3>
+<SecondaryButton/>
+</div>
+</div>
+</a>
+</div>
+		<div class="bg-secondary_beige w-[21rem] mt-10 mx-auto"> 
+  <a href={link_side_3}>  <div><img src={img_product_3} alt="produkt_billeder"></div>
+  <div class="p-7"><h3 class="text-heading-5">{kategori_3}</h3>
+<h2 class="uppercase">{title_3}</h2>
+<div class="flex justify-between">
+<h3 class="uppercase">{price_3}</h3>
+<SecondaryButton/>
+</div>
+</div>
+</a>
+</div>
+		 </div>
+</section>
 
-<Heading><h2>Du vil muligvis synes godt om</h2><Heading/>
-	 <div class="flex gap-10">
-	 	<Card 
-	      link_side="/produktside"
-	      img_product="/produktbilleder/kaffeprodukt_1.png"
-	      kategori="Espresso"
-	      title="koffeinfri aftenkasse | fra colombia"
-	      price="fra 79DKK"
-	      />
-		   <Card 
-	      link_side="/produktside"
-	      img_product="/produktbilleder/kaffeprodukt_1.png"
-	      kategori="Espresso"
-	      title="koffeinfri aftenkasse | fra colombia"
-	      price="fra 79DKK"
-	      />
-		   <Card 
-	      link_side="/produktside"
-	      img_product="/produktbilleder/kaffeprodukt_1.png"
-	      kategori="Espresso"
-	      title="koffeinfri aftenkasse | fra colombia"
-	      price="fra 79DKK"
-	      />
-	 </div>
+<style>
+		/* <Card 
+		      link_side="/produktside"
+		      img_product="/produktbilleder/kaffeprodukt_1.png"
+		      kategori="Espresso"
+		      title="koffeinfri aftenkasse | fra colombia"
+		      price="fra 79DKK"
+		      /> */
+</style>

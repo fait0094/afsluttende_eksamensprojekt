@@ -1,0 +1,37 @@
+---
+import Sti from "../components/Sti.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import "..//styles/style.css";
+import Timer from "../components/Timer.astro";
+
+---
+
+<MainLayout
+  title="Det Lille Kafferisteri"
+  metacontent="(Indsæt metabeskrivelse her)"
+>
+
+<section>
+    <Sti
+    sti1="Forside"
+    divider1="/"
+    sti2="Shop"
+    divider2="/"
+    sti3="Friskristet Kaffeprodukter"
+    />
+    <Heading><h1>Friskristet kaffeprodukter</h1><Heading/>
+<p class="text-center">Gå på opdagelse i vores varianter af friskristet kaffe. Alle vores bønner er økologisk certificeret, ligesom vi så vidt muligt lever op til andre mærkninger, der støtter de lokale område, hvor bønnerne spirer. Velkommen til en smagsoplevelse, der går ud over det sædvanlige</p>
+<Timer/>
+</section>
+ 
+
+
+<section>
+<Heading><h2>Vores kaffeprodukter</h2><Heading/>
+<!-- Indsæt filtrering her -->
+</section>
+
+</MainLayout>
+
+

@@ -6,10 +6,6 @@ import SecondaryButton from "../components/SecondaryButton.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import ToggleDropdown from "../components/ToggleDropdown.astro";
 import Timer from "../components/Timer.astro";
-import Sti from "../components/Sti.astro";
-import Single from "../components/Single.astro";
-import Testimonial from "../components/Testimonial.astro";
-import Forslag from "../components/Forslag.astro";
 import "../styles/style.css";
 import InfoSection from "../components/InfoSection.astro";
 
@@ -18,68 +14,9 @@ import InfoSection from "../components/InfoSection.astro";
 <SecondLayout
   title="Det Lille Kafferisteri"
   metacontent="(Indsæt metabeskrivelse her)"
->
-<section class="md:max-w-3xl lg:max-w-6xl mx-auto">
-    <Sti/>
-    <Single/>
-    <Testimonial
-    testimonial_billede_1="/billeder/sarah.jpg"
-    testimonial_person_1="Sarah, 33 år"
-    testimonial_tekst_1="Jeg er virkelig kræsen, når det kommer til kaffe. Men jeg har virkelig fundet den kaffe der passer til mig. Den er rund i smagen og perfekt i kombination med min havremælk"
-    testimonial_billede_2="/billeder/kenneth.jpg"
-    testimonial_person_2="Kenneth, 65 år"
-    testimonial_tekst_2="Jeg går op i god kaffe og elsker at få tilsendt god kaffe hver måned. Derudover lærer jeg nye metoder, jeg ikke kendte til før."
-    />
-    <Forslag/>
-</section>
-
-
-
-
-      <Card 
-      link_side="/produktside"
-      img_product="/produktbilleder/kaffeprodukt_1.png"
-      kategori="Espresso"
-      title="koffeinfri aftenkasse | fra colombia"
-      price="fra 79DKK"
-      />
-      
-
-  <PrimaryButton 
-  text="læs mere"
-  >
-
-  <ToggleDropdown
-  type="type"
-  title="Vælg kaffebønner"
-  option1="Stempel"
-  option2="Filter"
-  option3="Espresso"
-  option4="Mellemristet og lysristet"
-  ></ToggleDropdown>
-  <Timer/>
-  
-      <Kategoricard
-    imgPath="/kategoricards/kaffeprodukter.webp"
-    title="Kaffeprodukter"
-    description="Udforsk vores sortiment af bæredygtige kaffebønner fra vores lokale risteri..."
-    link_side=""
-    
-    />
-
-   <InfoSection
-   img1="/produktbilleder/kaffeprodukt_1.png"
-   title1="Vælg din favorit kaffekasse..."
-   description1="Der opfylder dine specifikke behov, hvad enten det er smag, pris eller andre præferencer."
-   img2="/produktbilleder/kaffeprodukt_1.png"
-   title2="Vælg din favorit kaffekasse..."
-   description2="Der opfylder dine specifikke behov, hvad enten det er smag, pris eller andre præferencer."
-   img3="/produktbilleder/kaffeprodukt_1.png"
-   title3="Vælg din favorit kaffekasse..."
-   description3="Der opfylder dine specifikke behov, hvad enten det er smag, pris eller andre præferencer."
-   >
-   </InfoSection>
-
+/>
+ 
+<section class="h-scren bg-[url('/billeder/hero-billede.png')] bg-cover"></section>
 
 </SecondLayout>
 

@@ -2,8 +2,6 @@
 import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Card from "../components/Card.astro";
-import Kategoricard from "../components/Kategoricard.astro";
 
 const { title, metacontent } = Astro.props;
 ---
@@ -16,17 +14,16 @@ const { title, metacontent } = Astro.props;
     <meta name="robots" content="noindex" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={metacontent} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet">
     <title>{title}</title>
   </head>
   <body>
     <!-- Lav en seperat menu på forsiden?? Da den ikke er stylet på samme måde på andre sider -->
-    <Header />
-    <main>
-      <slot />   
+      <!-- <Header /> -->
+    <main class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto my-16">
+      <slot />
     </main>
-    <Footer />
   </body>
 </html>

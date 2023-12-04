@@ -1,13 +1,24 @@
 ---
-import Card from "../components/Card.astro";
+import Sti from "../components/Sti.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+
 import "..//styles/style.css";
 ---
 
 <MainLayout>
 
-    <!-- Familieejet virksomhed -->
+    <Sti>
 
+    </Sti>
+    <!-- Familieejet virksomhed -->
+<section class="flex gap-10">
+    <div>
+    <h2>familieejet virksomhed</h2>
+    <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
+Vores kaffehistorie startede for mere end 20 år siden. Vi havde oplevet værdien af den helt friske kaffe, så Anders gik i gang med at riste til os selv på en lille hjemmerister i køkkenet. Dette var begyndelsen på vores rejse.</p>
+</div>
+<img src="/om_os/signe-anders.png" alt="">
+</section>
 
     <!-- Kerneværdier -->
 
@@ -16,11 +27,11 @@ import "..//styles/style.css";
 <!-- Vores butik / billedegalleri -->
 
 <section class="grid grid-rows-2">
-    <img class="col-span-3 " src="/vores_butik/billede1.png" alt="kaffeposer">
-    <img class="col-start-4" src="/vores_butik/billede2.png" alt="we_love_coffee_billede">
-    <img src="/vores_butik/billede3.png" alt="kaffebakke">
-    <img src="/vores_butik/billede4.png" alt="kaffepuder">
-    <img src="/vores_butik/billede5.png" alt="kaffeskilt">
+    <img class="col-span-3 " src="/om_os/billede1.png" alt="kaffeposer">
+    <img class="col-start-4" src="/om_os/billede2.png" alt="we_love_coffee_billede">
+    <img src="/om_os/billede3.png" alt="kaffebakke">
+    <img src="/om_os/billede4.png" alt="kaffepuder">
+    <img src="/om_os/billede5.png" alt="kaffeskilt">
 </section>
 
 </MainLayout>

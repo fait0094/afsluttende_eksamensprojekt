@@ -1,12 +1,14 @@
 ---
 import Card from "../components/Card.astro";
-import MainLayout from "../layouts/MainLayout.astro";
+import SecondLayout from "../layouts/SecondLayout.astro";
 import "../styles/style.css";
 import Sti from "../components/Sti.astro";
 import Testimonial from "../components/Testimonial.astro";
 import Single from "../components/Single.astro";
 import Forslag from "../components/Forslag.astro";
 ---
+
+<SecondLayout>
 <section class="md:max-w-3xl lg:max-w-6xl mx-auto">
     <Sti/>
     <Single/>
@@ -20,3 +22,4 @@ import Forslag from "../components/Forslag.astro";
     />
     <Forslag/>
 </section>
+</SecondLayout>

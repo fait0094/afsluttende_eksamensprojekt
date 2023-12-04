@@ -118,3 +118,7 @@ header {
   background-image: url("/billeder/img header.png");
   background-size: cover;
 }
+
+section {
+  padding-block: 4rem;
+}

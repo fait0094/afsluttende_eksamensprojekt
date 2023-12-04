@@ -1,0 +1,30 @@
+---
+import "../styles/style.css";
+import Heading from "./Heading.astro";
+const { testimonial_billede_1, testimonial_person_1, testimonial_tekst_1, testimonial_billede_2, testimonial_person_2, testimonial_tekst_2 } = Astro.props;
+---
+
+<section>
+    <Heading
+    heading="Det siger vores kunder"
+    />
+    <div class="grid grid-cols-2 gap-10">
+   <div class="grid grid-cols-5">
+        <img src={testimonial_billede_1} alt="" class="col-span-1">
+        <div class="col-span-4">
+            <h3>{testimonial_person_1}</h3>
+            <img src="/ikoner/stjerner.svg" alt="">
+            <p>"{testimonial_tekst_1}"</p>
+        </div>
+   </div>
+   <div class="grid grid-cols-5">
+        <img src={testimonial_billede_2} alt="" class="col-span-1">
+        <div class="col-span-4">
+            <h3>{testimonial_person_2}</h3>
+            <img src="/ikoner/stjerner.svg" alt="">
+            <p>"{testimonial_tekst_2}"</p>
+        </div>
+   </div>
+</div>
+</section>
+

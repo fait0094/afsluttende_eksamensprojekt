@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+const {headerImg} = Astro.props;
 ---
 
 <header>
@@ -23,9 +24,9 @@ import "../styles/style.css";
 
 <div>
 
-      <div id="header"
-        class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto h-32 items-center"
-      >
+  <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden" >
+      <div
+        class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto h-32 items-center">
         <div class="flex">
           <a href="/index"
             ><img
@@ -35,6 +36,7 @@ import "../styles/style.css";
             /></a
           >
         </div>
+
 
         <ul class="flex gap-16 items-center text-white">
           <li class="uppercase hover:underline">
@@ -55,6 +57,7 @@ import "../styles/style.css";
         </ul>
         </div>
       </div>
+    </div>
     </div>
 </div>
     </nav>

@@ -1,6 +1,8 @@
 ---
 import Kategoricard from "../components/Kategoricard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Sti from "../components/Sti.astro";
+import Heading from "../components/Heading.astro";
 import "..//styles/style.css";
 ---
 
@@ -10,59 +12,70 @@ import "..//styles/style.css";
   title="Det Lille Kafferisteri"
   metacontent="(Indsæt metabeskrivelse her)"
 >
+<div class="bg-secondary_beige md:max-w-3xl lg:max-w-6xl mx-auto">
+  <Sti
+      sti1="Forside"
+      divider1="/"
+      sti2="Shop"
+      />
+    
+  <section class="py-16">
+    <Heading><h2>Shop</h2><Heading/>
   
-<section class="grid justify-center lg:grid-cols-3 gap-10 md:grid-cols-2 py-16">
-      <Kategoricard
-      backgroundImage="/kategoricards/kaffeprodukter.webp"
-    title="Kaffeprodukter"
-    description="Udforsk vores sortiment af bæredygtige kaffebønner fra vores lokale risteri..."
-    link_side="/"
+        <div class="grid justify-center lg:grid-cols-3 gap-10 md:grid-cols-2">
+          <Kategoricard
+          backgroundImage="/kategoricards/kaffeprodukter.webp"
+        title="Kaffeprodukter"
+        description="Udforsk vores sortiment af bæredygtige kaffebønner fra vores lokale risteri..."
+        link_side="/"
+        
+        />
+          <Kategoricard
+       backgroundImage="/kategoricards/kaffekassen.webp"
+        title="Kaffekassen"
+        description="Bliv en del af kaffekassen og modtag hver måned en pakke med lækkerier..."
+        link_side="/"
+        
+        />
     
-    />
-      <Kategoricard
-   backgroundImage="/kategoricards/kaffekassen.webp"
-    title="Kaffekassen"
-    description="Bliv en del af kaffekassen og modtag hver måned en pakke med lækkerier..."
-    link_side="/"
+          <Kategoricard
+       backgroundImage="/kategoricards/lidt_til_kaffen.webp"
+        title="Lidt Til Kaffen"
+        description="Opdag vores sortiment af delikate søde fristelser og nyd det sammen med kaffen..."
+        link_side="/"
+        
+        />
     
-    />
-
-      <Kategoricard
-   backgroundImage="/kategoricards/lidt_til_kaffen.webp"
-    title="Lidt Til Kaffen"
-    description="Opdag vores sortiment af delikate søde fristelser og nyd det sammen med kaffen..."
-    link_side="/"
+          <Kategoricard
+       backgroundImage="/kategoricards/kaffetilbehor.webp"
+        title="Kaffetilbehør"
+        description="Se vores udvalg af kaffetilbehør, kaffefiltre, kaffebryggere mv..."
+        link_side="/"
+        
+        />
     
-    />
-
-      <Kategoricard
-   backgroundImage="/kategoricards/kaffetilbehor.webp"
-    title="Kaffetilbehør"
-    description="Se vores udvalg af kaffetilbehør, kaffefiltre, kaffebryggere mv..."
-    link_side="/"
+          <Kategoricard
+       backgroundImage="/kategoricards/hudpleje.webp"
+        title="Hudpleje"
+        description="Forkæl din krop med luksuriøse hudplejeprodukter, der er fremstillet med kaffe..."
+        link_side="/"
+        
+        />
     
-    />
-
-      <Kategoricard
-   backgroundImage="/kategoricards/hudpleje.webp"
-    title="Hudpleje"
-    description="Forkæl din krop med luksuriøse hudplejeprodukter, der er fremstillet med kaffe..."
-    link_side="/"
-    
-    />
-
-      <Kategoricard
-   backgroundImage="/kategoricards/rengoring.webp"
-    title="Rengøring"
-    description="Rengøring af dit brygudstyr har en stor betydning for et godt resultat for din kaffe..."
-    link_side="/"
-    
-    />
-
-
-
-
-</section>
+          <Kategoricard
+       backgroundImage="/kategoricards/rengoring.webp"
+        title="Rengøring"
+        description="Rengøring af dit brygudstyr har en stor betydning for et godt resultat for din kaffe..."
+        link_side="/"
+        
+        />
+        </div>
+  
+  
+  
+  
+  </section>
+</div>
 
 </MainLayout>
 

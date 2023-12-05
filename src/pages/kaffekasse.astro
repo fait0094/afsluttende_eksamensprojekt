@@ -11,14 +11,15 @@ import "..//styles/style.css";
 
 <MainLayout>
 <!-- ABONNOMENT SECTION HER -->
-<section class="grid justify-center bg-secondary_beige py-16">
+<section class="grid justify-center py-16">
 <Heading><h2>abonnement</h2><Heading/>
 
     <p class="text-center">Vælg en abonnementløsning hos Det lille kafferisteri. Vores abonnement, Kaffekassen, er nøglen til kaffeviden og bryggemetoder. Med abonnementet får du uundværlig læring, lækker kaffe og spændende gaver, der forbedrer din kaffeoplevelse. Bliv klogere og gladere med vores månedlige overraskelser og sjove kaffeoplevelser.</p>
 </section>
 
-<Heading><h2>vores udvalg</h2><Heading/>
-<section class="lg:flex lg:justify-evenly grid md:grid-cols-2">
+<div class="bg-primary_white py-16">
+<Heading><h2>vores udvalg af kaffekasser</h2><Heading/>
+<section class="lg:flex lg:justify-evenly grid md:grid-cols-2 gap-10">
     <Card 
     link_side="kaffekassesingle"
     img_product="/produktbilleder/kaffekasse.png"
@@ -42,13 +43,12 @@ import "..//styles/style.css";
           </Card>
 
 </section>
-
+</div>
 <!-- SÅDAN BESTILLER DU SECTION HER -->
 
-<section class="bg-secondary_beige">
+<section class="bg-secondary_beige py-16">
+    <div class="md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto">
 <Heading><h2>sådan bestiller du en kaffekasse</h2><Heading/>
-
-
 <InfoSection
 img1="/ikoner/kvalitet.svg"
 title1="vælg din favorit kaffekasse... "
@@ -63,6 +63,8 @@ title3="Modtag din kaffekasse..."
 description3="og oplev ren nydelse af den friskristede kaffe sammen med en lille sød overraskelse"
 >
 </InfoSection>
+</div>
 </section>
+</div>
 
 </MainLayout>

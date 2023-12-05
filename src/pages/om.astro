@@ -8,57 +8,69 @@ import InfoSection from "../components/InfoSection.astro";
 ---
 
 <MainLayout>
-<section class="bg-secondary_beige py-16">
-    <Sti
-    sti1="Forside"
-    divider1="/"
-    sti2="Om Os"
-    >
-    </Sti>
-    <!-- Familieejet virksomhed -->
-<div class="grid gap-10 md:flex lg:flex">
-    <div>
-    <h2>familieejet virksomhed</h2>
-    <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
-Vores kaffehistorie startede for mere end 20 år siden. Vi havde oplevet værdien af den helt friske kaffe, så Anders gik i gang med at riste til os selv på en lille hjemmerister i køkkenet. Dette var begyndelsen på vores rejse.</p>
-</div>
-<img src="/om_os/signe-anders.png" alt="">
-</div>
+<section class="">
+    <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Sti
+        sti1="Forside"
+        divider1="/"
+        sti2="Om Os"
+        >
+        </Sti>
+        <!-- Familieejet virksomhed -->
+    <div class="grid gap-10 md:flex lg:flex py-16">
+        <div>
+        <h2>familieejet virksomhed</h2>
+        <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
+    Vores kaffehistorie startede for mere end 20 år siden. Vi havde oplevet værdien af den helt friske kaffe, så Anders gik i gang med at riste til os selv på en lille hjemmerister i køkkenet. Dette var begyndelsen på vores rejse.</p>
+    </div>
+    <img src="/om_os/signe-anders.png" alt="">
+    </div>
+    </div>
 </section>
 
     <!-- Kerneværdier -->
-<InfoSection
-img1="/ikoner/kvalitet.svg"
-title1="Kvalitet"
-description1="Vi køber kvalitets kaffebønner og arbejder på at få det bedste frem i bønnerne."
-
-img2="/ikoner/baeredygtighed.svg"
-title2="Bæredygtighed"
-description2="Vi brygger kaffe med god samvittighed og går ind for bæredygtighed."
-
-img3="/ikoner/okologi.svg"
-title3="Økologi"
-description3="Det er vigtigt for os, at vores kaffe er certificeret økologisk."
->
-</InfoSection>
+<section class="bg-primary_white py-16">
+    <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Heading><h2>Vores kerneværdier</h2><Heading/>
+        <InfoSection
+        img1="/ikoner/kvalitet.svg"
+        title1="Kvalitet"
+        description1="Vi køber kvalitets kaffebønner og arbejder på at få det bedste frem i bønnerne."
+        
+        img2="/ikoner/baeredygtighed.svg"
+        title2="Bæredygtighed"
+        description2="Vi brygger kaffe med god samvittighed og går ind for bæredygtighed."
+        
+        img3="/ikoner/okologi.svg"
+        title3="Økologi"
+        description3="Det er vigtigt for os, at vores kaffe er certificeret økologisk."
+        >
+        </InfoSection>
+    </div>
+</section>
 
     <!-- Lokation -->
-<section class="grid gap-10 bg-secondary_beige md:flex lg:flex py-16">
-    <img src="/om_os/location.png" alt="lokation_hundested">
-    <div>
-        <h2>Lokation</h2>
-        <p>Vi er lokaliseret i Hundested Havn. Vi har åbent hele året, men er særlig kendt for sommerperioderne.</p>
-   <a class="underline" href="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB">Find rutevejledning</a>
-    </div>
+<section class="py-16">
+   <div class="grid gap-10 md:flex lg:flex md:max-w-3xl lg:max-w-6xl mx-auto ">
+        <img src="/om_os/location.png" alt="lokation_hundested">
+        <div>
+            <h2>Lokation</h2>
+            <p>Vi er lokaliseret i Hundested Havn. Vi har åbent hele året, men er særlig kendt for sommerperioderne.</p>
+       <a class="underline" href="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB">Find rutevejledning</a>
+        </div>
+   </div>
 </section>
 <!-- Vores butik / billedegalleri -->
 
-<section class="grid grid-cols-8 grid-rows-2 gap-5 py-16">
-    <img class="col-span-3 " src="/om_os/billede1.png" alt="kaffeposer">
-    <img class="col-span-5" src="/om_os/billede2.png" alt="we_love_coffee_billede">
-    <img class="col-span-4" src="/om_os/billede3.png" alt="kaffebakke">
-    <img class="col-span-2" src="/om_os/billede4.png" alt="kaffepuder">
-    <img class="col-span-2" src="/om_os/billede5.png" alt="kaffeskilt">
-</section>
+<section class="bg-primary_white py-16">
+    <Heading><h2>Vores butik</h2><Heading/>
+   <div class="md:max-w-3xl lg:max-w-6xl mx-auto grid grid-cols-8 grid-rows-2 gap-5">
+        <img class="col-span-3 " src="/om_os/billede1.png" alt="kaffeposer">
+        <img class="col-span-5" src="/om_os/billede2.png" alt="we_love_coffee_billede">
+        <img class="col-span-4" src="/om_os/billede3.png" alt="kaffebakke">
+        <img class="col-span-2" src="/om_os/billede4.png" alt="kaffepuder">
+        <img class="col-span-2" src="/om_os/billede5.png" alt="kaffeskilt">
+    </section>
+   </div>
 
 </MainLayout>

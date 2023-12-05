@@ -11,30 +11,37 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
 <section class="">
-    <Sti
-    sti1="Forside"
-    divider1="/"
-    sti2="Shop"
-    divider2="/"
-    sti3="Kaffe"
-    />
-    <Single/>
-   <Forslag
-        link_side_1="/produktside"
-	    img_product_1="/kaffekasse_single/kaffekassen.jpg"
-	    title_1="kaffekassen | mini"
-	    price_1="119 DKK/MÅNED"
-
-        link_side_2="/produktside"
-	    img_product_2="/kaffekasse_single/kaffekassen.jpg"
-	    title_2="kaffekassen | mellem"
-	    price_2="159 DKK/MÅNED"
-
-        link_side_3="/produktside"
-	    img_product_3="/kaffekasse_single/kaffekassen.jpg"
-	    title_3="kaffekassen | deluxe"
-	    price_3="299 DKK/MÅNED"
-    />
+   <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Sti
+        sti1="Forside"
+        divider1="/"
+        sti2="Shop"
+        divider2="/"
+        sti3="Kaffe"
+        />
+        <Single/>
+   </div>
+    <section class="bg-primary_white">
+   <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+       <Forslag
+       heading="Du vil muligvis synes godt om"
+            link_side_1="/produktside"
+    	    img_product_1="/kaffekasse_single/kaffekassen.jpg"
+    	    title_1="kaffekassen | mini"
+    	    price_1="119 DKK/MÅNED"
+    
+            link_side_2="/produktside"
+    	    img_product_2="/kaffekasse_single/kaffekassen.jpg"
+    	    title_2="kaffekassen | mellem"
+    	    price_2="159 DKK/MÅNED"
+    
+            link_side_3="/produktside"
+    	    img_product_3="/kaffekasse_single/kaffekassen.jpg"
+    	    title_3="kaffekassen | deluxe"
+    	    price_3="299 DKK/MÅNED"
+        />
+   </div>
+    </section>
     <Testimonial
     testimonial_billede_1="/billeder/sarah.png"
     testimonial_person_1="Sarah, 33 år"

@@ -11,30 +11,35 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
 <section class="">
-    <Sti
-    sti1="Forside"
-    divider1="/"
-    sti2="Gavekort"
-    />
-    <Single/>
-      <Forslag
-        link_side_1="/produktside"
-	    img_product_1="/billeder/forslag-1.jpg"
-        kategori_1="Espresso"
-	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
-	    price_1="FRA 79 DKK"
-
-        link_side_2="/produktside"
-	    img_product_2="/billeder/forslag-2.jpg"
-        kategori_2="Espresso"
-	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
-	    price_2="FRA 79 DKK"
-
-        link_side_3="/produktside"
-	    img_product_3="/billeder/forslag-3.jpg"
-        kategori_3="Stempelkande"
-	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
-	    price_3="FRA 79 DKK"
-    />
+    <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Sti
+        sti1="Forside"
+        divider1="/"
+        sti2="Gavekort"
+        />
+        <Single/>
+    </div>
+      <div class="bg-primary_white">
+          <Forslag
+          heading="Du vil muligvis synes godt om"
+            link_side_1="/produktside"
+    	    img_product_1="/billeder/forslag-1.jpg"
+            kategori_1="Espresso"
+    	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
+    	    price_1="FRA 79 DKK"
+    
+            link_side_2="/produktside"
+    	    img_product_2="/billeder/forslag-2.jpg"
+            kategori_2="Espresso"
+    	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+    	    price_2="FRA 79 DKK"
+    
+            link_side_3="/produktside"
+    	    img_product_3="/billeder/forslag-3.jpg"
+            kategori_3="Stempelkande"
+    	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
+    	    price_3="FRA 79 DKK"
+        />
+      </div>
 </section>
 </MainLayout>

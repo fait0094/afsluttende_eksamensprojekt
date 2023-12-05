@@ -5,24 +5,26 @@ const { testimonial_billede_1, testimonial_person_1, testimonial_tekst_1, testim
 ---
 
 <section class="bg-secondary_beige py-16">
-  <Heading><h2>Det siger vores kunder</h2><Heading/>
-    <div class="grid grid-cols-2 gap-10">
-   <div class="grid grid-cols-5">
-        <img src={testimonial_billede_1} alt="" class="col-span-1">
-        <div class="col-span-4">
-            <h3>{testimonial_person_1}</h3>
-            <img src="/ikoner/stjerner.svg" alt="">
-            <p>"{testimonial_tekst_1}"</p>
-        </div>
-   </div>
-   <div class="grid grid-cols-5">
-        <img src={testimonial_billede_2} alt="" class="col-span-1">
-        <div class="col-span-4">
-            <h3>{testimonial_person_2}</h3>
-            <img src="/ikoner/stjerner.svg" alt="">
-            <p>"{testimonial_tekst_2}"</p>
-        </div>
-   </div>
-</div>
+ <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+    <Heading><h2>Det siger vores kunder</h2><Heading/>
+      <div class="grid grid-cols-2 gap-10">
+     <div class="grid grid-cols-5">
+          <img src={testimonial_billede_1} alt="" class="col-span-1">
+          <div class="col-span-4">
+              <h3>{testimonial_person_1}</h3>
+              <img src="/ikoner/stjerner.svg" alt="">
+              <p>"{testimonial_tekst_1}"</p>
+          </div>
+     </div>
+     <div class="grid grid-cols-5">
+          <img src={testimonial_billede_2} alt="" class="col-span-1">
+          <div class="col-span-4">
+              <h3>{testimonial_person_2}</h3>
+              <img src="/ikoner/stjerner.svg" alt="">
+              <p>"{testimonial_tekst_2}"</p>
+          </div>
+     </div>
+  </div>
+ </div>
 </section>
 

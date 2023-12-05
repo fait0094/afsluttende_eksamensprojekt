@@ -5,7 +5,7 @@ import "../styles/style.css";
 
 <div class="text-center">
 <h3>Næste kafferistning begynder om:</h3>
-<h4 id="timer"></h4>
+<h4 id="timer" class="text-heading-2"></h4>
 </div>
 <script>
 // Set the date we're counting down to
@@ -20,7 +20,7 @@ var x = setInterval(function() {
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
     
-  // Time calculations for days, hours, minutes and seconds
+  // Timer der tæller dage, timer, minutter og sekunder
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));

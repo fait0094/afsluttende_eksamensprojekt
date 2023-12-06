@@ -23,27 +23,38 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="grid md:grid-cols-3 gap-10">
             <!-- Produkt -->
             <div class="bg-primary_white border border-darkest_brown p-10 col-span-2">
-                <div class="grid grid-rows-3">
+                <div class="grid grid-rows-4">
 
-                   <div class="grid grid-cols-5">
-                    <h2 class="col-span-2">Produkt</h2>
-                    <h2>Pris</h2>
-                    <h2>Antal</h2>
-                    <h2>Subtotal</h2>
+                   <div>
+                       <div class="grid grid-cols-5">
+                        <h2 class="col-span-2">Produkt</h2>
+                        <h2>Pris</h2>
+                        <h2>Antal</h2>
+                        <h2>Subtotal</h2>
+                        
+    
+                       </div>
+                       <div class="border-b border-gray-500 w-full"></div>
+
                    </div>
+
+
+
+
+
 
                    <div class="grid grid-cols-5 items-center">
                     <div class="flex gap-6 col-span-2"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
                     <p>159 DKK</p>
                     <ToggleDropdown title="1" option1="2"/>
-                    <p>159 DKK</p>
+                    <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                    <div class="grid grid-cols-5  items-center">
                     <div class="flex gap-6 col-span-2"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
                     <p>159 DKK</p>
                     <ToggleDropdown title="1" option1="2"/>
-                    <p>159 DKK</p>
+                   <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                 </div>
@@ -53,7 +64,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             <div class="bg-primary_white border border-darkest_brown p-10 col-span-1">
             <h2>Subtotal</h2>
             <div class="flex space-x-24"><h3 class="">Subtotal</h3><p>717 DKK</p></div>
-            <div class="flex space-x-24"><h3 class="">Levering</h3><p>50 DKK</p></div>
+            <div class="flex space-x-24 border-b border-darkest_brown"><h3 class="">Levering</h3><p>50 DKK</p></div>
             <div class="flex space-x-24"><h3 class="">Pris i alt</h3><p>767 DKK</p></div>
              <PrimaryButton text="Videre til kassen"></PrimaryButton>
             </div>

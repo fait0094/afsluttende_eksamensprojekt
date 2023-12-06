@@ -65,7 +65,8 @@ iframe {
 }
 
 /* Fælles styling */
-body {
+body,
+.body-text {
   font-family: "Barlow Condensed", sans-serif;
   font-size: var(--body-default);
   line-height: 1.5;

@@ -1,0 +1,130 @@
+---
+import Card from "../components/Card.astro";
+import Heading from "../components/Heading.astro";
+import "../styles/style.css";
+import Sti from "../components/Sti.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+import ToggleDropdown from "../components/ToggleDropdown.astro";
+import Forslag from "../components/Forslag.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+<section class="">
+    <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Sti
+        sti1="Forside"
+        divider1="/"
+        sti2="Indkøbskurv"
+        />
+        <Heading><h1>Indkøbskurv</h1><Heading/>
+
+        <!--  Kasse 1: Indhold i kurv -->
+        <div class="grid md:grid-cols-3 gap-10">
+            <!-- Produkt -->
+            <div class="bg-primary_white border border-darkest_brown p-10 col-span-2">
+                <div class="grid grid-rows-4 gap-4">
+
+                   <div>
+                       <div class="grid grid-cols-5">
+                        <h2 class="col-span-2 text-heading-4">Produkt</h2>
+                        <h2 class="text-heading-4">Pris</h2>
+                        <h2 class="text-heading-4">Antal</h2>
+                        <h2 class="text-heading-4">Subtotal</h2>
+                        
+    
+                       </div>
+                       <div class="border-b border-gray-500 w-full"></div>
+
+                   </div>
+
+                   <div class="grid grid-cols-5 items-center">
+                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
+                    <p>159 DKK</p>
+                    <ToggleDropdown title="1" option1="2"/>
+                    <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                   </div>
+
+                   <div class="grid grid-cols-5 items-center">
+                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
+                    <p>159 DKK</p>
+                    <ToggleDropdown title="1" option1="2"/>
+                   <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                   </div>
+
+                </div>
+            </div>
+
+            <!-- Kasse 2: Subtotal -->
+            <div class="bg-primary_white border border-darkest_brown p-10 col-span-1 grid gap-4">
+            <h2 class="text-heading-4 border-b border-darkest_brown">Subtotal</h2>
+            <div class="flex space-x-24"><p class="">Subtotal</p><p>717 DKK</p></div>
+            <div class="flex space-x-24 border-b border-darkest_brown"><p class="">Levering</p><p>50 DKK</p></div>
+            <div class="flex space-x-24"><p class="">Pris i alt</p><p>767 DKK</p></div>
+             <PrimaryButton text="Videre til kassen"></PrimaryButton>
+            </div>
+
+        </div>
+        
+       
+    </div>
+</section>
+
+<div class="bg-primary_white">
+        <Forslag
+        heading="Du vil muligvis synes godt om"
+            link_side_1="/produktside"
+    	    img_product_1="/kaffekasse_single/kaffekassen.jpg"
+    	    title_1="kaffekassen | mini"
+    	    price_1="119 DKK/MÅNED"
+    
+            link_side_2="/produktside"
+    	    img_product_2="/kaffekasse_single/kaffekassen.jpg"
+    	    title_2="kaffekassen | mellem"
+    	    price_2="159 DKK/MÅNED"
+    
+            link_side_3="/produktside"
+    	    img_product_3="/kaffekasse_single/kaffekassen.jpg"
+    	    title_3="kaffekassen | deluxe"
+    	    price_3="299 DKK/MÅNED"
+        />
+</div>
+
+</MainLayout>
+
+<style>
+    /* <!-- Produkt -->
+            <div class="bg-primary_white border border-darkest_brown p-10 col-span-2">
+                <div class="grid grid-cols-5">
+                    <div class="col-span-2">
+                        <h2>Produkt</h2>
+                        <div class="flex gap-6"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
+                        <div class="flex gap-6"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffemik 1000g</p></div>
+                    </div>
+
+                    <!-- Pris -->
+                    <div>
+                    <h2>Pris</h2>
+                     <p>159 DKK</p>
+                     <p>279 DKK</p>
+                    </div>
+
+                    <!-- Antal -->
+                    <div>
+                    <h2>Antal</h2>
+                      <ToggleDropdown
+          title="1" option1="2"/>
+            <ToggleDropdown
+          title="2" option1="1"/>
+                    </div>
+                   
+                    <!-- Subtotal -->
+                     <div>
+                    <h2>Subtotal</h2>
+                     <p>159 DKK</p>
+                     <p>558 DKK</p>
+                    </div>
+
+                </div>
+            </div> */
+</style>

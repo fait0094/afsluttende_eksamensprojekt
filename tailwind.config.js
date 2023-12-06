@@ -13,6 +13,7 @@ export default {
         light_accent_green: "#426A46",
       },
       fontSize: {
+        "body-text": ["1rem"],
         "heading-1": ["3.052rem"],
         "heading-2": ["2.441rem"],
         "heading-3": ["1.953rem"],

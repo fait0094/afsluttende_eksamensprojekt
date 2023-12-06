@@ -3,22 +3,63 @@ import Card from "../components/Card.astro";
 import Heading from "../components/Heading.astro";
 import "../styles/style.css";
 import Sti from "../components/Sti.astro";
-import Testimonial from "../components/Testimonial.astro";
-import Single from "../components/Single.astro";
+import ToggleDropdown from "../components/ToggleDropdown.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import KaffeGalleri from "../components/KaffeGalleri.astro";
 ---
 
 <MainLayout>
-<section class="">
+
+<section class="py-16">
+  
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
         <Sti
         sti1="Forside"
         divider1="/"
         sti2="Gavekort"
         />
-        <Single/>
+      
+        <!-- <Single/> -->
+
+       <div class="grid md:grid-cols-2">
+          <KaffeGalleri
+          galleri_1="/gavekort/gavekort.jpg"
+          galleri_2="/gavekort/gavekort-1.jpg"
+          galleri_3="/gavekort/gavekort-2.jpg"
+          galleri_4="/gavekort/gavekort-3.jpg"
+          />
+          <div class="">
+             <h1>Gavekort</h1>
+             <p class="mb-4">Overrask en du holder af med et gavekort til Det Lille Kafferisteri. Gavekortet er tilgængeligt både fysisk og digitalt via mail. Vælg beløb, tilpas og glæd dine nærmeste med smagen af kvalitetskaffe.</p>
+<ul class="custom-list">
+  <li class="flex mb-4"><p>Gyldigt i 36 måneder</p></li>
+  <li class="flex mb-4"><p>Kan opdeles over flere køb</p></li>
+  <li class="flex mb-4"><p>Kan ikke ombyttes til kontanter</p></li>
+  <li class="flex mb-4"><p>Fysisk kort eller digital via mail</p></li>
+</ul>
+
+
+        <!-- Inputfelter -->
+       <div class="">
+           <ToggleDropdown
+           type="Type" title="Digitalt gavekort" option1="Fysisk gavekort"/>
+           <ToggleDropdown
+           type="Beløb" title="200 DKK" option1="300 DKK"/>
+          <div class="grid grid-row md:grid-cols-2 gap-5">
+             <ToggleDropdown
+             type="Antal" title="1" option1="1" option2="2" option3="3"/>
+             <PrimaryButton text="Tilføj til kurven"/>
+          </div>
+           
+       </div>
+   </div>
+       </div>
     </div>
+</section>
+
+
       <div class="bg-primary_white">
           <Forslag
           heading="Du vil muligvis synes godt om"
@@ -41,5 +82,20 @@ import MainLayout from "../layouts/MainLayout.astro";
     	    price_3="FRA 79 DKK"
         />
       </div>
-</section>
+
 </MainLayout>
+
+<style>
+  .custom-list {
+    list-style-type: none;
+  }
+
+  .custom-list li::before {
+    content: url('/ikoner/bean.svg');
+    display: inline-block;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+</style>
+

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+img,
+iframe {
+  max-width: 100%;
+  /* align-self: stretch; */
+  /* object-fit: cover; */
+}
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import "..//styles/style.css";
 import Timer from "../components/Timer.astro";
+import Card from "../components/Card.astro";
 
 ---
 
@@ -11,8 +12,7 @@ import Timer from "../components/Timer.astro";
   title="Det Lille Kafferisteri"
   metacontent="(Indsæt metabeskrivelse her)"
 >
-
-<section>
+<!-- <section>
     <Sti
     sti1="Forside"
     divider1="/"
@@ -23,14 +23,229 @@ import Timer from "../components/Timer.astro";
     <Heading><h1>Friskristet kaffeprodukter</h1><Heading/>
 <p class="text-center">Gå på opdagelse i vores varianter af friskristet kaffe. Alle vores bønner er økologisk certificeret, ligesom vi så vidt muligt lever op til andre mærkninger, der støtter de lokale område, hvor bønnerne spirer. Velkommen til en smagsoplevelse, der går ud over det sædvanlige</p>
 <Timer/>
-</section>
+</section> -->
  
 
 <!-- Filtrering -->
-<section>
-<Heading><h2>Vores kaffeprodukter</h2><Heading/>
-<!-- Indsæt filtrering her -->
-</section>
+<!-- <Heading><h2>Vores kaffeprodukter</h2><Heading/> -->
+
+<section
+    id="step"
+    x-data="{ dyr: 'alledyr', lokation: 'allelokationer', alder: 'allealder', kon: 'allekon', skjultedyr : 0 }"
+  >
+    <!-- Filterknapper -->
+    <section class="px-8 md:px-12">
+      <div class="mb-10 mx-10">
+        <form id="filtre" class="flex gap-8 justify-center">
+          <!-- Dyr -->
+          <div class="grid gap-2">
+            <label for="dyr">Dyr</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="dyr"
+              id="dyr"
+              x-model="dyr"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingendyr() });"
+            >
+              <option value="alledyr">Alle dyr</option>
+              <option value="hund">Hund</option>
+              <option value="kat">Kat</option>
+              <option value="kanin">Kanin</option>
+              <option value="marsvin">Marsvin</option>
+              <option value="orkenrotte">Ørkenrotte</option>
+            </select>
+          </div>
+
+          <!-- Lokation -->
+          <div class="grid gap-2">
+            <label for="lokation">Lokation</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="lokation"
+              id="lokation"
+              x-model="lokation"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingendyr() });"
+            >
+              <option value="allelokationer">Alle lokationer</option>
+              <option value="sjaelland">Sjælland</option>
+              <option value="jylland">Jylland</option>
+            </select>
+          </div>
+
+          <!-- Køn -->
+          <div class="grid gap-2">
+            <label for="kon">Køn</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="kon"
+              id="kon"
+              x-model="kon"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingendyr() });"
+            >
+              <option value="allekon">Alle køn</option>
+              <option value="han">Han</option>
+              <option value="hun">Hun</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!---------------- Dyr til adoption – indhold der kan filtreres i ------------------>
+
+    <div class="grid md:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'hund'].includes(dyr) && ['allelokationer', 'sjaelland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+         <Card
+    kategori="Espresso"
+    title="KAFFEMIK | MEXICO & GUATAMALA"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'hund'].includes(dyr) && ['allelokationer', 'jylland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Lmalea Apso / Cavalier King Charles"
+          title="karlo"
+          description=" Vores lille mini-Chewbacca her skal lige se nye folk an, før han overgiver sig helt, så ny familie må ikke forvente instant connection"
+          imgPath="/adoption/karlo.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'hund'].includes(dyr) && ['allelokationer', 'sjaelland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Labrador-blanding"
+          title="zico"
+          description=" Zico er en flot fyr på kun 7 måneder, der er overdraget til Dyreværnet, da Zico og tidligere ejer var landet i en dårlig spiral, der påvirkede begge parter negativt, så noget måtte gøres."
+          imgPath="/adoption/zico.png"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'kat'].includes(dyr) && ['allelokationer', 'jylland'].includes(lokation) && ['allekon', 'hun'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Udekat"
+          title="killing"
+          description=" Killing er en skøn rød/hvid kattepige, der er glad for større børn, og har boet sammen med mindre hund også. "
+          imgPath="/adoption/killing.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'kat'].includes(dyr) && ['allelokationer', 'sjaelland'].includes(lokation) && ['allekon', 'hun'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Indekat"
+          title="pjuske"
+          description=" Pjuske er en meget social pige, der elsker alle mennesker og har været vant til børnebørn mellem 3-12 på besøg, hvilket har været SÅ skønt."
+          imgPath="/adoption/pjuske.webp"
+          link_side="/singleview"
+          femaleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'kat'].includes(dyr) && ['allelokationer', 'sjaelland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Udekat"
+          title="purrseidon"
+          description="Purrseidon er en stor og flot hankat, der har haft et noget turbulent og voldsomt liv som ikke kastreret hankat, indtil nu. "
+          imgPath="/adoption/purrisedon.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'kanin'].includes(dyr) && ['allelokationer', 'jylland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Dværgkanin"
+          title="waterloo"
+          description="Waterloo er en sød lille spirrevip, der har brug for at være mere i hænder, da det nok har været sparsomt med håndtering i tidligere hjem."
+          imgPath="/adoption/waterloo.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'marsvin'].includes(dyr) && ['allelokationer', 'sjaelland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Glathåret marsvin"
+          title="søren"
+          description=" Søren har i sandhed formået at sætte mange hjerter i brand her hos os, da han bare er noget af det sødeste lille væsen."
+          imgPath="/adoption/soren.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['alledyr', 'orkenrotte'].includes(dyr) && ['allelokationer', 'jylland'].includes(lokation) && ['allekon', 'han'].includes(kon)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <Card
+          kategori="Ørkenrotte"
+          title="starstruck"
+          description="Starstruck er en skøn ørkenrotte, der desværre har mistet sin ven, og han er derfor på jagt efter en ny erfaren ejer."
+          imgPath="/adoption/starstruck.webp"
+          link_side="/singleview"
+          maleicon={true}
+        />
+      </section>
+
+
+      <!-- Denne vises, hvis ingen dyr matcher filtre (Se funktion i MainLayout) -->
+      <p id="ingendyr" class="hidden">
+        Der er desværre ingen dyr til adoption, som matcher dine valgte filtre.
+      </p>
+    </div>
+  </section>
 
 </MainLayout>
 

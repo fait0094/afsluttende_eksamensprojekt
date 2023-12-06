@@ -21,8 +21,8 @@ const {headerImg} = Astro.props;
       </div>
 
             <div class="px-10 py-5 lg:pt-0">
-        <div class="flex">
-          <div class="flex-1 ">
+        <div class="flex jusify-between">
+          <div class="flex-1  md:hidden">
             <a href="/"
               ><img
                 class=""
@@ -59,7 +59,7 @@ const {headerImg} = Astro.props;
 
       <!-- burgermenustart -->
       <div
-        class="fixed top-0 text-primary_black z-40 bg-secondary_beige w-full max-h-screen translate-x-full text-left transition-transform"
+        class="fixed top-0 text-primary_black z-40 bg-secondary_beige w-full max-h-screen translate-x-full text-left transition-transform md:hidden"
         id="hammenu"
       >
         <div class="p-6 leading-loose h-screen grid px-10 pt-16">
@@ -107,7 +107,8 @@ const {headerImg} = Astro.props;
               <a class="menuItem" href="/adopter">Om Os</a>
             </li>
           </ul>
-</div>
+      </div>
+      </div>
 
       <!-- Desktopmenu  -->
 
@@ -115,7 +116,7 @@ const {headerImg} = Astro.props;
 
   <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden" >
       <div
-        class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto h-32 items-center">
+        class="hidden md:flex justify-between lg:max-w-7xl lg:mx-auto h-32 items-center">
         <div class="flex">
           <a href="/index"
             ><img

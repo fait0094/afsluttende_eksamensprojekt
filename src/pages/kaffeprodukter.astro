@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import "..//styles/style.css";
 import Timer from "../components/Timer.astro";
+import Card from "../components/Card.astro";
 
 ---
 
@@ -11,8 +12,7 @@ import Timer from "../components/Timer.astro";
   title="Det Lille Kafferisteri"
   metacontent="(Indsæt metabeskrivelse her)"
 >
-
-<section>
+<!-- <section>
     <Sti
     sti1="Forside"
     divider1="/"
@@ -23,14 +23,258 @@ import Timer from "../components/Timer.astro";
     <Heading><h1>Friskristet kaffeprodukter</h1><Heading/>
 <p class="text-center">Gå på opdagelse i vores varianter af friskristet kaffe. Alle vores bønner er økologisk certificeret, ligesom vi så vidt muligt lever op til andre mærkninger, der støtter de lokale område, hvor bønnerne spirer. Velkommen til en smagsoplevelse, der går ud over det sædvanlige</p>
 <Timer/>
-</section>
+</section> -->
  
 
 <!-- Filtrering -->
-<section>
-<Heading><h2>Vores kaffeprodukter</h2><Heading/>
-<!-- Indsæt filtrering her -->
-</section>
+<!-- <Heading><h2>Vores kaffeprodukter</h2><Heading/> -->
+
+<section
+    class="bg-primary_white"
+    id="step"
+    x-data="{ kaffetype: 'allekaffetyper', ristegrad: 'alleristegrader', smag: 'allesmag', oprindelse: 'alleoprindelser', andet: 'alleandet', skjultekaffe : 0 }"
+  >
+    <!-- Filterknapper -->
+    <section class="px-8 md:px-12">
+      <div class="mb-10 mx-10">
+        <form id="filtre" class="flex gap-8 justify-center">
+
+          <!-- Kaffetype -->
+          <div class="grid gap-2">
+            <label for="kaffetype">Kaffetype</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="kaffetype"
+              id="kaffetype"
+              x-model="kaffetype"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenkaffe() });"
+            >
+              <option value="allekaffetyper">Alle</option>
+              <option value="espresso">Espresso</option>
+              <option value="stempelkande">Stempelkande</option>
+              <option value="filterkande">Filterkande</option>
+            </select>
+          </div>
+
+          <!-- Ristegrad -->
+          <div class="grid gap-2">
+            <label for="ristegrad">Ristegrad</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="ristegrad"
+              id="ristegrad"
+              x-model="ristegrad"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenkaffe() });"
+            >
+              <option value="alleristegrader">Alle</option>
+              <option value="lysristet">Lysristet</option>
+              <option value="mellemristet">Mellemristet</option>
+            </select>
+          </div>
+
+          <!-- Smag -->
+          <div class="grid gap-2">
+            <label for="smag">Smag</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="smag"
+              id="smag"
+              x-model="smag"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenkaffe() });"
+            >
+              <option value="allesmag">Alle</option>
+              <option value="sod">Sød</option>
+              <option value="syrlig">Syrlig</option>
+            </select>
+          </div>
+
+          <!-- Oprindelse -->
+          <div class="grid gap-2">
+            <label for="oprindelse">Oprindelse</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="oprindelse"
+              id="oprindelse"
+              x-model="oprindelse"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenkaffe() });"
+            >
+
+             <option value="alleoprindelser">Alle</option>
+              <option value="sydamerika">Sydamerika</option>
+              <option value="mellemamerika">Mellemamerika</option>
+              <option value="nordafrika">Nordafrika</option>
+              <option value="sydostasien">Sydøstasien</option>
+
+            </select>
+          </div>
+
+          <!-- Andet -->
+          <div class="grid gap-2">
+            <label for="andet">Andet</label>
+            <select
+              class="border rounded-lg border-primary_black block px-3 py-1 bg-primary_white"
+              name="andet"
+              id="andet"
+              x-model="andet"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenkaffe() });"
+            >
+              <option value="alleandet">Alle</option>
+              <option value="koffeinfri">Koffeinfri</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!---------------- Kaffetype til adoption – indhold der kan filtreres i ------------------>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+         <Card
+    kategori="Espresso"
+    title="KAFFEMIK | MEXICO & GUATAMALA"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+            <Card
+    kategori="Espresso"
+    title="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Stempelkande"
+    title="BRASIL | BRASILIEN, SINGLE ORIGIN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Espresso"
+    title="MADAMMERNES MØRKE MOCCA | MEXICO"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+         <Card
+    kategori="Filterkande"
+    title="MORGENKAFFE | NICARAGUA & BRASILIEN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    /> 
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Filterkande"
+    title="UGANDA | SINGLE ORIGIN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Stempelkande"
+    title="GUATAMALA | SINGLE ORIGIN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Stempelkande"
+    title="ETHIOPIA | SINGLE ORIGIN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+      <section
+        class="cursor-pointer"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydostasien'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+          <Card
+    kategori="Filterkande"
+    title="INDONESIA | SINGLE ORIGIN"
+    price="FRA 79 DKK"
+    img_product="/billeder/coffee-single.png"
+    link_side="/kaffesingle"
+    />
+      </section>
+
+
+      <!-- Denne vises, hvis ingen kaffetype matcher filtre (Se funktion i MainLayout) -->
+      <p id="ingenkaffe" class="hidden">
+        Der er desværre ingen kaffe, som matcher dine valgte filtre.
+      </p>
+    </div>
+  </section>
 
 </MainLayout>
 

@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import HeaderCopy from "../components/HeaderCopy.astro";
 
 const {
   title,
@@ -29,7 +30,7 @@ const {
         <title>{title}</title>
 	</head>
 	<body>
-            <Header headerImg="/billeder/img-header.png" />
+            <HeaderCopy headerImg="/billeder/img-header.png" />
             <main class="bg-secondary_beige p-10 md:p-0">
                 <slot />
               

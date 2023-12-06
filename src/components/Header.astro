@@ -20,9 +20,9 @@ const {headerImg} = Astro.props;
         </ul>
       </div>
 
-            <div class="px-10 py-5 lg:pt-0">
-        <div class="flex jusify-between">
-          <div class="flex-1  md:hidden">
+            <div class="lg:py-0">
+        <div class="flex">
+          <div class="flex-1 md:hidden">
             <a href="/"
               ><img
                 class=""
@@ -112,20 +112,19 @@ const {headerImg} = Astro.props;
 
       <!-- Desktopmenu  -->
 
-<div>
+
 
   <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden" >
-      <div
-        class="hidden md:flex justify-between lg:max-w-7xl lg:mx-auto h-32 items-center">
-        <div class="flex">
+    <!-- logo container -->
+      <div class="hidden lg:flex h-32 items-center">
+        <div>
           <a href="/index"
             ><img
               src="/ikoner/logo.svg"
               alt="logo_detlillekafferisteri"
             /></a>
         </div>
-
-
+    
         <ul class="flex gap-16 items-center text-white">
           <li class="uppercase">
             <h3><a href="/shop">shop</a></h3>
@@ -143,8 +142,8 @@ const {headerImg} = Astro.props;
            <a href="/indkobskurv"><img class="hover:scale-110 ease-in-out transition duration-200" src="/ikoner/indkobskurv.svg" alt=""></a>
           </li>
         </ul>
-        </div>
       </div>
+    </div>
     </nav>
 </header>
 

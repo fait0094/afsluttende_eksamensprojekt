@@ -21,7 +21,6 @@ function toggleMenu() {
 
 hamburger.addEventListener("click", toggleMenu);
 
-
 // cookieboks;
 const cookieBox = document.getElementById("cookiebox");
 const afvisBtn = document.getElementById("afvis");

@@ -4,66 +4,46 @@ const {headerImg} = Astro.props;
 ---
 
 <header>
-    <nav>
-           <div class="list-none bg-light_brown">
-        <ul
-          class="flex justify-around  lg:text-primary_white lg:mx-auto py-2 lg:max-w-7xl"
-        >
-          <li><p>Fri fragt ved køb over 400,-</p></li>
-          <li><p>Levering inden for 1-2 hverdage</p></li>
-          <li><p>Altid Økologiske Kaffebønner</p></li>
-          <div class="flex gap-3">
+  <nav class="navbar">
+    <div class="list-none bg-light_brown">
+      <!-- topbar -->
+      <ul class="flex justify-around lg:text-primary_white lg:mx-auto py-2 lg:max-w-7xl">
+        <li><p>Fri fragt ved køb over 400,-</p></li>
+        <li><p>Levering inden for 1-2 hverdage</p></li>
+        <li><p>Altid Økologiske Kaffebønner</p></li>
+        <div class="flex gap-3">
           <li><img src="/ikoner/topbar-oko.svg" alt=""></li>
           <li><img src="/ikoner/topbar-smiley.svg" alt=""></li>
           <li><img src="/ikoner/topbar-fairtrade.svg" alt=""></li>
+        </div>
+      </ul>
+    </div>
 
-        </ul>
+ <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden lg:h-0 h-20" >               
+    <div class="px-10 lg:pt-0 py-5">
+      <div class="flex">
+        <div class="flex-1 lg:hidden">
+          <a href="/">
+            <img class="" src="/ikoner/logo.svg" alt="logo_dyrevaernet" height="85" width="85" />
+          </a>
+        </div>
+
+        <!-- burgermenu -->
+        
+        <div class="lg:hidden flex gap-6">
+                   <a href="/indkobskurv"><img class="hover:scale-110 ease-in-out transition duration-200" src="/ikoner/indkobskurv.svg" alt=""></a>
+          <button class="hamburger z-50">
+            <img class="menuIcon" src="/ikoner/burgermenu-open.svg" alt="burgermenu" height="22" width="34" />
+            <img class="closeIcon hidden" src="/ikoner/burgermenu-close.svg" alt="burgermenu-luk" width="34" height="22" />
+          </button>
+    
+        </div>
       </div>
+    </div>
 
-            <div class="lg:py-0">
-        <div class="flex">
-          <div class="flex-1 md:hidden">
-            <a href="/"
-              ><img
-                class=""
-                src="/ikoner/logo.svg"
-                alt="det_lille_kafferisteri_logo"
-                height="48"
-                width="48"
-              /></a
-            >
-          </div>
-
-      <!-- Burgermenuikon  -->
-
-              <div class="lg:hidden flex gap-6">
-            <button class="hamburger z-50">
-              <img
-                class="menuIcon"
-                src="/ikoner/burgermenu-open.svg"
-                alt="burgermenu"
-                height="22"
-                width="34"
-              />
-              <img
-                class="closeIcon hidden"
-                src="/ikoner/burgermenu-close.svg"
-                alt="burgermenu-luk"
-                width="34"
-                height="22"
-              />
-            </button>
-          </div>
-
-
-
-      <!-- burgermenustart -->
-      <div
-        class="fixed top-0 text-primary_black z-40 bg-secondary_beige w-full max-h-screen translate-x-full text-left transition-transform md:hidden"
-        id="hammenu"
-      >
-        <div class="p-6 leading-loose h-screen grid px-10 pt-16">
-          <ul>
+    <div class="fixed top-0 text-dark_brown z-40 bg-secondary_beige w-full max-h-screen translate-x-full text-left transition-transform" id="hammenu">
+      <div class="p-6 leading-loose h-screen grid px-10 py-16">
+         <ul>
             <li class="heading-3">
               <a class="menuItem" href="/adopter">Kaffe</a>
             </li>
@@ -108,59 +88,101 @@ const {headerImg} = Astro.props;
             </li>
           </ul>
       </div>
-      </div>
-
-      <!-- Desktopmenu  -->
-
-
-
-  <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden" >
-    <!-- logo container -->
-      <div class="hidden lg:flex h-32 items-center">
-        <div>
-          <a href="/index"
-            ><img
-              src="/ikoner/logo.svg"
-              alt="logo_detlillekafferisteri"
-            /></a>
+    </div>
+</div>
+    <!-- Desktopmenu -->
+    <div style={`background-image: url(${headerImg})`} class="bg-cover" >
+      <div class="hidden lg:flex justify-between lg:max-w-6xl lg:mx-auto lg:pb-5 h-28">
+        <div class="flex">
+          <a class="flex" href="/"><img src="/ikoner/logo.svg" alt="logo_dyrevaernet" height="130" width="130" /></a>
         </div>
-    
-        <ul class="flex gap-16 items-center text-white">
-          <li class="uppercase">
-            <h3><a href="/shop">shop</a></h3>
-          </li>
-          <li class="uppercase">
-           <h3> <a href="/kaffekasse">kaffekassen</a></h3>
-          </li>
-          <li class="uppercase">
-          <h3>  <a href="/gavekort">gavekort</a></h3>
-          </li>
-          <li class="uppercase">
-          <h3>  <a href="/om">om os</a></h3>
-          </li>
-          <li class="uppercase">
+        <ul class="flex gap-12 items-center text-primary_white">
+          <div class="dropdown absolute">
+          <li class="heading-3"><a href="/adopter">Shop</a></li>
+  <div class="dropdown-content bg-secondary_beige">
+<div class="grid grid-cols-2 gap-6">
+    <div>
+    <a class="heading-4" href="#">Kaffe</a>
+    <a href="#"><p>Espresso</p></a>
+    <a href="#"><p>Filterkaffe</p></a>
+    <a href="#"><p>Stempelkaffe</p></a>
+    <a href="#"><p>Koffeinfri</p></a>
+    </div>
+    <div class="vertical"></div>
+<div class="ml-4">
+    <a class="heading-4" href="#">Andre produkter</a>
+    <a href="#"><p>Fristeriet - Lidt til kaffen</p></a>
+    <a href="#"><p>Kaffetilbehør</p></a>
+    <a href="#"><p>Hudpleje</p></a>
+    <a href="#"><p>Rengøring</p></a>
+    <a href="#"><p>Gavekort</p></a>
+      </div>
+    </div>
+  </div>
+</div>
+          <li class="heading-3"><a href="/indlever">Abonnoment</a></li>
+          <li class="heading-3"><a href="/rodgivning">Om Os</a></li>
+            <li class="uppercase">
            <a href="/indkobskurv"><img class="hover:scale-110 ease-in-out transition duration-200" src="/ikoner/indkobskurv.svg" alt=""></a>
           </li>
         </ul>
       </div>
     </div>
-    </nav>
+  </nav>
 </header>
 
 
 <style>
-    li:hover {
+  /* Hover effekt */
+  li:hover {
     transform: scale(1.05);
     transition-property: transform;
-    transition-duration: 150ms;
+    transition-duration: 200ms;
     transition-timing-function: ease-in-out;
   }
 
-  /*Burgermenu*/
 .showMenu {
   transform: translateY(0);
 }
-</style>
 
+
+/* dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 35rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 50;
+  padding: 2rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.vertical {
+            border-left: 2px solid #35261C;
+            opacity: 50%;
+            position:absolute;
+            left: 50%; 
+            top:10%;
+            bottom: 10%;
+          
+          }
+
+
+</style>
 
 <script src="../js/main.js"></script>

@@ -16,13 +16,13 @@ const {headerImg} = Astro.props;
           <li><img src="/ikoner/topbar-oko.svg" alt=""></li>
           <li><img src="/ikoner/topbar-smiley.svg" alt=""></li>
           <li><img src="/ikoner/topbar-fairtrade.svg" alt=""></li>
-       </div>
+
         </ul>
       </div>
 
             <div class="px-10 py-5 lg:pt-0">
         <div class="flex">
-          <div class="flex-1 lg:hidden">
+          <div class="flex-1 ">
             <a href="/"
               ><img
                 class=""
@@ -34,10 +34,9 @@ const {headerImg} = Astro.props;
             >
           </div>
 
-      <!-- Burgermenu  -->
+      <!-- Burgermenuikon  -->
 
-      <!-- Burgermenuikon -->
-        <div class="lg:hidden flex gap-6">
+              <div class="lg:hidden flex gap-6">
             <button class="hamburger z-50">
               <img
                 class="menuIcon"
@@ -55,8 +54,8 @@ const {headerImg} = Astro.props;
               />
             </button>
           </div>
-        </div>
-      </div>
+
+
 
       <!-- burgermenustart -->
       <div
@@ -75,9 +74,7 @@ const {headerImg} = Astro.props;
               <a class="menuItem" href="/rodgivning"> <p class="text-heading-4" >Filterkaffe</p></a>
             </li>
             <li>
-              <a class="menuItem whitespace-nowrap" href="#"
-                > <p class="text-heading-4" >Stempelkaffe</p></a
-              >
+              <a class="menuItem" href="/rodgivning"> <p class="text-heading-4" >Stempelkaffe</p></a>
             </li>
             <li>
               <a class="menuItem" href="/om"> <p class="text-heading-4">Koffeinfri</p></a>
@@ -110,7 +107,7 @@ const {headerImg} = Astro.props;
               <a class="menuItem" href="/adopter">Om Os</a>
             </li>
           </ul>
-
+</div>
 
       <!-- Desktopmenu  -->
 
@@ -124,23 +121,21 @@ const {headerImg} = Astro.props;
             ><img
               src="/ikoner/logo.svg"
               alt="logo_detlillekafferisteri"
-              
-            /></a
-          >
+            /></a>
         </div>
 
 
         <ul class="flex gap-16 items-center text-white">
-          <li class="uppercase hover:underline">
+          <li class="uppercase">
             <h3><a href="/shop">shop</a></h3>
           </li>
-          <li class="uppercase hover:underline">
+          <li class="uppercase">
            <h3> <a href="/kaffekasse">kaffekassen</a></h3>
           </li>
-          <li class="uppercase hover:underline">
+          <li class="uppercase">
           <h3>  <a href="/gavekort">gavekort</a></h3>
           </li>
-          <li class="uppercase hover:underline">
+          <li class="uppercase">
           <h3>  <a href="/om">om os</a></h3>
           </li>
           <li class="uppercase">
@@ -149,9 +144,6 @@ const {headerImg} = Astro.props;
         </ul>
         </div>
       </div>
-    </div>
-    </div>
-</div>
     </nav>
 </header>
 

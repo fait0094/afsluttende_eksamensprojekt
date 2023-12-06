@@ -107,9 +107,7 @@ import Card from "../components/Card.astro";
               <option value="sydamerika">Sydamerika</option>
               <option value="mellemamerika">Mellemamerika</option>
               <option value="nordafrika">Nordafrika</option>
-              <option value="sydafrika">Sydafrika</option>
-              <option value="sydasien">Sydasien</option>
-              <option value="sydøstasien">Sydøstasien</option>
+              <option value="sydostasien">Sydøstasien</option>
 
             </select>
           </div>
@@ -135,10 +133,10 @@ import Card from "../components/Card.astro";
 
     <!---------------- Kaffetype til adoption – indhold der kan filtreres i ------------------>
 
-    <div class="grid md:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -153,7 +151,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -168,7 +166,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -183,7 +181,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -198,7 +196,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -213,7 +211,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -228,7 +226,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -242,7 +240,7 @@ import Card from "../components/Card.astro";
       </section>
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'marsvin'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
@@ -257,7 +255,7 @@ import Card from "../components/Card.astro";
 
       <section
         class="cursor-pointer"
-        :class="{'hidden': !(['allekaffetyper', 'orkenrotte'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+        :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydostasien'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >

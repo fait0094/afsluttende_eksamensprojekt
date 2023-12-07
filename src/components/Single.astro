@@ -65,14 +65,57 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 
         <!-- Inputfelter -->
        <div class="grid grid-row md:grid-cols-2 gap-5">
-           <ToggleDropdown
+       <!-- Type -->
+<div class="grid">
+  <label><h4>Type</h4></label>
+  <select class="py-2 px-5">
+    <option>Hele bønner</option>
+    <option>Kværnede bønner</option>
+  </select>
+</div>
+
+<!-- Størrelse -->
+<div class="grid">
+  <label><h4>Størrelse</h4></label>
+  <select class="py-2 px-5">
+    <option>250g</option>
+    <option>1000g</option>
+  </select>
+</div>
+
+<!-- Antal -->
+<div class="grid">
+  <label><h4>Antal</h4></label>
+  <select class="py-2 px-5">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+  </select>
+</div>
+
+
+           <!-- Button -->
+           <PrimaryButton text="Tilføj til kurven"/>
+         
+       </div>
+   </div>
+</section>
+
+<style>
+
+    /* <ToggleDropdown
            type="Type" title="Hele bønner" option1="Kværnede bønner"/>
            <ToggleDropdown
            type="Størrelse" title="250 g" option1="1000 g"/>
            <ToggleDropdown
            type="Antal" title="1" option1="1" option2="2" option3="3"/>
-           <PrimaryButton text="Tilføj til kurven"/>
-           
-       </div>
-   </div>
-</section>
+           <PrimaryButton text="Tilføj til kurven"/> */
+
+</style>

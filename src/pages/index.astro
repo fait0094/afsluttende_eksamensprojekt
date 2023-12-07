@@ -20,7 +20,7 @@ import Forslag from "../components/Forslag.astro";
 
 <!-- herosection -->
  <section
-    class="flex items-center justify-start h-screen bg-[url('/billeder/hero-billede.png')] bg-cover md:bg-center bg-custom_position -z-10"
+    class="flex items-center justify-start h-screen bg-[url('/billeder/hero-billede.png')] bg-cover md:bg-center bg-custom_position hero-billede"
   >
     <div class="text-left mx-8 text-primary_white lg:ml-36">
       <h1>Velkommen til det lille kafferisteri</h1>
@@ -151,3 +151,12 @@ import Forslag from "../components/Forslag.astro";
 
 
 
+
+<style>
+  .hero-billede{
+    position: absolute;
+    top:2px;
+    height: 100%;
+    width: 100%;
+  }
+</style>

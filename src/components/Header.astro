@@ -5,18 +5,23 @@ const {headerImg} = Astro.props;
 
 <header>
   <nav class="navbar">
-    <div class="list-none bg-light_brown">
+    <div class="list-none bg-light_brown flex ">
       <!-- topbar -->
-      <ul class="flex justify-around lg:text-primary_white lg:mx-auto py-2 lg:max-w-7xl">
-        <li><p>Fri fragt ved køb over 400,-</p></li>
-        <li><p>Levering inden for 1-2 hverdage</p></li>
-        <li><p>Altid Økologiske Kaffebønner</p></li>
-        <div class="flex gap-3">
+      <div class="text-primary_white lg:mx-auto lg:max-w-7xl text-slide items-center px-10 lg:py-3">
+          <div class="text-wrap">
+          <div class="lg:flex text gap-16">
+        <span><p>Fri fragt ved køb over 400,-</p></span>
+        <span><p>Levering inden for 1-2 hverdage</p></span>
+        <span><p>Altid Økologiske Kaffebønner</p></span>
+        </div>
+          </div>
+        </div>
+
+        <div class="flex gap-3 md:max-w-3xl lg:max-w-7xl mx-auto items-center">
           <li><img src="/ikoner/topbar-oko.svg" alt=""></li>
           <li><img src="/ikoner/topbar-smiley.svg" alt=""></li>
           <li><img src="/ikoner/topbar-fairtrade.svg" alt=""></li>
         </div>
-      </ul>
     </div>
 
  <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden lg:h-0 h-20" >               
@@ -92,15 +97,15 @@ const {headerImg} = Astro.props;
 </div>
     <!-- Desktopmenu -->
     <div style={`background-image: url(${headerImg})`} class="bg-cover" >
-      <div class="hidden lg:flex justify-between lg:max-w-6xl lg:mx-auto lg:pb-5 h-28">
+      <div class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto lg:pb-5 h-28">
         <div class="flex">
           <a class="flex" href="/"><img src="/ikoner/logo.svg" alt="logo_dyrevaernet" height="130" width="130" /></a>
         </div>
         <ul class="flex gap-12 items-center text-primary_white">
-          <div class="dropdown absolute">
+          <div class="dropdown">
           <li class="heading-3"><a href="/shop">Shop</a></li>
-  <div class="dropdown-content bg-secondary_beige">
-<div class="grid grid-cols-2 gap-6">
+  <div class="dropdown-content bg-secondary_beige absolute hidden z-50">
+<div class="grid grid-cols-2 gap-6 text-dark_brown">
     <div>
     <a class="heading-4" href="/kaffeprodukter">Kaffe</a>
     <a href="/kaffeprodukter"><p>Espresso</p></a>
@@ -147,24 +152,16 @@ const {headerImg} = Astro.props;
 
 
 /* dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+
 
 .dropdown-content {
-  display: none;
-  position: absolute;
   min-width: 35rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 50;
   padding: 2rem;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 10px 16px;
-  text-decoration: none;
+  padding: 10px;
   display: block;
 }
 
@@ -181,6 +178,52 @@ const {headerImg} = Astro.props;
             bottom: 10%;
           
           }
+
+/* textslider topbar */
+
+@media (max-width: 768px) {
+  .text-slide>div {
+    height: 40px;
+    line-height: 35px;
+    overflow:hidden;
+
+  }
+  .text {
+    position:relative;
+    animation: text-animation ease 8s infinite;
+  }
+
+@keyframes text-animation {
+  0% {
+    top:0;
+  }
+
+  10% {
+    top:0;
+  }
+  
+  30% {
+    top:-30px;
+  }
+  
+  50% {
+    top:-30px;
+  }
+  
+  70% {
+    top:-65px;
+  }
+  
+  90% {
+    top:-65px;
+  }
+  
+  100% {
+    top:0;
+  }
+
+}
+}
 
 
 </style>

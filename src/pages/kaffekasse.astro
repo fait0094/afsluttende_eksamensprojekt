@@ -3,6 +3,7 @@ import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import InfoSection from "../components/InfoSection.astro";
+import Sti from "../components/Sti.astro";
 import "..//styles/style.css";
 ---
 
@@ -11,7 +12,13 @@ import "..//styles/style.css";
 
 <MainLayout>
 <!-- ABONNOMENT SECTION HER -->
-<section class="grid justify-center py-16 px-10">
+
+<section class="grid pb-16 px-10  md:max-w-3xl lg:max-w-6xl mx-auto">
+      <Sti
+        sti1="Forside"
+        divider1="/"
+        sti2="Abonnement"
+        />
 <Heading><h2  class="text-center">abonnement</h2><Heading/>
 
     <p class="text-center">Vælg en abonnementløsning hos Det lille kafferisteri. Vores abonnement, Kaffekassen, er nøglen til kaffeviden og bryggemetoder. Med abonnementet får du uundværlig læring, lækker kaffe og spændende gaver, der forbedrer din kaffeoplevelse. Bliv klogere og gladere med vores månedlige overraskelser og sjove kaffeoplevelser.</p>

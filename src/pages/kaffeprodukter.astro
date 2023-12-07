@@ -20,7 +20,7 @@ import Card from "../components/Card.astro";
     divider2="/"
     sti3="Friskristet Kaffeprodukter"
     />
-    <Heading><h1>Friskristet kaffeprodukter</h1><Heading/>
+    <Heading><h1  class="text-center">Friskristet kaffeprodukter</h1><Heading/>
 <p class="text-center">Gå på opdagelse i vores varianter af friskristet kaffe. Alle vores bønner er økologisk certificeret, ligesom vi så vidt muligt lever op til andre mærkninger, der støtter de lokale område, hvor bønnerne spirer. Velkommen til en smagsoplevelse, der går ud over det sædvanlige</p>
 <Timer/>
 </section>
@@ -28,12 +28,12 @@ import Card from "../components/Card.astro";
 
 <!-- Filtrering -->
 <section
-    class="bg-primary_white py-16"
+    class="bg-primary_white py-16 px-10"
     id="step"
     x-data="{ kaffetype: 'allekaffetyper', ristegrad: 'alleristegrader', smag: 'allesmag', oprindelse: 'alleoprindelser', andet: 'alleandet', skjultekaffe : 0 }"
   >
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
-      <Heading><h2>Vores kaffeprodukter</h2><Heading/>
+      <Heading><h2  class="text-center">Vores kaffeprodukter</h2><Heading/>
       <!-- Filterknapper -->
       <section class="px-8 md:px-12">
         <div class="mb-10 mx-10">

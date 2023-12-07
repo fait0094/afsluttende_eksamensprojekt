@@ -17,7 +17,7 @@ import InfoSection from "../components/InfoSection.astro";
         >
         </Sti>
         <!-- Familieejet virksomhed -->
-    <div class="grid gap-10 md:flex lg:flex py-16">
+    <div class="grid gap-16 md:flex lg:flex md:px-0 px-10">
         <div>
         <h2>familieejet virksomhed</h2>
         <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
@@ -29,9 +29,9 @@ import InfoSection from "../components/InfoSection.astro";
 </section>
 
     <!-- Kerneværdier -->
-<section class="bg-primary_white py-16">
+<section class="bg-primary_white py-16  md:px-0 px-10">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
-        <Heading><h2>Vores kerneværdier</h2><Heading/>
+        <Heading><h2  class="text-center">Vores kerneværdier</h2><Heading/>
         <InfoSection
         img1="/ikoner/kvalitet.svg"
         title1="Kvalitet"
@@ -51,19 +51,20 @@ import InfoSection from "../components/InfoSection.astro";
 
     <!-- Lokation -->
 <section class="py-16">
-   <div class="grid gap-10 md:flex lg:flex md:max-w-3xl lg:max-w-6xl mx-auto ">
+   <div class="grid gap-16 md:flex lg:flex md:max-w-3xl lg:max-w-6xl mx-auto ">
         <img src="/om_os/location.png" alt="lokation_hundested">
         <div>
             <h2>Lokation</h2>
-            <p>Vi er lokaliseret i Hundested Havn. Vi har åbent hele året, men er særlig kendt for sommerperioderne.</p>
-       <a class="underline" href="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB">Find rutevejledning</a>
+            <p>Siden 2021 har vi haft risteri og butik, nede på Hundested Havn, som er en hyggelig havn med en masse små butikker, restauranter og caféer. Anders rister kaffe og Signe passer butikken. 
+                Kom og tag et kig forbi. Vi har åbent hele året - og er særlig kendt for sommerperioderne.</p>
+       <a class="underline" href="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB"><p class="pt-10">Find rutevejledning</p></a>
         </div>
    </div>
 </section>
 <!-- Vores butik / billedegalleri -->
 
 <section class="bg-primary_white py-16">
-    <Heading><h2>Vores butik</h2><Heading/>
+    <Heading><h2  class="text-center">Vores butik</h2><Heading/>
    <div class="md:max-w-3xl lg:max-w-6xl mx-auto grid grid-cols-8 grid-rows-2 gap-5">
         <img class="col-span-3 " src="/om_os/billede1.png" alt="kaffeposer">
         <img class="col-span-5" src="/om_os/billede2.png" alt="we_love_coffee_billede">

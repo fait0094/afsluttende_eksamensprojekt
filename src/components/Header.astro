@@ -2,26 +2,29 @@
 import "../styles/style.css";
 const {headerImg} = Astro.props;
 ---
+<!-- lg:mx-auto lg:max-w-7xl -->
 
 <header>
   <nav class="navbar">
-    <div class="list-none bg-light_brown flex ">
+    <div class="list-none bg-light_brown">
       <!-- topbar -->
-      <div class="text-primary_white lg:mx-auto lg:max-w-7xl text-slide items-center px-10 lg:py-3">
-          <div class="text-wrap">
-          <div class="lg:flex text gap-16">
-        <span><p>Fri fragt ved køb over 400,-</p></span>
-        <span><p>Levering inden for 1-2 hverdage</p></span>
-        <span><p>Altid Økologiske Kaffebønner</p></span>
-        </div>
+      <div class="lg:mx-auto lg:max-w-7xl flex space-between gap-10 justify-between px-10">
+        <div class="text-primary_white text-slide items-center lg:py-3">
+            <div class="text-wrap">
+            <div class="lg:flex text gap-16">
+          <span><p>Fri fragt ved køb over 400,-</p></span>
+          <span><p>Levering inden for 1-2 hverdage</p></span>
+          <span><p>Altid Økologiske Kaffebønner</p></span>
           </div>
-        </div>
-
-        <div class="flex gap-3 md:max-w-3xl lg:max-w-7xl mx-auto items-center">
-          <li><img src="/ikoner/topbar-oko.svg" alt=""></li>
-          <li><img src="/ikoner/topbar-smiley.svg" alt=""></li>
-          <li><img src="/ikoner/topbar-fairtrade.svg" alt=""></li>
-        </div>
+            </div>
+          </div>
+  
+          <div class="flex gap-3 items-center">
+            <li><img src="/ikoner/topbar-oko.svg" alt=""></li>
+            <li><img src="/ikoner/topbar-smiley.svg" alt=""></li>
+            <li><img src="/ikoner/topbar-fairtrade.svg" alt=""></li>
+          </div>
+      </div>
     </div>
 
  <div style={`background-image: url(${headerImg})`} class="bg-cover overflow-hidden lg:h-0 h-20" >               
@@ -152,8 +155,6 @@ const {headerImg} = Astro.props;
 
 
 /* dropdown */
-
-
 .dropdown-content {
   min-width: 35rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -181,15 +182,14 @@ const {headerImg} = Astro.props;
 
 /* textslider topbar */
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .text-slide>div {
     height: 40px;
     line-height: 35px;
-    overflow:hidden;
-
+    overflow: hidden;
   }
   .text {
-    position:relative;
+    position: relative;
     animation: text-animation ease 8s infinite;
   }
 
@@ -224,8 +224,6 @@ const {headerImg} = Astro.props;
 
 }
 }
-
-
 </style>
 
 <script src="../js/main.js"></script>

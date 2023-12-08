@@ -50,6 +50,7 @@ iframe {
   --heading-h4: var(--text-6);
   --heading-h5: var(--text-5);
   --body-default: var(--text-4);
+  --body-mini: var(--text-3);
 
   /* Ved ikke om vi skal køre spacingssss :) */
 

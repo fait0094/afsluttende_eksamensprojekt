@@ -22,15 +22,15 @@ import MainLayout from "../layouts/MainLayout.astro";
         <!--  Kasse 1: Indhold i kurv -->
         <div class="grid md:grid-cols-3 gap-10">
             <!-- Produkt -->
-            <div class="bg-primary_white border border-darkest_brown p-10 col-span-2">
+            <div class="bg-primary_white border border-darkest_brown p-6 md:p-10 col-span-2">
                 <div class="grid grid-rows-4 gap-4">
 
                    <div>
                        <div class="grid grid-cols-5">
-                        <h2 class="col-span-2 text-heading-4">Produkt</h2>
-                        <h2 class="text-heading-4">Pris</h2>
-                        <h2 class="text-heading-4">Antal</h2>
-                        <h2 class="text-heading-4">Subtotal</h2>
+                        <h2 class="col-span-2 text-heading-5">Produkt</h2>
+                        <h2 class="text-heading-5">Pris</h2>
+                        <h2 class="text-heading-5">Antal</h2>
+                        <h2 class="text-heading-5">Subtotal</h2>
                         
     
                        </div>
@@ -39,43 +39,43 @@ import MainLayout from "../layouts/MainLayout.astro";
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
                     <p>159 DKK</p>
                     <ToggleDropdown title="1" option1="2"/>
-                    <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                    <div class="flex justify-between lg:gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
-                    <p>279 DKK</p>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Brasil (250g)</p></div>
+                    <p>70 DKK</p>
                     <ToggleDropdown title="2" option1="1"/>
-                   <div class="flex gap-5"><p>558 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                   <div class="flex justify-between lg:gap-5"><p>140 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
-                    <p>79 DKK</p>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Uganda (1000g)</p></div>
+                    <p>250 DKK</p>
                     <ToggleDropdown title="1" option1="2"/>
-                   <div class="flex gap-5"><p>79 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                   <div class="flex justify-between lg:gap-5"><p>250 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-6 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Kaffekassen Small</p></div>
-                    <p>159 DKK</p>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/indkobskurv.jpg" alt=""><p>Guatamala (250g)</p></div>
+                    <p>70 DKK</p>
                     <ToggleDropdown title="1" option1="2"/>
-                   <div class="flex gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
+                   <div class="flex justify-between lg:gap-5"><p>70 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                 </div>
             </div>
 
             <!-- Kasse 2: Subtotal -->
-            <div class="bg-primary_white border border-darkest_brown p-10 lg:col-span-1 grid gap-4 col-span-2">
-            <h2 class="text-heading-4 border-b border-darkest_brown">Subtotal</h2>
-            <div class="flex space-x-24 justify-between"><p class="">Subtotal</p><p>717 DKK</p></div>
-            <div class="flex space-x-24 border-b border-darkest_brown justify-between"><p class="">Levering</p><p>50 DKK</p></div>
-            <div class="flex space-x-24 justify-between"><p class="">Pris i alt</p><p>767 DKK</p></div>
+            <div class="bg-primary_white border border-darkest_brown p-6 md:p-10 lg:col-span-1 grid gap-4 col-span-2">
+            <h2 class="text-heading-5 border-b border-darkest_brown pb-3">Subtotal</h2>
+            <div class="flex space-x-24 justify-between"><p class="">Subtotal</p><p>619 DKK</p></div>
+            <div class="flex space-x-24 border-b border-darkest_brown pb-3 justify-between"><p class="">Levering</p><p>50 DKK</p></div>
+            <div class="flex space-x-24 justify-between"><h2 class="text-heading-5">Pris i alt</h2><h2 class="text-heading-5">669 DKK</h2></div>
              <PrimaryButton text="Videre til kassen"></PrimaryButton>
             </div>
 

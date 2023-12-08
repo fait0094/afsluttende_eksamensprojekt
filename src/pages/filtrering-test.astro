@@ -20,7 +20,7 @@ import Card from "../components/Card.astro";
     divider2="/"
     sti3="Friskristet Kaffeprodukter"
     />
-    <Heading><h1  class="text-center">Friskristet kaffeprodukter</h1><Heading/>
+    <Heading><h1 class="text-center">Friskristet kaffeprodukter</h1><Heading/>
 <p class="text-center">Gå på opdagelse i vores varianter af friskristet kaffe. Alle vores bønner er økologisk certificeret, ligesom vi så vidt muligt lever op til andre mærkninger, der støtter de lokale område, hvor bønnerne spirer. Velkommen til en smagsoplevelse, der går ud over det sædvanlige</p>
 <Timer/>
 </section>
@@ -30,115 +30,105 @@ import Card from "../components/Card.astro";
 <section
     class="bg-primary_white py-16 px-10"
     id="step"
-    x-data="{ kaffetype: 'allekaffetyper', ristegrad: 'alleristegrader', smag: 'allesmag', oprindelse: 'alleoprindelser', andet: 'alleandet', skjultekaffe : 0 }"
+    x-data="{ kaffetype: [], ristegrad: [], smag: [], oprindelse: [], andet: [], skjultekaffe : 0 }"
   >
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
-      <Heading><h2  class="text-center">Vores kaffeprodukter</h2><Heading/>
+      <Heading><h2 class="text-center">Vores kaffeprodukter</h2></Heading>
       <!-- Filterknapper -->
-      <section class="md:px-12">
+      <section class="px-8 md:px-12">
         <div class="mb-10 mx-10">
-          <form id="filtre" class="grid grid-cols-3 gap-4 md:flex md:gap-8 justify-center">
+          <form id="filtre" class="flex gap-8 justify-center">
   
             <!-- Kaffetype -->
             <div class="grid">
               <label for="kaffetype"><h3 class="heading-5">Kaffetype</h3></label>
-              <select
-                class="border border-light_brown block px-3 py-1 bg-primary_white"
-                name="kaffetype"
-                id="kaffetype"
-                x-model="kaffetype"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenkaffe() });"
-              >
-                <option value="allekaffetyper">Alle</option>
-                <option value="espresso">Espresso</option>
-                <option value="stempelkande">Stempelkande</option>
-                <option value="filterkande">Filterkande</option>
-              </select>
+              <div>
+                <input
+  type="checkbox"
+  id="espresso"
+  name="kaffetype"
+  value="espresso"
+  x-model="kaffetype"
+>
+
+                <label for="espresso">Espresso</label>
+              </div>
+              <div>
+                <input type="checkbox" id="stempelkande" name="kaffetype" value="stempelkande" x-model="kaffetype">
+                <label for="stempelkande">Stempelkande</label>
+              </div>
+              <div>
+                <input type="checkbox" id="filterkande" name="kaffetype" value="filterkande" x-model="kaffetype">
+                <label for="filterkande">Filterkande</label>
+              </div>
             </div>
   
             <!-- Ristegrad -->
             <div class="grid">
               <label for="ristegrad"><h3 class="heading-5">Ristegrad</h3></label>
-              <select
-                class="border border-light_brown block px-3 py-1 bg-primary_white"
-                name="ristegrad"
-                id="ristegrad"
-                x-model="ristegrad"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenkaffe() });"
-              >
-                <option value="alleristegrader">Alle</option>
-                <option value="lysristet">Lysristet</option>
-                <option value="mellemristet">Mellemristet</option>
-              </select>
+              <div>
+                <input type="checkbox" id="lysristet" name="ristegrad" value="lysristet" x-model="ristegrad">
+                <label for="lysristet">Lysristet</label>
+              </div>
+              <div>
+                <input type="checkbox" id="mellemristet" name="ristegrad" value="mellemristet" x-model="ristegrad">
+                <label for="mellemristet">Mellemristet</label>
+              </div>
             </div>
   
             <!-- Smag -->
             <div class="grid">
               <label for="smag"><h3 class="heading-5">Smag</h3></label>
-              <select
-                class="border border-light_brown block px-3 py-1 bg-primary_white"
-                name="smag"
-                id="smag"
-                x-model="smag"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenkaffe() });"
-              >
-                <option value="allesmag">Alle</option>
-                <option value="sod">Sød</option>
-                <option value="syrlig">Syrlig</option>
-              </select>
+              <div>
+                <input type="checkbox" id="sod" name="smag" value="sod" x-model="smag">
+                <label for="sod">Sød</label>
+              </div>
+              <div>
+                <input type="checkbox" id="syrlig" name="smag" value="syrlig" x-model="smag">
+                <label for="syrlig">Syrlig</label>
+              </div>
             </div>
   
             <!-- Oprindelse -->
             <div class="grid">
               <label for="oprindelse"><h3 class="heading-5">Oprindelse</h3></label>
-              <select
-                class="border border-light_brown block px-3 py-1 bg-primary_white"
-                name="oprindelse"
-                id="oprindelse"
-                x-model="oprindelse"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenkaffe() });"
-              >
-  
-               <option value="alleoprindelser">Alle</option>
-                <option value="sydamerika">Sydamerika</option>
-                <option value="mellemamerika">Mellemamerika</option>
-                <option value="nordafrika">Nordafrika</option>
-                <option value="sydostasien">Sydøstasien</option>
-  
-              </select>
+              <div>
+                <input type="checkbox" id="sydamerika" name="oprindelse" value="sydamerika" x-model="oprindelse">
+                <label for="sydamerika">Sydamerika</label>
+              </div>
+              <div>
+                <input type="checkbox" id="mellemamerika" name="oprindelse" value="mellemamerika" x-model="oprindelse">
+                <label for="mellemamerika">Mellemamerika</label>
+              </div>
+              <div>
+                <input type="checkbox" id="nordafrika" name="oprindelse" value="nordafrika" x-model="oprindelse">
+                <label for="nordafrika">Nordafrika</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sydostasien" name="oprindelse" value="sydostasien" x-model="oprindelse">
+                <label for="sydostasien">Sydøstasien</label>
+              </div>
             </div>
   
             <!-- Andet -->
             <div class="grid">
               <label for="andet"><h3 class="heading-5">Andet</h3></label>
-              <select
-                class="border border-light_brown block px-3 py-1 bg-primary_white"
-                name="andet"
-                id="andet"
-                x-model="andet"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenkaffe() });"
-              >
-                <option value="alleandet">Alle</option>
-                <option value="koffeinfri">Koffeinfri</option>
-              </select>
+              <div>
+                <input type="checkbox" id="koffeinfri" name="andet" value="koffeinfri" x-model="andet">
+                <label for="koffeinfri">Koffeinfri</label>
+              </div>
             </div>
           </form>
         </div>
       </section>
-  
       <!---------------- Indhold der kan filtreres i ------------------>
   
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
         <section
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
            <Card
       kategori="Espresso"
@@ -153,7 +143,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
               <Card
       kategori="Espresso"
@@ -168,7 +158,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Stempelkande"
@@ -183,7 +173,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Espresso"
@@ -198,7 +188,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
            <Card
       kategori="Filterkande"
@@ -213,7 +203,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Filterkande"
@@ -228,7 +218,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Stempelkande"
@@ -242,7 +232,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'stempelkande'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'nordafrika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Stempelkande"
@@ -257,7 +247,7 @@ import Card from "../components/Card.astro";
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'filterkande'].includes(kaffetype) && ['alleristegrader', 'lysristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'sydostasien'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
           x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
+          
         >
             <Card
       kategori="Filterkande"
@@ -269,14 +259,18 @@ import Card from "../components/Card.astro";
         </section>
   
   
-        <!-- Denne vises, hvis ingen kaffetype matcher filtre (Se funktion i MainLayout) -->
-        <p id="ingenkaffe" class="hidden">
-          Der er desværre ingen kaffe, som matcher dine valgte filtre.
-        </p>
+       
+        
       </div>
     </div>
   </section>
 
 </MainLayout>
+
+<script>
+
+</script>
+
+
 
 

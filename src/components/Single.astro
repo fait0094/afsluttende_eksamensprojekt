@@ -31,11 +31,11 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
             <img src="/ikoner/stjerner.svg" alt="">
             <p class="underline">Se anmeldelser</p>
         </div>
-
-   <div class="grid grid-cols-2">
-                <p class="mb-4 col-span-2 lg:col-span-1">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
+   <div class="grid">
+           <div>
+                <p class="mb-4">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
                 
-                 <div class="md:flex gap-8 lg:flex row-start-2 lg:gap-6">
+                 <div class="md:flex gap-8">
                         <Skala
                         skala="Syrlighed"
                         beanImgPath1="/ikoner/bean-full.png"
@@ -58,12 +58,13 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
                         beanImgPath4="/ikoner/bean-empty.png"
                         />
                  </div>
-             <img class="col-start-2 row-start-2 lg:row-span-2 lg:ml-16" src="/ikoner/landekort.svg" alt="">
+           </div>
+             <img src="/ikoner/landekort.svg" alt="">
    </div>
        
 
         <!-- Inputfelter -->
-       <div class="grid grid-row md:grid-cols-2 gap-5">
+       <div class="grid md:grid-cols-2 gap-3 md:gap-5">
        <!-- Type -->
 <div class="grid">
   <label><h4>Type</h4></label>
@@ -101,7 +102,14 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 
 
            <!-- Button -->
-           <PrimaryButton text="Tilføj til kurven"/>
+          <div class="grid mt-2 md:mt-0">
+
+            <div class="bg-accent_green hover:bg-light_accent_green inline-flex md:mt-12 justify-center">
+   <a href=#>
+    <h4 class="text-primary_white py-2 px-5">Tilføj til kurven</h4>
+    </a> 
+</div>
+          </div>
          
        </div>
    </div>

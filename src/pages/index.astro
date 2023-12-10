@@ -23,7 +23,7 @@ import Forslag from "../components/Forslag.astro";
     id="cookiebox"
     class="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-primary_black bg-opacity-70"
   >
-    <div class="cookieboks w-96 p-10 shadow-lg bg-primary_white ">
+    <div class="cookieboks w-96 p-10 shadow-lg bg-primary_white">
       <h2 class="mb-4 text-center text-xl font-bold ">
        Det Lille Kafferisteri bruger cookies
       </h2>
@@ -52,10 +52,10 @@ import Forslag from "../components/Forslag.astro";
  <section
     class="flex items-center justify-start h-screen bg-[url('/billeder/hero-billede.webp')] bg-cover md:bg-center bg-custom_position hero-billede"
   >
-    <div class="text-left mx-8 text-primary_white lg:ml-36">
+    <div class="text-left mx-8 text-primary_white lg:ml-36 mt-28">
       <h1>Velkommen til det lille kafferisteri</h1>
       <p>
- Dyk ned i kunsten af vores kafferisteri, hvor passion møder præcision. Fordyb dig i symfonien af aromaer og smag på udsøgte, friskristede kaffebønner. Hæv din kaffeoplevelse
+ Dyk ned i kunsten af vores kafferisteri, hvor passion møder præcision. <br> Fordyb dig i symfonien af aromaer og smag på udsøgte, friskristede kaffebønner. Løft din kaffeoplevelse til nye højder.
       </p>
       <div class="mt-5">
         <PrimaryButton link_side="/shop" text="Gå til shop">
@@ -70,7 +70,7 @@ import Forslag from "../components/Forslag.astro";
 <section class="py-16 mt-[40rem] bg-primary_white">
   <div class="md:grid md:grid-cols-2 p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto">
     <img src="/produktbilleder/kaffekasse_stor.webp" alt="kaffekasse_billede">
-    <div class="cols-2 mt-6">
+    <div class="cols-2 mt-6 lg:mt-0">
       <h2>Tilmeld dig kaffekassen</h2>
       <h3 class="mt-8">Det er ligesom at få en gave hver måned</h3>
       <p class="italic">“Jeg er almen kaffedrikker, men har aldrig været den største kaffeentusiast, men så gik det op for mig, hvor lækker god kaffe er, og hvor få ting du egentlig behøver for at lave god kaffe. Takket hver kaffekassen, har jeg fået ressourcerne til at producere den helt rigtige kaffe og få tips med på vejen med den guide, der medfølger hver måned.”</p>
@@ -97,9 +97,9 @@ import Forslag from "../components/Forslag.astro";
 <div class="grid lg:grid-cols-2 pb-16 md:max-w-3xl lg:max-w-6xl mx-auto">  
 <div>
 <Heading><h2 class="text-center">altid friskristet kaffe</h2><Heading/>
-<p class="text-center">Tre gange om ugen forvandler vi bønner til den friskeste og mest lækre kaffe, for at sikre, at du altid får den bedste smagsoplevelse</p>
+<p class="text-center pt-6">Tre gange om ugen forvandler vi bønner til den friskeste og mest lækre kaffe, for at sikre, at du altid får den bedste smagsoplevelse. Vi rister kun med økologiske bønner og det kan særdeleshed smages. <br> De bedste hilsner Anders og Signe.</p>
 </div>
-<div><Timer></Timer>
+<div class="justify-center grid"><Timer></Timer>
   </div>
 
 </div>

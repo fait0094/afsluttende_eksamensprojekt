@@ -3,10 +3,17 @@ import "../styles/style.css";
 
 ---
 
-<div class="text-center pt-16 lg:pt-0">
+<div class="text-center pt-16 lg:pt-0 grid">
 <h3>Næste kafferistning begynder om:</h3>
-<h4 id="timer" class="text-heading-2"></h4>
+<h4 class=" w-full text-heading-1  text-light_brown" id="timer"></h4>
 </div>
+
+<style>
+#timer{
+  font-weight: bold;
+}
+
+</style>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 19, 2024 15:37:25").getTime();

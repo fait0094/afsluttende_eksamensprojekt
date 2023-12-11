@@ -1,14 +1,13 @@
 ---
-import Card from "../components/Card.astro";
-import Heading from "../components/Heading.astro";
 import "../styles/style.css";
 import Sti from "../components/Sti.astro";
 import Testimonial from "../components/Testimonial.astro";
-import Single from "../components/Single.astro";
+import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import HeaderCopy from "../components/Header.astro";
+const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
+
 
 
          
@@ -26,11 +25,99 @@ import HeaderCopy from "../components/Header.astro";
         sti3="Kaffekassen Small"
         />
         
-        <Single
-        galleri_1="/billeder/produktbilleder/kaffeboksalm.webp"
-        galleri_2="/kaffekasse_single/kaffekasse-1.jpg"
-        galleri_3="/kaffekasse_single/kaffekasse-2.jpg"
-        galleri_4="/kaffekasse_single/kaffekasse-3.jpg"/>
+       <!-- Single -->
+<div class="grid md:grid-cols-2 bg-secondary_beige py-16 gap-10">
+ <div class="">
+<img class="mb-5 w-full" src={galleri_1} alt="Kaffe" height="410" width="410">
+<div class="flex gap-5">
+    <img src={galleri_2} alt="">
+    <img src={galleri_3} alt="">
+    <img src={galleri_4} alt="">
+</div>
+    
+</div>
+   <div class="">
+        <div class="flex justify-between">
+            <h1>Kaffekassen Small</h1>
+           <div class="flex gap-2">
+                <img src="/ikoner/topbar-fairtrade.svg" alt="">
+                <img src="/ikoner/topbar-oko.svg" alt="">
+           </div>
+        </div>
+        <h2>159 DKK</h2>
+        <div class="flex gap-4 mb-4">
+            <img src="/ikoner/stjerner.svg" alt="">
+            <a href="#anmeldelser"><p class="underline">Se anmeldelser</p></a>
+        </div>
+   <div class="grid">
+        <p class="mb-4">Tilmeld dig en kaffekasse og få en eksklusiv boks på abonnement efter dine behov.</p>
+
+<p>Boksen indeholder:</p>
+<ul class="custom-list">
+  <li class="flex mb-4"><p>2 poser udvalgt 250 grams friskristet økologisk kaffe.</p></li>
+  <li class="flex mb-4"><p>En kaffe-gave til en værdi af omkring 50 kr.</p></li>
+  <li class="flex mb-4"><p>Et eksklusivt nyhedsbrev, der guider dig gennem månedens særlige tema med spændende perspektiver på kaffe.</p></li>
+</ul>
+
+<p>Som medlem af vores klub vil du også blive tilbudt en række rabatter og andre fordele. Du kan altid opsige dit medlemskab.</p>
+ 
+
+   </div>
+       
+
+        <!-- Inputfelter -->
+       <div class="grid md:grid-cols-2 gap-3 md:gap-5">
+       <!-- Type -->
+<div class="grid">
+  <label><h4>Type</h4></label>
+  <select class="py-2 px-5">
+    <option>Hele bønner</option>
+    <option>Kværnede bønner</option>
+  </select>
+</div>
+
+<!-- Størrelse -->
+<div class="grid">
+  <label><h4>Størrelse</h4></label>
+  <select class="py-2 px-5">
+    <option>250g</option>
+    <option>1000g</option>
+  </select>
+</div>
+
+<!-- Antal -->
+<div class="grid">
+  <label><h4>Antal</h4></label>
+  <select class="py-2 px-5">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+  </select>
+</div>
+
+
+           <!-- Button -->
+          <div class="grid mt-2 md:mt-0">
+
+            <div class="bg-accent_green hover:bg-light_accent_green inline-flex md:mt-12 justify-center">
+   <a href=#>
+    <h4 class="text-primary_white py-2 px-5">Tilføj til kurven</h4>
+    </a> 
+</div>
+          </div>
+         
+       </div>
+   </div>
+</div>
+
+
     </div>
 <div class="bg-primary_white md:px-0 px-10">
     
@@ -65,5 +152,17 @@ import HeaderCopy from "../components/Header.astro";
 
 </MainLayout>
 
+<style>
+  .custom-list {
+    list-style-type: none;
+  }
 
+  .custom-list li::before {
+    content: url('/ikoner/bean.svg');
+    display: inline-block;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+</style>
 

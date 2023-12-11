@@ -36,12 +36,12 @@ import Forslag from "../components/Forslag.astro";
         <button
           id="afvis"
           class="border-2 border-solid border-slate-300 px-6 py-2 text-dark_brown"
-          ><h3 class="heading-4">AFVIS</h3></button
+          ><h3 class="heading-4 mb-0">AFVIS</h3></button
         >
         <button
           id="accepter"
           class="border-solid border-2 hover:bg-light_accent_green border-accent_green hover:border-light_accent_green bg-accent_green text-primary_white px-6 font-bold"
-          ><h3 class="heading-4 normal">ACCEPTER</h3></button
+          ><h3 class="heading-4 mb-0">ACCEPTER</h3></button
         >
       </div>
     </div>
@@ -68,11 +68,10 @@ import Forslag from "../components/Forslag.astro";
 <!-- tilmeld dig kaffekassen -->
 
 <section class="py-16 mt-[40rem] bg-primary_white">
-  <div class="md:grid md:grid-cols-2 p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto">
-    <img src="/produktbilleder/kaffekasse_stor.webp" alt="kaffekasse_billede">
+  <div class="md:grid md:grid-cols-2 p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in ">
+    <img class="justiy-center" src="/billeder/produktbilleder/kaffeboksalm.webp" alt="kaffekasse_billede" height="450" width="450">
     <div class="cols-2 mt-6 lg:mt-0">
       <h2>Tilmeld dig kaffekassen</h2>
-      <h3 class="mt-8">Det er ligesom at få en gave hver måned</h3>
       <p class="italic">“Jeg er almen kaffedrikker, men har aldrig været den største kaffeentusiast, men så gik det op for mig, hvor lækker god kaffe er, og hvor få ting du egentlig behøver for at lave god kaffe. Takket hver kaffekassen, har jeg fået ressourcerne til at producere den helt rigtige kaffe og få tips med på vejen med den guide, der medfølger hver måned.”</p>
     
       <div class="flex gap-5 mt-8 mb-5">
@@ -130,7 +129,7 @@ import Forslag from "../components/Forslag.astro";
 
 <!-- når du handler hos os får du -->
 
-<section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto">
+<section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in">
     <Heading><h2  class="text-center pt-16">når du handler hos os får du</h2><Heading/>
     <InfoSection
     img1="/ikoner/kvalitet.svg"

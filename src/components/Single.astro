@@ -7,9 +7,9 @@ import ToggleDropdown from "./ToggleDropdown.astro";
 const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
 
-<section class="grid md:grid-cols-2 bg-secondary_beige py-16">
+<section class="grid md:grid-cols-2 bg-secondary_beige py-16 gap-10">
  <div class="">
-<img class="mb-5" src={galleri_1} alt="Kaffe">
+<img class="mb-5 w-full" src={galleri_1} alt="Kaffe" height="410" width="410">
 <div class="flex gap-5">
     <img src={galleri_2} alt="">
     <img src={galleri_3} alt="">
@@ -29,7 +29,7 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         <h2>159 DKK</h2>
         <div class="flex gap-4 mb-4">
             <img src="/ikoner/stjerner.svg" alt="">
-            <p class="underline">Se anmeldelser</p>
+            <a href="#anmeldelser"><p class="underline">Se anmeldelser</p></a>
         </div>
    <div class="grid">
            <div>
@@ -124,5 +124,4 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
            <ToggleDropdown
            type="Antal" title="1" option1="1" option2="2" option3="3"/>
            <PrimaryButton text="Tilføj til kurven"/> */
-
-</style>
+           

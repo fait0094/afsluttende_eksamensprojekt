@@ -41,3 +41,20 @@ afvisBtn.addEventListener("click", () => {
 accepterBtn.addEventListener("click", () => {
   cookieBox.style.display = "none";
 });
+
+
+//fade in animation//
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+function fadeInOnScroll() {
+  fadeInElements.forEach((el) => {
+    const elTop = el.getBoundingClientRect().top;
+    const elBottom = el.getBoundingClientRect().bottom;
+
+    if (elTop < window.innerHeight && elBottom > 0) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", fadeInOnScroll);

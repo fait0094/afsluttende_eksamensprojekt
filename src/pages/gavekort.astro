@@ -7,7 +7,6 @@ import ToggleDropdown from "../components/ToggleDropdown.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import KaffeGalleri from "../components/KaffeGalleri.astro";
 ---
 
 <MainLayout
@@ -29,13 +28,13 @@ import KaffeGalleri from "../components/KaffeGalleri.astro";
       
         <!-- <Single/> -->
 
-       <div class="grid md:grid-cols-2">
-          <KaffeGalleri
-          galleri_1="/gavekort/gavekort.jpg"
-          galleri_2="/gavekort/gavekort-1.jpg"
-          galleri_3="/gavekort/gavekort-2.jpg"
-          galleri_4="/gavekort/gavekort-3.jpg"
-          />
+       <div class="grid md:grid-cols-2 bg-secondary_beige py-16 gap-10">
+
+<img class="mb-5 w-full" src="/gavekort/gavekort.jpg" alt="Gavekort">
+
+
+
+
           <div class="">
              <h1>Gavekort</h1>
              <p class="mb-4">Overrask en du holder af med et gavekort til Det Lille Kafferisteri. Gavekortet er tilgængeligt både fysisk og digitalt via mail. Vælg beløb, tilpas og glæd dine nærmeste med smagen af kvalitetskaffe.</p>
@@ -48,16 +47,56 @@ import KaffeGalleri from "../components/KaffeGalleri.astro";
 
 
         <!-- Inputfelter -->
-       <div class="">
-           <ToggleDropdown
-           type="Type" title="Digitalt gavekort" option1="Fysisk gavekort"/>
-           <ToggleDropdown
-           type="Beløb" title="200 DKK" option1="300 DKK"/>
-          <div class="grid grid-row md:grid-cols-2 gap-5">
-             <ToggleDropdown
-             type="Antal" title="1" option1="1" option2="2" option3="3"/>
-             <PrimaryButton text="Tilføj til kurven"/>
-          </div>
+   <!-- Inputfelter -->
+<div class="grid md:grid-cols-2 gap-3 md:gap-5 mt-5 items-end">
+  <!-- Type -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Type</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>Digitalt gavekort</option>
+      <option>Fysisk gavekort</option>
+    </select>
+  </div>
+
+  <!-- Beløb -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Beløb</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>200 DKK</option>
+      <option>300 DKK</option>
+      <option>400 DKK</option>
+    </select>
+  </div>
+
+  <!-- Antal -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Antal</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
+
+  <!-- Button -->
+  <div class="grid col-span-1">
+    <div class="bg-accent_green hover:bg-light_accent_green inline-flex justify-center items-center h-12">
+      <a href="#">
+        <h4 class="text-primary_white">Tilføj til kurven</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
            
        </div>
    </div>
@@ -82,7 +121,7 @@ import KaffeGalleri from "../components/KaffeGalleri.astro";
     	    price_2="FRA 79 DKK"
     
             link_side_3="/produktside"
-    	    img_product_3="/billeder/produktbilleder/packshot1a.webp"
+    	    img_product_3="/billeder/produktbilleder/packshot1.webp"
             kategori_3="Stempelkande"
     	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
     	    price_3="FRA 79 DKK"

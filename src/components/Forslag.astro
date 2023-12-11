@@ -45,14 +45,13 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 </div>
 </div>
 </a>
-</div></div>
-          <!-- Add more cards here -->
+</div>
+</div>
         </div>
-        <div class="indicators">
+        <div class="indicators mt-6">
           <span class="indicator active" onclick="moveToSlide(0);"></span>
           <span class="indicator" onclick="moveToSlide(1);"></span>
           <span class="indicator" onclick="moveToSlide(2);"></span>
-          <!-- Add more indicators here -->
         </div>
       </div>
 
@@ -80,15 +79,11 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
   transition: border-color 0.3s ease-in-out;
 }
 
-.card.active {
-  border-color: #333;
-  font-weight: bold;
-}
 
 .indicators {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1.5rem;
 }
 
 .indicator {
@@ -101,7 +96,7 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 }
 
 .indicator.active {
-  background-color: #333;
+  background-color: var(--light_brown);
   font-weight: bold;
 }
 
@@ -126,7 +121,7 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
   .indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 1.5rem;
   }
 
   .indicator {
@@ -139,8 +134,7 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
   }
 
   .indicator.active {
-    background-color: #333;
-    font-weight: bold;
+    background-color: var(--light_brown);
   }
 }
 

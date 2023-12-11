@@ -6,8 +6,10 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 ---
 <section class="py-16 ">
 	<Heading><h2>{heading}</h2><Heading/>
-		 <div class="flex gap-10">
-		<div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
+    <div class="slider">
+        <div class="cards">
+          <div class="card active">
+           <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
   <a href={link_side_1}>  <div><img class="w-full" src={img_product_1} alt="produkt_billeder"></div>
   <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_1}</h1>
 <h2 class="uppercase heading-3 font-semibold">{title_1}</h2>
@@ -18,7 +20,9 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 </div>
 </a>
 </div>
-		<div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
+        </div>
+          <div class="card">
+            <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
   <a href={link_side_2}>  <div><img class="w-full" src={img_product_2} alt="produkt_billeder"></div>
   <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_2}</h3>
 <h2 class="uppercase heading-3 font-semibold">{title_2}</h2>
@@ -29,7 +33,9 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 </div>
 </a>
 </div>
-		<div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
+    </div>
+          <div class="card">
+            <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
   <a href={link_side_3}>  <div><img class="w-full" src={img_product_3} alt="produkt_billeder"></div>
   <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_3}</h1>
 <h2 class="uppercase heading-3 font-semibold">{title_3}</h2>
@@ -39,9 +45,174 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 </div>
 </div>
 </a>
-</div>
-		 </div>
+</div></div>
+          <!-- Add more cards here -->
+        </div>
+        <div class="indicators">
+          <span class="indicator active" onclick="moveToSlide(0);"></span>
+          <span class="indicator" onclick="moveToSlide(1);"></span>
+          <span class="indicator" onclick="moveToSlide(2);"></span>
+          <!-- Add more indicators here -->
+        </div>
+      </div>
+
 </section>
 
+    
 <style>
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; /* Ensure only one card is visible */
+}
+
+.cards {
+  display: flex;
+  gap: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: calc(33.333% - 20px); /* Three cards in a row for desktop */
+  padding: 20px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.card.active {
+  border-color: #333;
+  font-weight: bold;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+  font-weight: bold;
+}
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .slider {
+    overflow: hidden; /* Ensure only one card is visible */
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: nowrap; /* Display cards in a single row */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth movement */
+  }
+
+  .card {
+    flex: 0 0 100%; /* Each card takes full width */
+  }
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .indicator.active {
+    background-color: #333;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+ .indicators {
+    display: none;
+  }
+}
+
+
+
+
 </style>
+
+ <!--=============== scripts  ===============-->
+<script type="text/javascript">
+  // Declare moveToSlide in the global scope
+  function moveToSlide(index) {
+    console.log("Move to slide called with index:", index);
+
+    const cards = document.querySelectorAll('.slider .cards .card');
+    const indicators = document.querySelectorAll('.slider .indicators .indicator');
+
+    if (window.innerWidth <= 768) {
+      cards.forEach((card, i) => {
+        card.style.display = 'none';
+        indicators[i].classList.remove('active');
+      });
+
+      cards[index].style.display = 'block';
+      indicators[index].classList.add('active');
+    } else {
+      cards.forEach((card, i) => {
+        card.style.display = 'block';
+        if (i === index) {
+          indicators[i].classList.add('active');
+        } else {
+          indicators[i].classList.remove('active');
+        }
+      });
+    }
+  }
+
+  const slider = document.querySelector('.slider');
+  let startX = 0;
+  let startY = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    const deltaX = startX - touch.clientX;
+    const deltaY = startY - touch.clientY;
+
+    if (Math.abs(deltaY) > Math.abs(deltaX)) {
+      e.preventDefault();
+    }
+  });
+
+  // Ensure all cards are visible on transitioning to desktop
+  window.addEventListener('resize', function() {
+    const cards = document.querySelectorAll('.slider .cards .card');
+    if (window.innerWidth > 768) { // Check if transitioning to desktop view
+      cards.forEach((card) => {
+        card.style.display = 'block';
+      });
+    }
+  });
+
+  moveToSlide(0); // Call initially
+</script>

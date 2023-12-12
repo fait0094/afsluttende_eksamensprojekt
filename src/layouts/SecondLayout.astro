@@ -22,9 +22,8 @@ const { title, metacontent } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <!-- Lav en seperat menu på forsiden?? Da den ikke er stylet på samme måde på andre sider -->
      <Header/>
-    <main class="bg-secondary_beige">
+    <main class="bg-secondary_beige overflow-hidden">
       <slot />
     </main>
     	 <Footer />

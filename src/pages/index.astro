@@ -67,7 +67,8 @@ import Forslag from "../components/Forslag.astro";
 
 <!-- tilmeld dig kaffekassen -->
 
-<section class="py-16 mt-[40rem] bg-primary_white">
+<section class="py-16 mt-[40rem] bg-primary_white relative">
+  <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-80px] right-[-90px] h-60 w-60">
   <div class="md:grid md:grid-cols-2 p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in ">
     <img class="justiy-center" src="/billeder/produktbilleder/kaffeboksalm.webp" alt="kaffekasse_billede" height="450" width="450">
     <div class="cols-2 mt-6 lg:mt-0">
@@ -92,7 +93,10 @@ import Forslag from "../components/Forslag.astro";
 </section>
 
 <!-- altid friskristet kaffe -->
-<section class="pt-16 md:px-0">
+<section class="pt-16 md:px-0 relative">
+  <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-60px] left-[-90px] h-60 w-60">
+  <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[765px] right-[-90px] h-60 w-60">
+  <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-110px] left-[-130px] h-60 w-60 rotate-45">
 <div class="grid lg:grid-cols-2 pb-16 md:max-w-3xl lg:max-w-6xl mx-auto px-10">  
 <div>
 <h2 class="">altid friskristet kaffe</h2>
@@ -104,26 +108,6 @@ import Forslag from "../components/Forslag.astro";
 </div>
 <!-- mest populære kaffeprodukter -->
 <div class="bg-primary_white pb-16 px-10">
-    <!-- <Forslag
-    heading="Mest populære produkter"
-        link_side_1="/produktside"
-	    img_product_1="/billeder/produktbilleder/packshot3.webp"
-        kategori_1="Espresso"
-	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
-	    price_1="FRA 79 DKK"
-
-        link_side_2="/produktside"
-	    img_product_2="/billeder/produktbilleder/packshot4.webp"
-        kategori_2="Espresso"
-	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
-	    price_2="FRA 79 DKK"
-
-        link_side_3="/produktside"
-	    img_product_3="/billeder/produktbilleder/packshot1.webp"
-        kategori_3="Stempelkande"
-	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
-	    price_3="FRA 79 DKK"
-    /> -->
     <Forslag
     heading="Mest populære produkter"
         link_side_1="/produktside"
@@ -149,7 +133,9 @@ import Forslag from "../components/Forslag.astro";
 
 <!-- når du handler hos os får du -->
 
-<section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in">
+<section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in relative">
+   <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-60px] right-[-197px] h-60 w-60 rotate-45 z-10">
+
     <Heading><h2  class="text-center pt-16">når du handler hos os får du</h2><Heading/>
     <InfoSection
     img1="/ikoner/kvalitet.svg"
@@ -176,7 +162,8 @@ import Forslag from "../components/Forslag.astro";
 </section>
 
 <!-- famlieejet virksomhed -->
-<section class=" py-16 bg-primary_white">
+<section class=" py-16 bg-primary_white relative">
+  <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-110px] left-[-130px] h-60 w-60">
   <div class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto lg:grid grid-cols-2 gap-10">
     <div>
     <h2>Familieejet virksomhed</h2>
@@ -191,7 +178,8 @@ import Forslag from "../components/Forslag.astro";
 </section>
 
 <!-- følg på instagram -->
-<section class="py-16 ">
+<section class="py-16 relative">
+<img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-20px] right-[-99px] h-60 w-60">
 <div class="md:p-0  px-10">
   <Heading><h2  class="text-center ">Følg os på Instagram</h2><Heading/>
    <div class="lg:flex gap-8 grid md:grid-cols-2 py-16">

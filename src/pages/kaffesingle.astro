@@ -56,10 +56,10 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
             ></TertiaryButton>
         </div>
    <div class="grid">
-           <div>
-                <p class="mb-4">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
-                
-                 <div class="md:flex gap-8">
+           <div class="grid grid-cols-2">
+                <p class="mb-4 col-span-2">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
+      
+                 <div class="md:flex gap-8 grid row-start-2">
                         <Skala
                         skala="Syrlighed"
                         beanImgPath1="/ikoner/bean-full.png"
@@ -82,8 +82,10 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
                         beanImgPath4="/ikoner/bean-empty.png"
                         />
                  </div>
-           </div>
-             <img src="/ikoner/landekort.svg" alt="">
+             <img class="lg:row-span-2 col-start-2 row-start-2" src="/ikoner/landekort.svg" alt="">
+            
+
+          </div>
    </div>
        
 <!-- Inputfelter -->

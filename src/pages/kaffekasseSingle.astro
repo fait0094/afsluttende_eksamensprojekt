@@ -2,7 +2,6 @@
 import "../styles/style.css";
 import Sti from "../components/Sti.astro";
 import Testimonial from "../components/Testimonial.astro";
-import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
@@ -16,14 +15,14 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
   metacontent="Oplev vores unikke abonnementsløsning, Kaffekassen, hos Det Lille Kafferisteri. Få essentiel kaffeviden, lækre kaffenydelser og spændende gaver hver måned. Bliv klogere og gladere med vores overraskelser og sjove kaffeoplevelser."
   >
 <section class="relative">
-    <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-20px] right-[-100px] h-60 w-60">
+<img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-5%] right-[-18%] h-[30rem] w-[30rem] rotate-45">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <Sti
         sti1="Forside"
         divider1="/"
         sti2="Kaffekassen"
         divider2="/"
-        sti3="Kaffekassen Small"
+        sti3="Kaffekassen Mellem"
         />
         
        <!-- Single -->
@@ -121,8 +120,8 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 
     </div>
 <div class="bg-primary_white md:px-0 px-10 relative">
-            <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-60px] left-[-90px] h-60 w-60">
-            <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-90px] right-[-90px] h-60 w-60">
+            <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
+            <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-33%] right-[-15%] h-[30rem] w-[30rem]">
         <Forslag
         heading="Du vil muligvis synes godt om"
             link_side_1="/kaffekasse"
@@ -142,14 +141,17 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         />
 </div>
 
-      <Testimonial
-      testimonial_billede_1="/billeder/sarah.png"
-      testimonial_person_1="Sarah, 33 år"
-      testimonial_tekst_1="Jeg er virkelig kræsen, når det kommer til kaffe. Men jeg har virkelig fundet den kaffe der passer til mig. Den er rund i smagen og perfekt i kombination med min havremælk"
-      testimonial_billede_2="/billeder/kenneth.png"
-      testimonial_person_2="Kenneth, 65 år"
-      testimonial_tekst_2="Jeg går op i god kaffe og elsker at få tilsendt god kaffe hver måned. Derudover lærer jeg nye metoder, jeg ikke kendte til før."
-      />
+     <div class="relative">
+      <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem]">
+        <Testimonial
+        testimonial_billede_1="/billeder/sarah.png"
+        testimonial_person_1="Sarah, 33 år"
+        testimonial_tekst_1="Jeg er virkelig kræsen, når det kommer til kaffe. Men jeg har virkelig fundet den kaffe der passer til mig. Den er rund i smagen og perfekt i kombination med min havremælk"
+        testimonial_billede_2="/billeder/kenneth.png"
+        testimonial_person_2="Kenneth, 65 år"
+        testimonial_tekst_2="Jeg går op i god kaffe og elsker at få tilsendt god kaffe hver måned. Derudover lærer jeg nye metoder, jeg ikke kendte til før."
+        />
+     </div>
 
 
     

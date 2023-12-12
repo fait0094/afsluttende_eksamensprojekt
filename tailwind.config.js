@@ -20,6 +20,9 @@ export default {
         "heading-4": ["1.563rem"],
         "heading-5": ["1.25rem"],
       },
+      rotate: {
+        '17': '17deg',
+      }
     },
   },
   plugins: [],

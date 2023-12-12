@@ -13,7 +13,8 @@ import TertiaryButton from "../components/TertiaryButton.astro";
 title="Om Os - Det Lille Kafferisteri"
   metacontent="Oplev historien bag Det Lille Kafferisteri. Anders og Signe skabte dette familieejede kafferisteri på Hundested Havn for over 20 år siden. Udforsk vores kerneværdier: kvalitet, bæredygtighed og økologi."
   >
-<section class="">
+<section class="relative">
+     <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-20px] right-[-100px] h-60 w-60">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <Sti
         sti1="Forside"
@@ -26,7 +27,7 @@ title="Om Os - Det Lille Kafferisteri"
 
 
     <!-- Kerneværdier -->
-<section class="bg-secondary_beige pb-16 pt-8  md:px-0 px-10 ">
+<section class="bg-secondary_beige pb-16 pt-8  md:px-0 px-10">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto">
         <Heading><h2  class="text-center">Vores kerneværdier</h2><Heading/>
         <InfoSection
@@ -49,19 +50,24 @@ title="Om Os - Det Lille Kafferisteri"
        <!-- Familieejet virksomhed -->
 
 <section>
-    <div class="bg-primary_white py-16 md:px-0 px-10 grid lg:flex justify-center gap-10">
-        <div>
-        <h2>familieejet virksomhed</h2>
-        <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
-    Vores kaffehistorie startede for mere end 20 år siden. Vi havde oplevet værdien af den helt friske kaffe, så Anders gik i gang med at riste til os selv på en lille hjemmerister i køkkenet. Dette var begyndelsen på vores rejse.</p>
-    </div>
-    <img src="/om_os/signe-anders.png" alt="">
+    <div class="bg-primary_white py-16 md:px-0 px-10 gap-10 relative">
+        <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-100px] left-[-120px] h-60 w-60">
+        <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-100px] right-[-80px] h-60 w-60 rotate-45 z-10">
+   <div class="grid lg:flex justify-center">
+            <div>
+            <h2>familieejet virksomhed</h2>
+            <p>Det Lille Kafferisteri er skabt af os, Anders og Signe, og sammen har vi tre børn, som alle mere eller mindre en del af vores lille passionerede familieprojekt på Hundested Havn. 
+        Vores kaffehistorie startede for mere end 20 år siden. Vi havde oplevet værdien af den helt friske kaffe, så Anders gik i gang med at riste til os selv på en lille hjemmerister i køkkenet. Dette var begyndelsen på vores rejse.</p>
+        </div>
+        <img src="/om_os/signe-anders.png" alt="">
+   </div>
     </div>
     </div>
 </section>
 
     <!-- Lokation -->
-<section class="py-16">
+<section class="py-16 relative">
+    <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-110px] left-[-130px] h-60 w-60 rotate-45">
    <div class="grid gap-16 md:flex lg:flex md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <img src="/om_os/location.png" alt="lokation_hundested">
         <div>

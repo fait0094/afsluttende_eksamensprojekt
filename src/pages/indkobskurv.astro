@@ -13,7 +13,8 @@ import MainLayout from "../layouts/MainLayout.astro";
  title="Indkøbskurv - Det Lille Kafferisteri"
   metacontent="Velkommen til Det Lille Kafferisteri! Oplev friskristet kaffe, tilmeld dig vores kaffekasse, og opdag vores mest populære kaffeprodukter. Hos os får du kvalitet, bæredygtighed, og økologisk kaffe."
 >
-<section class="">
+<section class="relative">
+<img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[20px] right-[-50px] h-60 w-60">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <Sti
         sti1="Forside"
@@ -87,8 +88,8 @@ import MainLayout from "../layouts/MainLayout.astro";
        
     </div>
 </section>
-
-<div class="bg-primary_white">
+<div class="bg-primary_white relative">
+    <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-60px] left-[-90px] h-60 w-60">
         <Forslag
         heading="Du vil muligvis synes godt om"
             link_side_1="/produktside"

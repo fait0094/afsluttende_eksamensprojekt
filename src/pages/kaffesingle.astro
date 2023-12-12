@@ -4,9 +4,10 @@ import Heading from "../components/Heading.astro";
 import "../styles/style.css";
 import Sti from "../components/Sti.astro";
 import Testimonial from "../components/Testimonial.astro";
-import Single from "../components/Single.astro";
+import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
 
 <MainLayout
@@ -22,11 +23,112 @@ import MainLayout from "../layouts/MainLayout.astro";
         divider2="/"
         sti3="Kaffe"
         />
-         <Single
-        galleri_1="/billeder/produktbilleder/packshot2.webp"
-        galleri_2="/billeder/galleri-1.jpg"
-        galleri_3="/billeder/galleri-2.jpg"
-        galleri_4="/billeder/galleri-3.jpg"/>
+        
+<section class="grid md:grid-cols-2 bg-secondary_beige py-16 gap-10">
+ <div class="">
+<img class="mb-5 w-full" src="/billeder/produktbilleder/packshot1.webp" alt="Kaffe" height="410" width="410">
+<div class="grid grid-cols-3 gap-5">
+    <img class="w-full md:w-auto" src="/billeder/galleri-1.jpg" alt="">
+    <img class="w-full md:w-auto" src="/billeder/galleri-2.jpg" alt="">
+    <img class="w-full md:w-auto" src="/billeder/galleri-3.jpg" alt="">
+</div>
+</div>
+
+   <div class="">
+        <h5>Espresso</h5>
+        <div class="flex justify-between">
+            <h1>Kaffemik</h1>
+           <div class="flex gap-2">
+                <img src="/ikoner/topbar-fairtrade.svg" alt="">
+                <img src="/ikoner/topbar-oko.svg" alt="">
+           </div>
+        </div>
+        <h2>70 DKK</h2>
+        <div class="flex gap-4 mb-4">
+            <img src="/ikoner/stjerner.svg" alt="">
+            <a href="#anmeldelser"><p class="underline">Se anmeldelser</p></a>
+        </div>
+   <div class="grid">
+           <div>
+                <p class="mb-4">Mørk krydret kaffe. Mexico (Berilo) med noter af chokolade og vanilje, samt fantastisk crema. Afstemt med Guatemalabønnerne, med sin rundhed og noter af tropisk frugt.</p>
+                
+                 <div class="md:flex gap-8">
+                        <Skala
+                        skala="Syrlighed"
+                        beanImgPath1="/ikoner/bean-full.png"
+                        beanImgPath2="/ikoner/bean-full.png"
+                        beanImgPath3="/ikoner/bean-full.png"
+                        beanImgPath4="/ikoner/bean-empty.png"
+                        />
+                        <Skala
+                        skala="Sødme"
+                        beanImgPath1="/ikoner/bean-full.png"
+                        beanImgPath2="/ikoner/bean-full.png"
+                        beanImgPath3="/ikoner/bean-full.png"
+                        beanImgPath4="/ikoner/bean-full.png"
+                        />
+                        <Skala
+                        skala="Ristegrad"
+                        beanImgPath1="/ikoner/bean-full.png"
+                        beanImgPath2="/ikoner/bean-full.png"
+                        beanImgPath3="/ikoner/bean-empty.png"
+                        beanImgPath4="/ikoner/bean-empty.png"
+                        />
+                 </div>
+           </div>
+             <img src="/ikoner/landekort.svg" alt="">
+   </div>
+       
+<!-- Inputfelter -->
+<div class="grid md:grid-cols-2 gap-3 md:gap-5 mt-5 items-end">
+  <!-- Type -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Type</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>Hele bønner</option>
+      <option>Kværnede bønner</option>
+    </select>
+  </div>
+
+  <!-- Størrelse -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Størrelse</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>250 g</option>
+      <option>1000 g</option>
+    </select>
+  </div>
+
+  <!-- Antal -->
+  <div class="grid col-span-1">
+    <label class="mb-1"><h4>Antal</h4></label>
+    <select class="py-3 px-5 h-12">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
+
+  <!-- Button -->
+  <div class="grid col-span-1">
+    <div class="bg-accent_green hover:bg-light_accent_green inline-flex justify-center items-center h-12">
+      <a href="#">
+        <h4 class="text-primary_white">Tilføj til kurven</h4>
+      </a>
+    </div>
+  </div>
+</div>
+     
+   </div>
+</section>
+
    </div>
     <section class="bg-primary_white">
    <div class="">

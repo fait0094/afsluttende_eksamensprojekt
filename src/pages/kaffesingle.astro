@@ -7,6 +7,8 @@ import Testimonial from "../components/Testimonial.astro";
 import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import TertiaryButton from "../components/TertiaryButton.astro";
+
 const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
 
@@ -46,7 +48,10 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         <h2>70 DKK</h2>
         <div class="flex gap-4 mb-4">
             <img src="/ikoner/stjerner.svg" alt="">
-            <a href="#anmeldelser"><p class="underline">Se anmeldelser</p></a>
+            <TertiaryButton
+            text="Se anmeldelser"
+            link_side="#anmeldelser"
+            ></TertiaryButton>
         </div>
    <div class="grid">
            <div>

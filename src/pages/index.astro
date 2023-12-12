@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import Kategoricard from "../components/Kategoricard.astro";
 import SecondaryButton from "../components/SecondaryButton.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
+import TertiaryButton from "../components/TertiaryButton.astro";
 import ToggleDropdown from "../components/ToggleDropdown.astro";
 import Timer from "../components/Timer.astro";
 import "../styles/style.css";
@@ -181,10 +182,13 @@ import Forslag from "../components/Forslag.astro";
     <div>
     <h2>Familieejet virksomhed</h2>
     <p>Velkommen til vores lille familieejede eventyr, der oprindeligt startede i hjemmets garage. Vi har vokset os fra vores beskedne begyndelse og udviklet konceptet med en charmerende butik på Hundested Havn. Vores passion ligger dybt for kaffen og lokalområdet, og vi leverer med stolthed kaffe til lokale restauranter, caféer og udvalgte butikker.</p>
-    <PrimaryButton
-    link_side="/om"
-    text="Læs mere"
-    ></PrimaryButton>
+<div class="my-5">
+<TertiaryButton
+text="Læs mere om os"
+link_side="/om"
+></TertiaryButton>
+</div>
+
     </div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0W3z8KgGs9w?si=1z37kH0ZaaVKG4ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>

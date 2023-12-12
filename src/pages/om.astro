@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import "..//styles/style.css";
 import InfoSection from "../components/InfoSection.astro";
+import TertiaryButton from "../components/TertiaryButton.astro";
+
 
 ---
 
@@ -65,9 +67,14 @@ title="Om Os - Det Lille Kafferisteri"
         <div>
             <h2>Lokation</h2>
             <p>Siden 2021 har vi haft risteri og butik, nede på Hundested Havn, som er en hyggelig havn med en masse små butikker, restauranter og caféer. Anders rister kaffe og Signe passer butikken. 
-                Kom og tag et kig forbi. Vi har åbent hele året - og er særlig kendt for sommerperioderne.</p>
-       <a class="underline" href="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB"><p class="pt-10">Find rutevejledning</p></a>
-        </div>
+           Kom og tag et kig forbi. Vi har åbent hele året - og er særlig kendt for sommerperioderne.</p>
+<div class="my-6">
+           <TertiaryButton
+    text="Find rutevejledning"
+    link_side="https://www.google.com/maps?sca_esv=587611622&output=search&q=det+lille+kafferisteri&source=lnms&entry=mc&sa=X&ved=2ahUKEwjvzJznz_WCAxV6XvEDHfo1DbAQ0pQJegQIFBAB"
+    ></TertiaryButton>   
+    </div>
+    </div>
    </div>
 </section>
 <!-- Vores butik / billedegalleri -->

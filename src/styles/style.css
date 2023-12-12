@@ -49,6 +49,7 @@ iframe {
   --heading-h3: var(--text-7);
   --heading-h4: var(--text-6);
   --heading-h5: var(--text-5);
+  --heading-h6: var(--text-4);
   --body-default: var(--text-4);
   --body-mini: var(--text-3);
 
@@ -116,10 +117,17 @@ h5,
   text-transform: uppercase;
 }
 
+h6, .heading-6 {
+font-family: "Poppins", sans-serif;
+font-size: var(--body-default);
+font-weight: 700;
+}
+
 p {
   font-family: "Poppins", sans-serif;
   font-size: var(--body-default);
   max-width: 65ch;
+  font-weight: 200 ;
 }
 
 span {

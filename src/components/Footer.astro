@@ -2,114 +2,117 @@
 import "../styles/style.css";
 ---
 
-<section class="bg-light_brown text-primary_white grid md:grid-cols-3 md:grid-rows-2 gap-10 p-10 md:px-20">
-    <!-- Kontaktoplysninger -->
-<article class="grid gap-1">
-    <h4>Kontaktoplysninger</h4>
-    <div class="flex gap-4 pb-2">
-       <img src="/ikoner/telefon.svg" width="20" height="50" />
-       <a href="tel:+4528266322">
-        <p>+45 28 26 63 22</p>
-      </a>
-    </div>
-    <div class="flex gap-4 pb-2">
-            <img src="/ikoner/mail.svg" width="20" height="39" />
-            <a href="mailto:kontakt@detlillekafferisteri.dk">
-            <p>kontakt@detlillekafferisteri.dk</p>
+<div class="relative overflow-hidden">
+    <img src="/ikoner/bg-beans-footer.svg" alt="" class="absolute bottom-[0px] right-[-40px] h-96 w-96 z-20">
+    <section class="bg-light_brown text-primary_white grid md:grid-cols-3 md:grid-rows-2 gap-10 p-10 md:px-20">
+        <!-- Kontaktoplysninger -->
+    <article class="grid gap-1">
+        <h4>Kontaktoplysninger</h4>
+        <div class="flex gap-4 pb-2">
+           <img src="/ikoner/telefon.svg" width="20" height="50" />
+           <a href="tel:+4528266322">
+            <p>+45 28 26 63 22</p>
+          </a>
+        </div>
+        <div class="flex gap-4 pb-2">
+                <img src="/ikoner/mail.svg" width="20" height="39" />
+                <a href="mailto:kontakt@detlillekafferisteri.dk">
+                <p>kontakt@detlillekafferisteri.dk</p>
+            </a>
+        </div>
+        <div class="flex gap-4 pb-2">
+                <img src="/ikoner/lokation.svg" width="20" height="64" />
+                <a href="https://www.google.com/maps/place/Kajgaden+7G,+3390+Hundested" target="_blank">
+        <p>Kajgaden 7G, 3390 Hundested</p>
+    </a>
+        </div>
+    </article>
+    
+    
+    <!-- Åbningstider -->
+    <article class="grid gap-1">
+        <h4>Åbningstider</h4>
+        <p>Tirsdag - Fredag: 10.00 - 17.30</p>
+        <p>Lørdag: 10.00 - 16.00</p>
+        <p>Søndag - Mandag: Lukket</p>
+    </article>
+    
+    <!-- Det Lille Kafferisteri -->
+    <article class="grid gap-1">
+        <h4>Det Lille Kafferisteri</h4>
+        <a href="#">
+            <p>Shop</p>
         </a>
-    </div>
-    <div class="flex gap-4 pb-2">
-            <img src="/ikoner/lokation.svg" width="20" height="64" />
-            <a href="https://www.google.com/maps/place/Kajgaden+7G,+3390+Hundested" target="_blank">
-    <p>Kajgaden 7G, 3390 Hundested</p>
-</a>
-    </div>
-</article>
-
-
-<!-- Åbningstider -->
-<article class="grid gap-1">
-    <h4>Åbningstider</h4>
-    <p>Tirsdag - Fredag: 10.00 - 17.30</p>
-    <p>Lørdag: 10.00 - 16.00</p>
-    <p>Søndag - Mandag: Lukket</p>
-</article>
-
-<!-- Det Lille Kafferisteri -->
-<article class="grid gap-1">
-    <h4>Det Lille Kafferisteri</h4>
-    <a href="#">
-        <p>Shop</p>
-    </a>
-    <a href="#">
-        <p>Kaffekassen</p>
-    </a>
-    <a href="#">
-        <p>Gavekort</p>
-    </a>
-    <a href="#">
-        <p>Om os</p>
-    </a>
-</article>
-
-
-<!-- Øvrige informationer -->
-<article class="grid gap-1">
-    <h4>Øvrige informationer</h4>
-    <a href="#">
-        <p>Levering og returnering</p>
-    </a>
-    <a href="#">
-        <p>Cookiepolitik</p>
-    </a>
-    <a href="#">
-        <p>Privatlivspolitik</p>
-    </a>
-    <a href="#">
-        <p>Smileyordning</p>
-    </a>
-</article>
-
-
-<!-- Trustpilot -->
-<article>
-     <div>
-        <div class="flex gap-2 items-center">
-          <img
-            src="../ikoner/trustpilot.svg"
-            alt="trustpilot-ikon"
-            width="50"
-            height="48"
-          />
-          <h4 class="">TRUSTPILOT</h4>
+        <a href="#">
+            <p>Kaffekassen</p>
+        </a>
+        <a href="#">
+            <p>Gavekort</p>
+        </a>
+        <a href="#">
+            <p>Om os</p>
+        </a>
+    </article>
+    
+    
+    <!-- Øvrige informationer -->
+    <article class="grid gap-1">
+        <h4>Øvrige informationer</h4>
+        <a href="#">
+            <p>Levering og returnering</p>
+        </a>
+        <a href="#">
+            <p>Cookiepolitik</p>
+        </a>
+        <a href="#">
+            <p>Privatlivspolitik</p>
+        </a>
+        <a href="#">
+            <p>Smileyordning</p>
+        </a>
+    </article>
+    
+    
+    <!-- Trustpilot -->
+    <article>
+         <div>
+            <div class="flex gap-2 items-center">
+              <img
+                src="../ikoner/trustpilot.svg"
+                alt="trustpilot-ikon"
+                width="50"
+                height="48"
+              />
+              <h4 class="">TRUSTPILOT</h4>
+            </div>
+            <p>Anmeldelser 272 • Fremragende</p>
+    
+            <div class="rating gap-4 pt-2 flex">
+              <img
+                src="../ikoner/trustpilot-stjerner.svg"
+                alt="trustpilo-stjerner"
+                width="112"
+                height="21"
+              />
+              <p>4,7</p>
+            </div>
+          </div>
+    </article>
+    
+    <!-- Følg os -->
+    <article class="p-2">
+        <h4>Følg os</h4>
+        <di class="flex gap-2">
+          <a href="https://www.facebook.com/Detlillekafferisteri"><img src="../ikoner/facebook.svg" alt=""></a>
+          <a href="https://www.instagram.com/detlillekafferisteri/"><img src="../ikoner/instagram.svg" alt=""></a>
         </div>
-        <p>Anmeldelser 272 • Fremragende</p>
-
-        <div class="rating gap-4 pt-2 flex">
-          <img
-            src="../ikoner/trustpilot-stjerner.svg"
-            alt="trustpilo-stjerner"
-            width="112"
-            height="21"
-          />
-          <p>4,7</p>
-        </div>
-      </div>
-</article>
-
-<!-- Følg os -->
-<article class="p-2">
-    <h4>Følg os</h4>
-    <di class="flex gap-2">
-      <a href="https://www.facebook.com/Detlillekafferisteri"><img src="../ikoner/facebook.svg" alt=""></a>
-      <a href="https://www.instagram.com/detlillekafferisteri/"><img src="../ikoner/instagram.svg" alt=""></a>
-    </div>
-</article>
-</section>
-
-<section class="bg-darkest_brown text-primary_white md:flex gap-10 py-5 pl-20">
-<p>Copyright 2023 © Det Lille Kafferisteri</p>
-<p>CVR: 33 31 73 28</p>
-</section>
+    </article>
+    </section>
+    
+    <section class="bg-darkest_brown text-primary_white md:flex gap-10 py-5 pl-20">
+    <p>Copyright 2023 © Det Lille Kafferisteri</p>
+    <p>CVR: 33 31 73 28</p>
+    </section>
+</div>
 
 <style></style>

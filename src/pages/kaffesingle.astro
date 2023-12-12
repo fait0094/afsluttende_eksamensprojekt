@@ -7,6 +7,9 @@ import Testimonial from "../components/Testimonial.astro";
 import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import TertiaryButton from "../components/TertiaryButton.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+
 const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
 
@@ -46,7 +49,10 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         <h2>70 DKK</h2>
         <div class="flex gap-4 mb-4">
             <img src="/ikoner/stjerner.svg" alt="">
-            <a href="#anmeldelser"><p class="underline">Se anmeldelser</p></a>
+            <TertiaryButton
+            text="Se anmeldelser"
+            link_side="#anmeldelser"
+            ></TertiaryButton>
         </div>
    <div class="grid">
            <div>
@@ -118,14 +124,17 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 
   <!-- Button -->
   <div class="grid col-span-1">
-    <div class="bg-accent_green hover:bg-light_accent_green inline-flex justify-center items-center h-12">
+    <div class="bg-accent_green hover:bg-light_accent_green inline-flex justify-center items-center h-12 rounded-full">
       <a href="#">
-        <h4 class="text-primary_white">Tilføj til kurven</h4>
+        <h6 class="text-primary_white">Tilføj til kurven</h6>
       </a>
     </div>
   </div>
+<!-- <PrimaryButton
+text="Tilføj til kurv"
+></PrimaryButton> -->
+
 </div>
-     
    </div>
 </section>
 

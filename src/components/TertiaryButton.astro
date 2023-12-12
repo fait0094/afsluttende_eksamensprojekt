@@ -1,0 +1,16 @@
+---
+import "../styles/style.css";
+import SecondaryButton from "../components/SecondaryButton.astro";
+const {
+    text, link_side
+} = Astro.props;
+---
+
+
+<div class="rounded-full flex">
+   <a href={link_side}>
+    <h6 class="underline">{text}</h6>
+    </a> 
+</div>
+
+  

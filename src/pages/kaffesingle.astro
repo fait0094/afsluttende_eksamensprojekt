@@ -15,7 +15,7 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
   metacontent="Smag vores Kaffemik hos Det Lille Kafferisteri, hvor hver kop bærer stolt både Fairtrade- og økologimærket. Denne mørke og krydrede kaffeblanding kombinerer mexicanske (Berilo) bønner med subtile noter af chokolade og vanilje."
   >
 <section class="relative">
-   <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-5%] right-[-18%] h-[30rem] w-[30rem] rotate-45">
+   <img src="/ikoner/bg-beans.svg" alt="Bønner ikoner" class="absolute top-[-5%] right-[-18%] h-[30rem] w-[30rem] rotate-45">
    <div class="md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <Sti
         sti1="Forside"
@@ -29,9 +29,9 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
  <div class="">
 <img class="mb-5 w-full" src="/billeder/produktbilleder/packshot1.webp" alt="Kaffe" height="410" width="410">
 <div class="grid grid-cols-3 gap-5">
-    <img class="w-full md:w-auto" src="/billeder/galleri-1.jpg" alt="">
-    <img class="w-full md:w-auto" src="/billeder/galleri-2.jpg" alt="">
-    <img class="w-full md:w-auto" src="/billeder/galleri-3.jpg" alt="">
+    <img class="w-full md:w-auto" src="/billeder/galleri-1.jpg" alt="Galleri billede af kaffe">
+    <img class="w-full md:w-auto" src="/billeder/galleri-2.jpg" alt="Galleri billede af kaffe">
+    <img class="w-full md:w-auto" src="/billeder/galleri-3.jpg" alt="Galleri billede af kaffe">
 </div>
 </div>
 
@@ -40,13 +40,13 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         <div class="flex justify-between">
             <h1>Kaffemik</h1>
            <div class="flex gap-2">
-                <img src="/ikoner/topbar-fairtrade.svg" alt="">
-                <img src="/ikoner/topbar-oko.svg" alt="">
+                <img src="/ikoner/topbar-fairtrade.svg" alt="Fairtrademærket ikon">
+                <img src="/ikoner/topbar-oko.svg" alt="Økomærket ikon">
            </div>
         </div>
         <h2>70 DKK</h2>
         <div class="flex gap-4 mb-4">
-            <img src="/ikoner/stjerner.svg" alt="">
+            <img src="/ikoner/stjerner.svg" alt="Stjerne anmeldelser">
             <TertiaryButton
             text="Se anmeldelser"
             link_side="#anmeldelser"
@@ -79,7 +79,7 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
                         beanImgPath4="/ikoner/bean-empty.png"
                         />
                  </div>
-             <img class="lg:row-span-2 col-start-2 row-start-2" src="/ikoner/landekort.svg" alt="">
+             <img class="lg:row-span-2 col-start-2 row-start-2" src="/ikoner/landekort.svg" alt="Landekort">
             
 
           </div>
@@ -88,39 +88,40 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 <!-- Inputfelter -->
 <div class="grid md:grid-cols-2 gap-3 md:gap-5 mt-5 items-end">
   <!-- Type -->
-  <div class="grid col-span-1">
-    <label class="mb-1"><h4>Type</h4></label>
-    <select class="py-3 px-5 h-12">
-      <option>Hele bønner</option>
-      <option>Kværnede bønner</option>
-    </select>
-  </div>
+<div class="grid col-span-1">
+  <label class="mb-1" for="kaffe-type"><h4>Type</h4></label>
+  <select class="py-3 px-5 h-12" id="kaffe-type">
+    <option>Hele bønner</option>
+    <option>Kværnede bønner</option>
+  </select>
+</div>
 
-  <!-- Størrelse -->
-  <div class="grid col-span-1">
-    <label class="mb-1"><h4>Størrelse</h4></label>
-    <select class="py-3 px-5 h-12">
-      <option>250 g</option>
-      <option>1000 g</option>
-    </select>
-  </div>
+<!-- Størrelse -->
+<div class="grid col-span-1">
+  <label class="mb-1" for="kaffe-stoerrelse"><h4>Størrelse</h4></label>
+  <select class="py-3 px-5 h-12" id="kaffe-stoerrelse">
+    <option>250 g</option>
+    <option>1000 g</option>
+  </select>
+</div>
 
-  <!-- Antal -->
-  <div class="grid col-span-1">
-    <label class="mb-1"><h4>Antal</h4></label>
-    <select class="py-3 px-5 h-12">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
-    </select>
-  </div>
+<!-- Antal -->
+<div class="grid col-span-1">
+  <label class="mb-1" for="kaffe-antal"><h4>Antal</h4></label>
+  <select class="py-3 px-5 h-12" id="kaffe-antal">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+  </select>
+</div>
+
 
   <!-- Button -->
   <div class="grid col-span-1">
@@ -137,8 +138,8 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 
    </div>
     <section class="bg-primary_white relative">
-<img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
-            <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-33%] right-[-15%] h-[30rem] w-[30rem] z-10">
+<img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
+            <img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute bottom-[-33%] right-[-15%] h-[30rem] w-[30rem] z-10">
        <Forslag
        heading="Du vil muligvis synes godt om"
             link_side_1="/kaffekasse"
@@ -160,7 +161,7 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
     </section>
     
 <div class="relative">
-  <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem]">
+  <img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem]">
       <Testimonial
       testimonial_billede_1="/billeder/sarah.png"
       testimonial_person_1="Sarah, 33 år"

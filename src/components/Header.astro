@@ -100,12 +100,40 @@ const {headerImg} = Astro.props;
 </div>
 
     <!-- Desktopmenu -->
-    <div style={`background-image: url(${headerImg})`} class="bg-cover" >
+<div style={`background-image: url(${headerImg})`} class="bg-cover">
+  <div class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto h-28 items-center">
+    <a class="" href="/"><img class="" src="/ikoner/logo.svg" alt="logo_kafferisteri" height="130" width="130" /></a>
+    <ul class="flex gap-12 text-primary_white">
+      <li class="heading-3">
+        <a href="/shop">Shop</a>
+        <div class="dropdown">
+          <ul>
+            <!-- Dropdown menuindhold her -->
+            <li><a href="/kaffeprodukter">Kaffe</a></li>
+            <li><a href="/kaffeprodukter"><p>Espresso</p></a></li>
+            <li><a href="/kaffeprodukter"><p>Filterkaffe</p></a></li>
+            <li><a href="/kaffeprodukter"><p>Stempelkaffe</p></a></li>
+            <li><a href="/kaffeprodukter"><p>Koffeinfri</p></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="heading-3"><a href="/kaffekasse">Abonnement</a></li>
+      <li class="heading-3"><a href="/om">Om Os</a></li>
+      <li class="uppercase">
+        <a href="/indkobskurv"><img class="hover:scale-110 ease-in-out transition duration-200 mt-2" src="/ikoner/kurv.svg" alt="Indkøbskurv ikon"></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+   <!-- Desktopmenu -->
+    <!-- <div style={`background-image: url(${headerImg})`} class="bg-cover" >
       <div class="hidden lg:flex justify-between lg:max-w-7xl lg:mx-auto h-28 items-center">
           <a class="" href="/"><img class="" src="/ikoner/logo.svg" alt="logo_kafferisteri" height="130" width="130" /></a>
           <ul class="flex gap-12 text-primary_white">
           <div class="dropdown">
-         <li class="heading-3 "><a href="/shop">Shop</a></li>
+        <ul> <li class="heading-3 "><a href="/shop">Shop</a></li></ul>
           <div class="dropdown-content bg-secondary_beige absolute hidden z-50">
             <div class="grid grid-cols-2 gap-6 text-dark_brown"><div>
               <a class="heading-4" href="/kaffeprodukter">Kaffe</a>
@@ -133,7 +161,7 @@ const {headerImg} = Astro.props;
       </li>
      </ul>
     </div>
-  </div>
+  </div> -->
   </nav>
 </header>
 

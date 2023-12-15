@@ -25,7 +25,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <!--  Kasse 1: Indhold i kurv -->
         <div class="grid md:grid-cols-3 gap-10 pb-16 pt-8">
             <!-- Produkt -->
-            <div class="bg-primary_white border border-darkest_brown p-6 md:p-10 col-span-2">
+            <div class="bg-primary_white  p-6 md:p-10 col-span-2">
                 <div class="grid grid-rows-4 gap-4">
 
                    <div>
@@ -37,21 +37,33 @@ import MainLayout from "../layouts/MainLayout.astro";
                         
     
                        </div>
-                       <div class="border-b border-gray-500 w-full"></div>
+                       <div class="border-b border-darkest_brown w-full"></div>
 
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
                     <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-1.jpg" alt=""><p>Kaffekassen Small</p></div>
                     <p>159 DKK</p>
-                    <ToggleDropdown title="1" option1="2"/>
+   
+                      <div class="">
+                        <select class="py-2 px-5 border border-darkest_brown">
+                             <option>1</option>
+                             <option>2</option>
+                            </select>
+                            </div>
+
                     <div class="flex justify-between lg:gap-5"><p>159 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
                     <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-2.jpg" alt=""><p>Brasil (250g)</p></div>
                     <p>70 DKK</p>
-                    <ToggleDropdown title="2" option1="1"/>
+                     <div class="">
+                        <select class="py-2 px-5 border border-darkest_brown">
+                             <option>2</option>
+                             <option>1</option>
+                            </select>
+                            </div>
                    <div class="flex justify-between lg:gap-5"><p>140 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
@@ -59,14 +71,24 @@ import MainLayout from "../layouts/MainLayout.astro";
                    <div class="grid grid-cols-5 items-center">
                     <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-3.jpg" alt=""><p>Uganda (1000g)</p></div>
                     <p>250 DKK</p>
-                    <ToggleDropdown title="1" option1="2"/>
+                     <div class="">
+                        <select class="py-2 px-5 border border-darkest_brown">
+                             <option>1</option>
+                             <option>2</option>
+                            </select>
+                            </div>
                    <div class="flex justify-between lg:gap-5"><p>250 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
                     <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-4.jpg" alt=""><p>Guatamala (250g)</p></div>
                     <p>70 DKK</p>
-                    <ToggleDropdown title="1" option1="2"/>
+                     <div class="">
+                        <select class="py-2 px-5 border border-darkest_brown">
+                             <option>1</option>
+                             <option>2</option>
+                            </select>
+                            </div>
                    <div class="flex justify-between lg:gap-5"><p>70 DKK</p><img src="/ikoner/kryds.svg" alt=""></div>
                    </div>
 
@@ -74,7 +96,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
 
             <!-- Kasse 2: Subtotal -->
-            <div class="bg-primary_white border border-darkest_brown p-6 md:p-10 lg:col-span-1 grid gap-4 col-span-2">
+            <div class="bg-primary_white  p-6 md:p-10 lg:col-span-1 grid gap-4 col-span-2">
             <h2 class="text-heading-5 border-b border-darkest_brown pb-3">Subtotal</h2>
             <div class="flex space-x-24 justify-between"><p class="">Subtotal</p><p>619 DKK</p></div>
             <div class="flex space-x-24 border-b border-darkest_brown pb-3 justify-between"><p class="">Levering</p><p>50 DKK</p></div>

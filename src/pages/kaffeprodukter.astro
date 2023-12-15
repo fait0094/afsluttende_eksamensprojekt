@@ -2,7 +2,7 @@
 import Sti from "../components/Sti.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import "..//styles/style.css";
+import "../styles/style.css";
 import Timer from "../components/Timer.astro";
 import Card from "../components/Card.astro";
 
@@ -31,7 +31,7 @@ import Card from "../components/Card.astro";
 
 <!-- Filtrering -->
 <section
-    class="bg-primary_white py-16 px-10"
+    class="bg-primary_white py-16 px-10 "
     id="step"
     x-data="{ kaffetype: 'allekaffetyper', ristegrad: 'alleristegrader', smag: 'allesmag', oprindelse: 'alleoprindelser', andet: 'alleandet', skjultekaffe : 0 }"
   >
@@ -136,7 +136,7 @@ import Card from "../components/Card.astro";
   
       <!---------------- Indhold der kan filtreres i ------------------>
   
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-6xl mx-auto fade-in">
         <section
           class="cursor-pointer"
           :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
@@ -283,3 +283,32 @@ import Card from "../components/Card.astro";
 </MainLayout>
 
 
+<style>
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.show {
+  opacity: 1;
+}
+</style>
+
+<script>
+//fade in animation//
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+function fadeInOnScroll() {
+  fadeInElements.forEach((el) => {
+    const elTop = el.getBoundingClientRect().top;
+    const elBottom = el.getBoundingClientRect().bottom;
+
+    if (elTop < window.innerHeight && elBottom > 0) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", fadeInOnScroll);
+
+
+</script>

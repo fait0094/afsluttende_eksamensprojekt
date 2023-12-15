@@ -2,7 +2,7 @@
 import Sti from "../components/Sti.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import "..//styles/style.css";
+import "../styles/style.css";
 import InfoSection from "../components/InfoSection.astro";
 import TertiaryButton from "../components/TertiaryButton.astro";
 
@@ -50,9 +50,9 @@ title="Om Os - Det Lille Kafferisteri"
        <!-- Familieejet virksomhed -->
 
 <section>
-    <div class="bg-primary_white py-16 md:px-0 px-10 gap-10 relative">
-     <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
-    <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-45%] right-[-15%] h-[30rem] w-[30rem] z-10">
+    <div class="bg-primary_white py-16 md:px-0 px-10 gap-10 relative fade-in ">
+     <img src="/ikoner/bg-beans.svg " alt="" class="absolute to p-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
+    <img src="/ikoner/bg-beans.svg " alt="" class="absolute bottom-[-45%] right-[-15%] h-[30rem] w-[30rem] z-10">
    <div class="grid lg:flex justify-center">
             <div>
             <h2>familieejet virksomhed</h2>
@@ -85,7 +85,7 @@ title="Om Os - Det Lille Kafferisteri"
 </section>
 <!-- Vores butik / billedegalleri -->
 
-<section class="bg-primary_white py-16 md:px-0 px-10 relative">
+<section class="bg-primary_white py-16 md:px-0 px-10 relative fade-in">
 <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-15%] right-[-20%] h-[30rem] w-[30rem]">
     <Heading><h2  class="text-center">Vores butik</h2><Heading/>
    <div class="md:max-w-3xl lg:max-w-6xl mx-auto grid grid-cols-8 grid-rows-2 gap-5 pt-8">
@@ -98,3 +98,23 @@ title="Om Os - Det Lille Kafferisteri"
    </div>
 
 </MainLayout>
+
+<script>
+//fade in animation//
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+function fadeInOnScroll() {
+  fadeInElements.forEach((el) => {
+    const elTop = el.getBoundingClientRect().top;
+    const elBottom = el.getBoundingClientRect().bottom;
+
+    if (elTop < window.innerHeight && elBottom > 0) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", fadeInOnScroll);
+
+
+</script>

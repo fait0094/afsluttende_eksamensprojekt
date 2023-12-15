@@ -36,7 +36,7 @@ import "..//styles/style.css";
 <Heading><h2 class="text-center">vores udvalg af kaffekasser</h2><Heading/>
 <section class=" pb-16 pt-8 relative">
     <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-10%] right-[-38%] h-[30rem] w-[30rem]">
-   <div class="lg:justify-evenly grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+   <div class="lg:justify-evenly grid md:grid-cols-2 lg:grid-cols-3 gap-10 fade-in">
         <Card 
         link_side="kaffekasseSingle"
         img_product="/billeder/produktbilleder/kaffeboksalm.webp"
@@ -72,7 +72,7 @@ import "..//styles/style.css";
 </div>
 <!-- SÅDAN BESTILLER DU SECTION HER -->
 
-<section class="bg-secondary_beige py-16 px-10 relative">
+<section class="bg-secondary_beige py-16 px-10 relative fade-in">
 <img src="/ikoner/bg-beans.svg" alt="" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem]">
     <div class="md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto">
 <Heading><h2  class="text-center">sådan bestiller du en kaffekasse</h2><Heading/>
@@ -95,3 +95,23 @@ description3="og oplev ren nydelse af den friskristede kaffe sammen med en lille
 </div>
 
 </MainLayout>
+
+<script>
+//fade in animation//
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+function fadeInOnScroll() {
+  fadeInElements.forEach((el) => {
+    const elTop = el.getBoundingClientRect().top;
+    const elBottom = el.getBoundingClientRect().bottom;
+
+    if (elTop < window.innerHeight && elBottom > 0) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", fadeInOnScroll);
+
+
+</script>

@@ -7,8 +7,6 @@
 img,
 iframe {
   max-width: 100%;
-  /* align-self: stretch; */
-  /* object-fit: cover; */
 }
 
 @import "tailwindcss/base";
@@ -155,4 +153,16 @@ header {
 }
 .fade-in.show {
   opacity: 1;
+}
+
+@media (max-width: 990px) {
+.beans {
+  display: none;
+}
+}
+
+@media (min-width: 1600px) {
+.beans {
+  display: none;
+}
 }

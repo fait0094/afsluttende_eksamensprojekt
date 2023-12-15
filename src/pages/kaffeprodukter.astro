@@ -1,8 +1,8 @@
 ---
+import "..//styles/style.css";
 import Sti from "../components/Sti.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import "..//styles/style.css";
 import Timer from "../components/Timer.astro";
 import Card from "../components/Card.astro";
 
@@ -13,8 +13,8 @@ import Card from "../components/Card.astro";
   metacontent="Gå på opdagelse i vores udvalg af friskristede kaffeprodukter hos Det Lille Kafferisteri. Vores økologiske bønner og friskristede bønner sikrer en unik smagsoplevelse. Velkommen til en kaffeoplevelse ud over det sædvanlige."
 >
 <section class="md:max-w-3xl lg:max-w-6xl mx-auto px-10 pb-16 relative">
-<img src="/ikoner/bg-beans.svg" alt="Bønner ikoner" class="absolute top-[-25%] right-[-30%] h-[30rem] w-[30rem]">
-<img src="/ikoner/bg-beans.svg" alt="Bønner ikoner" class="absolute bottom-[-70%] left-[-35%] h-[30rem] w-[30rem]">
+<img src="/ikoner/bg-beans.svg" alt="Bønner ikoner" class="absolute top-[-25%] right-[-30%] h-[30rem] w-[30rem] beans">
+<img src="/ikoner/bg-beans.svg" alt="Bønner ikoner" class="absolute bottom-[-70%] left-[-35%] h-[30rem] w-[30rem] beans">
     <Sti
     sti1="Forside"
     divider1="/"
@@ -134,38 +134,36 @@ import Card from "../components/Card.astro";
         </div>
       </section>
   
-      <!---------------- Indhold der kan filtreres i ------------------>
-  
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
-        <section
-          class="cursor-pointer"
-          :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
-          x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
-        >
-           <Card
-      kategori="Espresso"
-      title="KAFFEMIK | MEXICO & GUATAMALA"
-      price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot5.webp"
-      link_side="/kaffesingle"
+<!---------------- Indhold der kan filtreres i ------------------>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-6xl mx-auto">
+    <section
+    class="cursor-pointer"
+    :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'sod'].includes(smag) && ['alleoprindelser', 'mellemamerika'].includes(oprindelse) && ['alleandet', 'andet'].includes(andet)) }"
+    x-transition:enter.duration.800ms
+    x-on:change="testfunction();">
+    <Card
+    kategori="Espresso"
+    title="KAFFEMIK | MEXICO & GUATAMALA"
+    price="FRA 79 DKK"
+    img_product="/billeder/produktbilleder/packshot5.webp"
+    link_side="/kaffesingle"
       />
-        </section>
+    </section>
   
-        <section
-          class="cursor-pointer"
-          :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
-          x-transition:enter.duration.800ms
-          x-on:change="testfunction();"
-        >
-              <Card
+    <section
+    class="cursor-pointer"
+    :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+    x-transition:enter.duration.800ms
+    x-on:change="testfunction();"
+    >
+    <Card
       kategori="Espresso"
       title="KOFFEINFRI AFTENKAFFE | COLOMBIA"
       price="FRA 79 DKK"
       img_product="/billeder/produktbilleder/packshot_koffeinfri.webp"
       link_side="/kaffesingle"
       />
-        </section>
+    </section>
   
         <section
           class="cursor-pointer"

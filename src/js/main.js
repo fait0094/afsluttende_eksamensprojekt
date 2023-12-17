@@ -50,3 +50,4 @@ function fadeInOnScroll() {
 }
 
 window.addEventListener("scroll", fadeInOnScroll);
+

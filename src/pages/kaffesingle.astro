@@ -47,10 +47,7 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
         <h2>70 DKK</h2>
         <div class="flex gap-4 mb-4">
             <img src="/ikoner/stjerner.svg" alt="Stjerne anmeldelser">
-            <TertiaryButton
-            text="Se anmeldelser"
-            link_side="#anmeldelser"
-            ></TertiaryButton>
+            <a href="#"><p class="underline">Se anmeldelser</p></a>
         </div>
    <div class="grid">
            <div class="grid grid-cols-2">
@@ -140,23 +137,27 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
     <section class="bg-primary_white relative">
 <img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg] beans">
             <img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute bottom-[-33%] right-[-15%] h-[30rem] w-[30rem] z-10 beans">
-       <Forslag
-       heading="Du vil muligvis synes godt om"
-            link_side_1="/kaffekasse"
-    	    img_product_1="/billeder/nye_webp/kaffeboksjul.webp"
-    	    title_1="kaffekassen | mini"
-    	    price_1="119 DKK/MÅNED"
-    
-            link_side_2="/kaffekasse"
-    	    img_product_2="/billeder/nye_webp/kaffeboksalm2.webp"
-    	    title_2="kaffekassen | mellem"
-    	    price_2="159 DKK/MÅNED"
-    
-            link_side_3="/kaffekasse"
-    	    img_product_3="/billeder/nye_webp/kaffeboksalm3.webp"
-    	    title_3="kaffekassen | deluxe"
-    	    price_3="299 DKK/MÅNED"
-        />
+
+        <Forslag
+    heading="Mest populære produkter"
+        link_side_1="/produktside"
+	    img_product_1="/billeder/nye_webp/packshot4.webp"
+        kategori_1="Espresso"
+	    title_1="MADAMMERNES MØRKE MOCCA | MEXICO"
+	    price_1="FRA 79 DKK"
+
+        link_side_2="/produktside"
+	    img_product_2="/billeder/nye_webp/koffeinfri.webp"
+        kategori_2="Espresso"
+	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+	    price_2="FRA 79 DKK"
+
+        link_side_3="/produktside"
+	    img_product_3="/billeder/nye_webp/packshot1.webp"
+        kategori_3="Filterkande"
+	    title_3="MORGENKAFFE | NICARAGUA & BRASILIEN"
+	    price_3="FRA 79 DKK"
+    />
  
     </section>
     

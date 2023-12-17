@@ -5,9 +5,6 @@ import Testimonial from "../components/Testimonial.astro";
 import Skala from "../components/Skala.astro";
 import Forslag from "../components/Forslag.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import TertiaryButton from "../components/TertiaryButton.astro";
-
-const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, title, option1, option2, option3, option4, galleri_1, galleri_2, galleri_3, galleri_4 } = Astro.props;
 ---
 
 <MainLayout
@@ -29,9 +26,9 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
  <div class="">
 <img class="mb-5 w-full" src="/billeder/nye_webp/packshot2.webp" alt="Kaffe" height="410" width="410">
 <div class="grid grid-cols-3 gap-5">
-    <img class="w-full md:w-auto" src="/billeder/galleri-1.jpg" alt="Galleri billede af kaffe">
-    <img class="w-full md:w-auto" src="/billeder/galleri-2.jpg" alt="Galleri billede af kaffe">
-    <img class="w-full md:w-auto" src="/billeder/galleri-3.jpg" alt="Galleri billede af kaffe">
+    <img class="w-full md:w-auto" src="/galleri/galleri-1.webp" alt="Galleri billede af kaffe">
+    <img class="w-full md:w-auto" src="/galleri/galleri-2.webp" alt="Galleri billede af kaffe">
+    <img class="w-full md:w-auto" src="/galleri/galleri-3.webp" alt="Galleri billede af kaffe">
 </div>
 </div>
 
@@ -164,10 +161,10 @@ const { skala, beanImgPath1, beanImgPath2, beanImgPath3, beanImgPath4, type, tit
 <div class="relative">
   <img src="/ikoner/bg-beans.svg" alt="Bønne ikoner" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem] beans">
       <Testimonial
-      testimonial_billede_1="/billeder/sarah.png"
+      testimonial_billede_1="/testimonials/sarah.webp"
       testimonial_person_1="Sarah, 33 år"
       testimonial_tekst_1="Jeg er virkelig kræsen, når det kommer til kaffe. Men jeg har virkelig fundet den kaffe der passer til mig. Den er rund i smagen og perfekt i kombination med min havremælk"
-      testimonial_billede_2="/billeder/kenneth.png"
+      testimonial_billede_2="/testimonials/kenneth.webp"
       testimonial_person_2="Kenneth, 65 år"
       testimonial_tekst_2="Jeg går op i god kaffe og elsker at få tilsendt god kaffe hver måned. Derudover lærer jeg nye metoder, jeg ikke kendte til før."
       />

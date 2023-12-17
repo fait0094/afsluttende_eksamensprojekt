@@ -5,7 +5,6 @@ import Footer from "../components/Footer.astro";
 const { title, metacontent } = Astro.props;
 ---
 
-
 <html lang="da">
 <head>
     <meta charset="utf-8" />
@@ -19,11 +18,10 @@ const { title, metacontent } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
      <link rel="sitemap" href="/sitemap-index.xml" />
-     <script src="main.js"></script>
     <title>{title}</title>
   </head>
 	<body>
-    <Header headerImg="/billeder/img-header.png" />
+    <Header headerImg="/billeder/img-header.webp" />
             <main class="bg-secondary_beige overflow-hidden">
                 <slot />
               

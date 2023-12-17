@@ -12,7 +12,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   metacontent="Velkommen til Det Lille Kafferisteri! Oplev friskristet kaffe, tilmeld dig vores kaffekasse, og opdag vores mest populære kaffeprodukter. Hos os får du kvalitet, bæredygtighed, og økologisk kaffe."
 >
 <section class="relative">
-<img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-25%] right-[-10%] h-[30rem] w-[30rem] beans">
+    <img src="/ikoner/bg-beans.svg" alt="" class="absolute top-[-25%] right-[-10%] h-[30rem] w-[30rem] beans">
     <div class="md:max-w-3xl lg:max-w-6xl mx-auto md:px-0 px-10">
         <Sti
         sti1="Forside"
@@ -20,16 +20,15 @@ import MainLayout from "../layouts/MainLayout.astro";
         sti2="Indkøbskurv"
         />
         <Heading><h1  class="text-center">Indkøbskurv</h1><Heading/>
-
-        <!--  Kasse 1: Indhold i kurv -->
-        <div class="grid md:grid-cols-3 gap-10 pb-16 pt-8">
-            <!-- Produkt -->
-            <div class="bg-primary_white  p-6 md:p-10 col-span-2">
-                <div class="grid grid-rows-4 gap-4">
-
-                   <div>
-                       <div class="grid grid-cols-5">
-                        <h2 class="col-span-2 text-heading-5">Produkt</h2>
+            
+<!--  Kasse 1: Indhold i kurv -->
+<div class="grid md:grid-cols-3 gap-10 pb-16 pt-8">
+<!-- Produkt -->
+<div class="bg-primary_white  p-6 md:p-10 col-span-2">
+     <div class="grid grid-rows-4 gap-4">
+        <div>
+            <div class="grid grid-cols-5">
+                <h2 class="col-span-2 text-heading-5">Produkt</h2>
                         <h2 class="text-heading-5">Pris</h2>
                         <h2 class="text-heading-5">Antal</h2>
                         <h2 class="text-heading-5">Subtotal</h2>
@@ -41,7 +40,7 @@ import MainLayout from "../layouts/MainLayout.astro";
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-1.jpg" alt=""><p>Kaffekassen Small</p></div>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-1.webp" alt=""><p>Kaffekassen Small</p></div>
                     <p>159 DKK</p>
    
                       <div class="">
@@ -55,7 +54,7 @@ import MainLayout from "../layouts/MainLayout.astro";
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-2.jpg" alt=""><p>Brasil (250g)</p></div>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-2.webp" alt=""><p>Brasil (250g)</p></div>
                     <p>70 DKK</p>
                      <div class="">
                         <select class="py-2 px-5 border border-darkest_brown">
@@ -68,7 +67,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-3.jpg" alt=""><p>Uganda (1000g)</p></div>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-3.webp" alt=""><p>Uganda (1000g)</p></div>
                     <p>250 DKK</p>
                      <div class="">
                         <select class="py-2 px-5 border border-darkest_brown">
@@ -80,7 +79,7 @@ import MainLayout from "../layouts/MainLayout.astro";
                    </div>
 
                    <div class="grid grid-cols-5 items-center">
-                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-4.jpg" alt=""><p>Guatamala (250g)</p></div>
+                    <div class="flex gap-3 col-span-2 items-center"><img src="/indkobskurv/kurv-4.webp" alt=""><p>Guatamala (250g)</p></div>
                     <p>70 DKK</p>
                      <div class="">
                         <select class="py-2 px-5 border border-darkest_brown">
@@ -114,17 +113,17 @@ import MainLayout from "../layouts/MainLayout.astro";
         <Forslag
         heading="Du vil muligvis synes godt om"
             link_side_1="/produktside"
-    	    img_product_1="billeder/produktbilleder/kaffeboksjul.webp"
+    	    img_product_1="billeder/nye_webp/kaffeboksjul.webp"
     	    title_1="kaffekassen | Jul"
     	    price_1="477 DKK/MÅNED"
     
             link_side_2="/produktside"
-    	    img_product_2="billeder/produktbilleder/kaffeboksalm.webp"
+    	    img_product_2="billeder/nye_webp/kaffeboksalm2.webp"
     	    title_2="kaffekassen | mellem"
     	    price_2="159 DKK/MÅNED"
     
             link_side_3="/produktside"
-    	    img_product_3="billeder/produktbilleder/kaffeboksalm.webp"
+    	    img_product_3="billeder/nye_webp/kaffeboksalm3.webp"
     	    title_3="kaffekassen | deluxe"
     	    price_3="299 DKK/MÅNED"
         />

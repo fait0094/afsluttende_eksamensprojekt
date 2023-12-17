@@ -1,25 +1,21 @@
 ---
 import "../styles/style.css";
 import SecondaryButton from "./SecondaryButton.astro";
-
-const { title, description, imgPath, link_side, backgroundImage } = Astro.props;
+const { title, description, link_side, backgroundImage } = Astro.props;
 ---
 
-
-    </div>
-    <div class="flex justify-center">
-<div style={`background-image: url(${backgroundImage})`} class="bg-cover w-full h-full overflow-hidden shadow-lg hover:shadow-2xl duration-100 " >
-                    <a href={link_side}> 
-            <!-- Content inside the card goes here -->
+</div>
+<div class="flex justify-center">
+    <div style={`background-image: url(${backgroundImage})`} class="bg-cover w-full h-full overflow-hidden shadow-lg hover:shadow-2xl duration-100">
+        <a href={link_side}>
             <div class="p-6 text-white pt-52">
                 <h2 class="font-bold mb-2">{title}</h2>
-                           <div class="flex justify-between">
-                <p class="w-[15rem]" >{description}</p>
-                <SecondaryButton></SecondaryButton>
+                <div class="flex justify-between">
+                    <p class="w-[15rem]" >{description}</p>
+                    <SecondaryButton></SecondaryButton>
                 </div>
             </div>
-          </a>
-        </div>
-       
+        </a>
     </div>
+</div>
 

@@ -5,7 +5,7 @@ const {headerImg} = Astro.props;
 <header>
   <nav class="navbar z-50 relative "> 
     <div class="list-none bg-light_brown">
-      <!-- topbar -->
+      <!-- Topbar -->
       <div class="lg:mx-auto lg:max-w-6xl flex space-between gap-10 justify-between px-10 lg:px-0">
         <div class="text-primary_white text-slide items-center lg:py-3">
             <div class="text-wrap">
@@ -34,7 +34,7 @@ const {headerImg} = Astro.props;
           </a>
         </div>
 
-        <!-- burgermenu -->
+        <!-- Burgermenu -->
         
         <div class="lg:hidden flex gap-6">
                    <a href="/indkobskurv"><img class="hover:scale-110 ease-in-out transition duration-200 mt-2" src="/ikoner/kurv.svg" alt="Indkøbskurv ikon"></a>
@@ -137,7 +137,6 @@ const {headerImg} = Astro.props;
 
 
 <style>
-
   /* Hover effekt */
   li:hover {
     transform: scale(1.10);
@@ -146,14 +145,12 @@ const {headerImg} = Astro.props;
     transition-timing-function: ease-in-out;
   }
 
-
-
 .showMenu {
   transform: translateY(0);
 }
 
 
-/* dropdown */
+/* Dropdown */
 .dropdown-content {
   min-width: 35rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -166,22 +163,24 @@ const {headerImg} = Astro.props;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover
+{background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 .vertical {
-            border-left: 2px solid #35261C;
-            opacity: 50%;
-            position:absolute;
-            left: 50%; 
-            top:10%;
-            bottom: 10%;
-          
-          }
+  border-left: 2px solid #35261C;
+  opacity: 50%;
+  position:absolute;
+  left: 50%; 
+  top:10%;
+  bottom: 10%;
+}
 
-/* textslider topbar */
-
+/* Textslider Topbar */
 @media (max-width: 1023px) {
   .text-slide>div {
     height: 40px;
@@ -221,7 +220,6 @@ const {headerImg} = Astro.props;
   100% {
     top:0;
   }
-
 }
 }
 </style>

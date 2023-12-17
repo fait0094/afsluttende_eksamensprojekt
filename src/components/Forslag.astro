@@ -10,51 +10,50 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
         <div class="cards">
           <div class="card active">
            <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
-  <a href={link_side_1}>  <div><img class="w-full" src={img_product_1} alt="produkt_billeder"></div>
-  <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_1}</h1>
-<h2 class="uppercase heading-3 font-semibold">{title_1}</h2>
-<div class="flex justify-between items-center">
-<h3 class="uppercase heading-6 font-light">{price_1}</h3>
-<SecondaryButton/>
-</div>
-</div>
-</a>
-</div>
+            <a href={link_side_1}>  <div><img class="w-full" src={img_product_1} alt="produkt_billeder"></div>
+              <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_1}</h1>
+                <h2 class="uppercase heading-3 font-semibold">{title_1}</h2>
+                <div class="flex justify-between items-center">
+                  <h3 class="uppercase heading-6 font-light">{price_1}</h3>
+                  <SecondaryButton/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-          <div class="card">
-            <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
-  <a href={link_side_2}>  <div><img class="w-full" src={img_product_2} alt="produkt_billeder"></div>
-  <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_2}</h3>
-<h2 class="uppercase heading-3 font-semibold">{title_2}</h2>
-<div class="flex justify-between items-center">
-<h3 class="uppercase heading-6 font-light">{price_2}</h3>
-<SecondaryButton/>
-</div>
-</div>
-</a>
-</div>
-    </div>
-          <div class="card">
-            <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
-  <a href={link_side_3}>  <div><img class="w-full" src={img_product_3} alt="produkt_billeder"></div>
-  <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_3}</h1>
-<h2 class="uppercase heading-3 font-semibold">{title_3}</h2>
-<div class="flex justify-between items-center">
-<h3 class="uppercase heading-6 font-light">{price_3}</h3>
-<SecondaryButton/>
-</div>
-</div>
-</a>
-</div>
-</div>
+        <div class="card">
+          <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
+            <a href={link_side_2}>  <div><img class="w-full" src={img_product_2} alt="produkt_billeder"></div>
+              <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_2}</h3>
+                <h2 class="uppercase heading-3 font-semibold">{title_2}</h2>
+                <div class="flex justify-between items-center">
+                  <h3 class="uppercase heading-6 font-light">{price_2}</h3>
+                  <SecondaryButton/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="indicators mt-6">
-          <span class="indicator active" onclick="moveToSlide(0);"></span>
-          <span class="indicator" onclick="moveToSlide(1);"></span>
-          <span class="indicator" onclick="moveToSlide(2);"></span>
+        <div class="card">
+          <div class="bg-secondary_beige mt-10 mx-auto w-[20rem] h-full shadow-lg hover:shadow-2xl duration-100"> 
+            <a href={link_side_3}>  <div><img class="w-full" src={img_product_3} alt="produkt_billeder"></div>
+              <div class="p-7"><h1 class="text-heading-5 font-semibold">{kategori_3}</h1>
+                <h2 class="uppercase heading-3 font-semibold">{title_3}</h2>
+                <div class="flex justify-between items-center">
+                  <h3 class="uppercase heading-6 font-light">{price_3}</h3>
+                  <SecondaryButton/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-
+      <div class="indicators mt-6">
+        <span class="indicator active" onclick="moveToSlide(0);"></span>
+        <span class="indicator" onclick="moveToSlide(1);"></span>
+        <span class="indicator" onclick="moveToSlide(2);"></span>
+      </div>
+    </div>
 </section>
 
     
@@ -149,7 +148,7 @@ const {heading, kategori_1, title_1, price_1, buttonarrow, img_product_1, link_s
 
 </style>
 
- <!--=============== scripts  ===============-->
+
 <script type="text/javascript">
   // Declare moveToSlide in the global scope
   function moveToSlide(index) {

@@ -22,6 +22,9 @@ export default {
       },
       rotate: {
         '17': '17deg',
+      },
+      backgroundPosition: {
+        custom_position: "35%",
       }
     },
   },

@@ -51,3 +51,38 @@ function fadeInOnScroll() {
 
 window.addEventListener("scroll", fadeInOnScroll);
 
+// Timer
+
+  // Funktion til at opdatere timeren
+  function updateTimer() {
+    // Datoen, hvor nedtællingen starter
+    var startDate = new Date();
+    startDate.setDate(startDate.getDate() + 3);
+
+    // Funktion til at opdatere timer-elementet
+    function update() {
+      var now = new Date().getTime();
+      var distance = startDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output resultatet i elementet med id="timer"
+      document.getElementById("timer").innerHTML = days + "d " + hours + "t " + minutes + "m " + seconds + "s ";
+
+      // Hvis nedtællingen er slut, starter vi forfra
+      if (distance < 0) {
+        startDate.setDate(startDate.getDate() + 3); // Start timeren igen om 3 dage
+      }
+    }
+
+    // Initial opdatering af timeren
+    update();
+
+    // Opdater timeren hvert sekund
+    var x = setInterval(update, 1000);
+  }
+
+  // Kald funktionen til at starte timeren
+  updateTimer();

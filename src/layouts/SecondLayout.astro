@@ -10,13 +10,14 @@ const { title, metacontent } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/ikoner/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <!-- <meta name="robots" content="noindex" /> -->
+    <meta name="robots" content="noindex" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={metacontent} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+        <script src="main.js"></script>
      <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
   </head>

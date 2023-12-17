@@ -145,23 +145,8 @@ import Card from "../components/Card.astro";
     kategori="Espresso"
     title="KAFFEMIK | MEXICO & GUATAMALA"
     price="FRA 79 DKK"
-    img_product="/billeder/produktbilleder/packshot5.webp"
+    img_product="/billeder/nye_webp/packshot2.webp"
     link_side="/kaffesingle"
-      />
-    </section>
-  
-    <section
-    class="cursor-pointer"
-    :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
-    x-transition:enter.duration.800ms
-    x-on:change="testfunction();"
-    >
-    <Card
-      kategori="Espresso"
-      title="KOFFEINFRI AFTENKAFFE | COLOMBIA"
-      price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot_koffeinfri.webp"
-      link_side="/kaffesingle"
       />
     </section>
   
@@ -175,10 +160,25 @@ import Card from "../components/Card.astro";
       kategori="Stempelkande"
       title="BRASIL | BRASILIEN, SINGLE ORIGIN"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot3.webp"
+      img_product="/billeder/nye_webp/packshot3.webp"
       link_side="/kaffesingle"
       />
         </section>
+
+         <section
+    class="cursor-pointer"
+    :class="{'hidden': !(['allekaffetyper', 'espresso'].includes(kaffetype) && ['alleristegrader', 'mellemristet'].includes(ristegrad) && ['allesmag', 'syrlig'].includes(smag) && ['alleoprindelser', 'sydamerika'].includes(oprindelse) && ['alleandet', 'koffeinfri'].includes(andet)) }"
+    x-transition:enter.duration.800ms
+    x-on:change="testfunction();"
+    >
+    <Card
+      kategori="Espresso"
+      title="KOFFEINFRI AFTENKAFFE | COLOMBIA"
+      price="FRA 79 DKK"
+      img_product="/billeder/nye_webp/koffeinfri.webp"
+      link_side="/kaffesingle"
+      />
+    </section>
   
         <section
           class="cursor-pointer"
@@ -190,7 +190,7 @@ import Card from "../components/Card.astro";
       kategori="Espresso"
       title="MADAMMERNES MØRKE MOCCA | MEXICO"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot4.webp"
+      img_product="/billeder/nye_webp/packshot4.webp"
       link_side="/kaffesingle"
       />
         </section>
@@ -220,7 +220,7 @@ import Card from "../components/Card.astro";
       kategori="Filterkande"
       title="UGANDA | SINGLE ORIGIN"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot2.webp"
+      img_product="/billeder/nye_webp/packshot2.webp"
       link_side="/kaffesingle"
       />
         </section>
@@ -235,7 +235,7 @@ import Card from "../components/Card.astro";
       kategori="Stempelkande"
       title="GUATAMALA | SINGLE ORIGIN"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot3.webp"
+      img_product="/billeder/nye_webp/packshot3.webp"
       link_side="/kaffesingle"
       />
         </section>
@@ -249,7 +249,7 @@ import Card from "../components/Card.astro";
       kategori="Stempelkande"
       title="ETHIOPIA | SINGLE ORIGIN"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot5.webp"
+      img_product="/billeder/nye_webp/packshot5.webp"
       link_side="/kaffesingle"
       />
         </section>
@@ -264,7 +264,7 @@ import Card from "../components/Card.astro";
       kategori="Filterkande"
       title="INDONESIA | SINGLE ORIGIN"
       price="FRA 79 DKK"
-      img_product="/billeder/produktbilleder/packshot4.webp"
+      img_product="/billeder/nye_webp/packshot4.webp"
       link_side="/kaffesingle"
       />
         </section>

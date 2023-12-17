@@ -12,7 +12,7 @@ import Forslag from "../components/Forslag.astro";
 
 <SecondLayout
   title="Forside - Det Lille Kafferisteri"
-  metacontent="Velkommen til Det Lille Kafferisteri! Oplev friskristet kaffe, tilmeld dig vores kaffekasse, og opdag vores mest populære kaffeprodukter. Hos os får du kvalitet, bæredygtighed, og økologisk kaffe."
+  metacontent="Velkommen til Det Lille Kafferisteri! Oplev vores friskristede kaffe, tilmeld dig vores kaffekasse og udforsk vores mest populære økologiske kaffeprodukter. Hos os får du kvalitet, bæredygtighed i hver kop økologisk kaffe."
 >
 
   <!-- cookieboks -->
@@ -49,13 +49,13 @@ import Forslag from "../components/Forslag.astro";
  <section
     class="flex items-center justify-start h-screen bg-[url('/billeder/hero-billede.webp')] bg-cover md:bg-center bg-custom_position hero-billede"
   >
-    <div class="text-left mx-8 text-primary_white lg:ml-36 mt-28">
-      <h1> I over 20 år har vi fordybet os i kaffebønnernes oprindelse.</h1>
+    <div class="text-left px-10 lg:px-0 text-primary_white lg:ml-36 mt-28">
+      <h1>Oplev vores økologiske og friskristede kaffebønner</h1>
       <p>
- Oplev smagen af vores økologiske og friskristede kaffebønner. <br> Dyk ned i kunsten af vores kafferisteri, hvor passion møder præcision. <br> Vi håber du finder noget både til dig selv og dem, du holder af. <br> <br>- De bedste kaffehilsner Anders og Signe.
+        Med over 20 års erfaring har vi specialiseret os i kaffebønnernes verden. <br> Træd ind i Det lille kafferisteris univers, hvor lidenskab og præcision forenes. <br> Vi håber du finder noget både til dig selv og dem, du holder af. <br> <br>- De bedste kaffehilsner Anders og Signe.
       </p>
       <div class="mt-5">
-        <PrimaryButton size="hero" link_side="/shop" text="Gå til shop">
+        <PrimaryButton size="" link_side="/shop" text="Udforsk vores kaffebønner">
         </PrimaryButton>
       </div>
     </div>
@@ -65,9 +65,9 @@ import Forslag from "../components/Forslag.astro";
 <!-- tilmeld dig kaffekassen -->
 
 <section class="py-16 mt-[40rem] bg-primary_white relative">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[-25%] right-[-18%] h-[30rem] w-[30rem]">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[-25%] right-[-18%] h-[30rem] w-[30rem] beans">
   <div class="md:grid md:grid-cols-2 p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in ">
-    <img class="justiy-center" src="/billeder/produktbilleder/kaffeboksalm.webp" alt="kaffekasse_billede" height="450" width="450">
+    <img class="justiy-center" src="/billeder/nye_webp/kaffeboksalm3.webp" alt="kaffekasse billede" height="450" width="450">
     <div class="cols-2 mt-6 lg:mt-0">
       <h2>Tilmeld dig kaffekassen</h2>
       <p class="italic">“Jeg er almen kaffedrikker, men har aldrig været den største kaffeentusiast, men så gik det op for mig, hvor lækker god kaffe er, og hvor få ting du egentlig behøver for at lave god kaffe. Takket hver kaffekassen, har jeg fået ressourcerne til at producere den helt rigtige kaffe og få tips med på vejen med den guide, der medfølger hver måned.”</p>
@@ -91,10 +91,10 @@ import Forslag from "../components/Forslag.astro";
 
 <!-- altid friskristet kaffe -->
 <section class="pt-16 md:px-0 relative">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg]">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[0%] right-[-200%] h-[30rem] w-[30rem]">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-20%] left-[-20%] h-[30rem] w-[30rem] rotate-45">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[3%] right-[-15%] h-[30rem] w-[30rem] rotate-45">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[-15%] left-[-23%] h-[30rem] w-[30rem] rotate-[17deg] beans">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[0%] right-[-200%] h-[30rem] w-[30rem] beans">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-20%] left-[-20%] h-[30rem] w-[30rem] rotate-45 beans">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute top-[3%] right-[-15%] h-[30rem] w-[30rem] rotate-45 beans">
 <div class="grid lg:grid-cols-2 pb-16 md:max-w-3xl lg:max-w-6xl mx-auto px-10">  
 <div>
 <h2 class="">altid friskristet kaffe</h2>
@@ -109,19 +109,19 @@ import Forslag from "../components/Forslag.astro";
     <Forslag
     heading="Mest populære produkter"
         link_side_1="/produktside"
-	    img_product_1="/billeder/produktbilleder/packshot3.webp"
+	    img_product_1="/billeder/nye_webp/packshot3.webp"
         kategori_1="Espresso"
 	    title_1="KAFFEMIK | MEXICO & GUATAMALA"
 	    price_1="FRA 79 DKK"
 
         link_side_2="/produktside"
-	    img_product_2="/billeder/produktbilleder/packshot_koffeinfri.webp"
+	    img_product_2="/billeder/nye_webp/koffeinfri.webp"
         kategori_2="Espresso"
 	    title_2="KOFFEINFRI AFTENKAFFE | COLOMBIA"
 	    price_2="FRA 79 DKK"
 
         link_side_3="/produktside"
-	    img_product_3="/billeder/produktbilleder/packshot2.webp"
+	    img_product_3="/billeder/nye_webp/packshot2.webp"
         kategori_3="Stempelkande"
 	    title_3="BRASIL | BRASILIEN, SINGLE ORIGIN"
 	    price_3="FRA 79 DKK"
@@ -132,7 +132,7 @@ import Forslag from "../components/Forslag.astro";
 <!-- når du handler hos os får du -->
 
 <section class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto fade-in relative">
-   <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-30%] right-[-30%] h-[30rem] w-[30rem] rotate-45 z-10">
+   <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-30%] right-[-30%] h-[30rem] w-[30rem] rotate-45 z-10 beans">
 
     <Heading><h2  class="text-center pt-16">når du handler hos os får du</h2><Heading/>
     <InfoSection
@@ -154,14 +154,14 @@ import Forslag from "../components/Forslag.astro";
   <div class="pb-16">
   <PrimaryButton
   link_side="/kaffeprodukter"
-  text="Gå til kaffeprodukter"
+  text="Udforsk vores kaffeprodukter"
   ></PrimaryButton>
   </div>
 </section>
 
 <!-- famlieejet virksomhed -->
 <section class=" py-16 bg-primary_white relative">
-  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem]">
+  <img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-40%] left-[-20%] h-[30rem] w-[30rem] beans">
   <div class="p-10 md:p-0 md:max-w-3xl lg:max-w-6xl mx-auto lg:grid grid-cols-2 gap-10">
     <div>
     <h2>Familieejet virksomhed</h2>
@@ -180,7 +180,7 @@ link_side="/om"
 
 <!-- følg på instagram -->
 <section class="py-16 relative">
-<img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-10%] right-[-15%] h-[30rem] w-[30rem]">
+<img src="/ikoner/bg-beans.svg" alt="Bønner ikon" class="absolute bottom-[-10%] right-[-15%] h-[30rem] w-[30rem] beans">
 <div class="md:p-0  px-10 fade-in">
   <Heading><h2  class="text-center ">Følg os på Instagram</h2><Heading/>
    <div class="lg:flex gap-8 grid md:grid-cols-2 py-16">
